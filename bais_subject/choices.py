@@ -43,3 +43,12 @@ MINE_OCCUPATION = (
     ('DRILLER', 'DRILLER'),
     ('OTHER', 'OTHER')
 )
+
+COMMODITY = (
+    ('QUARRY', 'QUARRY'),
+    ('COAL', 'COAL'),
+    ('KIMBERLITE', 'KIMBERLITE'),
+    ('COPPER/NICKLE', 'COPPER/NICKLE'),
+    ('ASBESTOS', 'ASBESTOS'),
+    ('OTHER', 'OTHER')
+)
