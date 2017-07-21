@@ -10,18 +10,18 @@ with open(os.path.join(os.path.dirname(__file__), 'README.md')) as readme:
 os.chdir(os.path.normpath(os.path.join(os.path.abspath(__file__), os.pardir)))
 
 setup(
-    name='bais',
+    name='bais-subject',
     version='0.1.10',
     author=u'Erik van Widenfelt',
     author_email='ew2789@gmail.com',
     packages=find_packages(),
     include_package_data=True,
-    url='https://github.com/botswana-harvard/bais',
+    url='https://github.com/botswana-harvard/bais-subject',
     license='GPL license, see LICENSE',
-    description='pivoted reference model for edc modules',
+    description='BAIS subject modules',
     long_description=README,
     zip_safe=False,
-    keywords='django edc reference model',
+    keywords='django edc bais_subject',
     classifiers=[
         'Environment :: Web Environment',
         'Framework :: Django',
