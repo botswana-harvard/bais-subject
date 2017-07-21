@@ -40,5 +40,6 @@ MINE_OCCUPATION = (
     ('BLASTER', 'BLASTER'),
     ('SHAFTMAN', 'SHAFTMAN'),
     ('FOREMAN', 'FOREMAN'),
-    ('DRILLER', 'DRILLER')
+    ('DRILLER', 'DRILLER'),
+    ('OTHER', 'OTHER')
 )
