@@ -80,3 +80,13 @@ MARITAL_STATUS = (
     ('DIVORCED', 'DIVORCED'),
     ('WIDOWED', 'WIDOWED'),
 )
+
+SPOUSE_VISIT = (
+    ('DAILY', 'DAILY'),
+    ('WEEKLY', 'WEEKLY'),
+    ('FORTNIGHTLY', 'FORTNIGHTLY'),
+    ('MONTHLY', 'MONTHLY'),
+    ('QUARTELY', 'QUARTELY'),
+    ('YEARLY', 'YEARLY'),
+    ('NEVER', 'NEVER'),
+)
