@@ -34,3 +34,11 @@ EMPLOYMENT_STATUS = (
     ('STUDENT', 'STUDENT'),
     ('OTHER', 'OTHER')
 )
+
+MINE_OCCUPATION = (
+    ('LOADER', 'LOADER'),
+    ('BLASTER', 'BLASTER'),
+    ('SHAFTMAN', 'SHAFTMAN'),
+    ('FOREMAN', 'FOREMAN'),
+    ('DRILLER', 'DRILLER')
+)
