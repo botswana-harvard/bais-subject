@@ -4,6 +4,6 @@ MALE_FEMALE = (
 )
 
 YES_NO = (
-    (YES, _(YES)),
-    (NO, _(NO)),
+    ('YES', 'YES'),
+    ('NO', 'NO')
 )

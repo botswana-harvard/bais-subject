@@ -22,6 +22,7 @@ class Section5:
         choices=YES_NO,
         help_text="",
         null=True,
+        blank=False
     )
 
     hiv_and_aids_awareness = models.CharField(
@@ -30,4 +31,16 @@ class Section5:
         choices=YES_NO,
         help_text="",
         null=True,
+        blank=False,
+        help_text="Circle all that are mentioned more than one anwser is possible"
+    )
+
+    hiv_and_aids_awareness = models.CharField(
+        verbose_name="What can people do to prevent becoming infected with HIV?",
+        max_length=35,
+        choices=YES_NO,
+        help_text="",
+        null=True,
+        blank=False,
+        help_text="Circle all that are mentioned more than one anwser is possible"
     )
