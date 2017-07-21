@@ -1,6 +1,6 @@
 from django.db import models
 
-from ..choices import YES_NO
+from ..choices import YES_NO, YES_NO_DNTKNW
 
 
 class Section5:
@@ -82,26 +82,69 @@ class Section5:
         blank=False,
         help_text="Circle all that are mentioned more than one anwser is possible"
     )
-    
-    
-'''Help text here'''
-    
+
     hiv_and_aids_awareness = models.CharField(
         verbose_name="Is it possible for a healthy looking person to have HIV?",
         max_length=35,
-        choices=YES_NO,
+        choices=YES_NO_DNTKNW,
         help_text="",
         null=True,
         blank=False,
     )
-    
+
     hiv_and_aids_awareness = models.CharField(
-        verbose_name="From what source(s) did you recieve information about TB?",
+        verbose_name="Can people reduce their chances of getting HIV and AIDS by using condom correctly everytime they have sex?",
         max_length=35,
-        choices=YES_NO,
+        choices=YES_NO_DNTKNW,
         help_text="",
         null=True,
         blank=False,
-        help_text="Circle all that are mentioned more than one anwser is possible"
-    )    
-    
+    )
+
+    hiv_and_aids_awareness = models.CharField(
+        verbose_name="Do you think a person can get infected with HIV through mosquito bites?",
+        max_length=35,
+        choices=YES_NO_DNTKNW,
+        help_text="",
+        null=True,
+        blank=False,
+    )
+
+    hiv_and_aids_awareness = models.CharField(
+        verbose_name="Can people reduce their chances of getting HIV and AIDS by having only one uninfected sex partner who has no other partners?",
+        max_length=35,
+        choices=YES_NO_DNTKNW,
+        help_text="",
+        null=True,
+        blank=False,
+    )
+
+    hiv_and_aids_awareness = models.CharField(
+        verbose_name="Can a person get infected with HIv by sharing a  meal (from the same plate) with a person who has HIV and aids? ",
+        max_length=35,
+        choices=YES_NO_DNTKNW,
+        help_text="",
+        null=True,
+        blank=False,
+    )
+
+    hiv_and_aids_awareness = models.CharField(
+        verbose_name="Can people get HIV because of witchcraft?",
+        max_length=35,
+        choices=YES_NO_DNTKNW,
+        help_text="",
+        null=True,
+        blank=False,
+    )
+
+    hiv_and_aids_awareness = models.CharField(
+        verbose_name="Can HIV be transmitted from mother to child?",
+        max_length=35,
+        choices=YES_NO_DNTKNW,
+        help_text="",
+        null=True,
+        blank=False,
+    )
+
+    class Meta:
+        app_label = 'bais_subject'
