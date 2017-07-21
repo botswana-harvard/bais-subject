@@ -8,6 +8,12 @@ YES_NO = (
     ('NO', 'NO')
 )
 
+YES_NO_DNTKNW = (
+    ('YES', 'YES'),
+    ('NO', 'NO'),
+    ('Don\'t Know', 'Don\'t Know')
+)
+
 EDUCATION = (
     ('NONE', 'NONE')
     ('NON-FORMAL', 'NON-FORMAL'),

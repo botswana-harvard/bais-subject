@@ -44,3 +44,64 @@ class Section5:
         blank=False,
         help_text="Circle all that are mentioned more than one anwser is possible"
     )
+
+    hiv_and_aids_awareness = models.CharField(
+        verbose_name="Have you ever heard of TB?",
+        max_length=35,
+        choices=YES_NO,
+        help_text="",
+        null=True,
+        blank=False,
+    )
+
+    hiv_and_aids_awareness = models.CharField(
+        verbose_name="In the past 4 weeks,have you heard or seen any information about TB?",
+        max_length=35,
+        choices=YES_NO,
+        help_text="",
+        null=True,
+        blank=False,
+    )
+
+    hiv_and_aids_awareness = models.CharField(
+        verbose_name="From what source(s) did you recieve information about TB?",
+        max_length=35,
+        choices=YES_NO,
+        help_text="",
+        null=True,
+        blank=False,
+        help_text="Circle all that are mentioned more than one anwser is possible"
+    )
+
+    hiv_and_aids_awareness = models.CharField(
+        verbose_name="What can people do to prevent becoming infected with TB?",
+        max_length=35,
+        choices=YES_NO,
+        help_text="",
+        null=True,
+        blank=False,
+        help_text="Circle all that are mentioned more than one anwser is possible"
+    )
+    
+    
+'''Help text here'''
+    
+    hiv_and_aids_awareness = models.CharField(
+        verbose_name="Is it possible for a healthy looking person to have HIV?",
+        max_length=35,
+        choices=YES_NO,
+        help_text="",
+        null=True,
+        blank=False,
+    )
+    
+    hiv_and_aids_awareness = models.CharField(
+        verbose_name="From what source(s) did you recieve information about TB?",
+        max_length=35,
+        choices=YES_NO,
+        help_text="",
+        null=True,
+        blank=False,
+        help_text="Circle all that are mentioned more than one anwser is possible"
+    )    
+    
