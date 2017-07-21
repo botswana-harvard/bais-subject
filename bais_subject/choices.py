@@ -52,3 +52,13 @@ COMMODITY = (
     ('ASBESTOS', 'ASBESTOS'),
     ('OTHER', 'OTHER')
 )
+
+RELIGION = (
+    ('CHRISTIANITY', 'CHRISTIANITY'),
+    ('ISLAM', 'ISLAM'),
+    ('BAHAI', 'BAHAI'),
+    ('HINDUISM', 'HINDUISM'),
+    ('BADIMO', 'BADIMO'),
+    ('NO', 'NO RELIGION'),
+    ('OTHER', 'OTHER')
+)
