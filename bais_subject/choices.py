@@ -252,3 +252,147 @@ TB_NONDISCLOSURE = (
     ('KEEP IT A SECRET', 'KEEP IT A SECRET'),
     ('OTHER', 'OTHER, SPECFIY')
 )
+
+METHODS_OF_USE = (
+    ('SMOKE', 'SMOKE')
+    ('SNIFF', 'SNIFF')
+    ('CHEW', 'CHEW')
+)
+
+SUBSTANCE_FREQUENCY = (
+    ('DAILY', 'DAILY'),
+    ('5-6 DAYS PER WEEK', '5-6 DAYS PER WEEK'),
+    ('1-4 DAYS PER WEEK', '1-4 DAYS PER WEEK'),
+    ('1-3 DAYS PER MONTH', '1-3 DAYS PER MONTH'),
+    ('LESS THAN MONTHLY', 'LESS THAN MONTHLY'),
+
+)
+
+SEXUAL_INTERCOURSE_INFLUENCE = (
+    ('MARITAL FULFILMENT', 'MARITAL FULFILMENT'),
+    ('PERSUASION', 'PERSUASION'),
+    ('CURIOSITY', 'CURIOSITY'),
+    ('ECONOMIC REASONS', 'ECONOMIC REASONS'),
+    ('RELATIONSHIP FULFILMENT', 'RELATIONSHIP FULFILMENT'),
+    ('PEER PRESSURE', 'PEER PRESSURE'),
+    ('OLD ENOUGH', 'OLD ENOUGH'),
+    ('OTHERS', 'OTHERS'),
+)
+
+SEXUAL_INTERCOURSE_PROTECTION = (
+    ('MALE CONDOMS', 'MALE CONDOMS'),
+    ('FEMALE CONDOMS', 'FEMALE CONDOMS'),
+    ('MODERN CONTRACEPTIVES.', 'MODERN CONTRACEPTIVES.'),
+    ('TRADITIONAL METHODS', 'TRADITIONAL METHODS'),
+    ('SPRITUAL METHODS', 'SPRITUAL METHODS'),
+    ('OTHER', 'OTHER'),
+)
+
+SEXUAL_INTERCOURSE_PROTECTION_REASON = (
+    ('PREGNANCY', 'PREGNANCY'),
+    ('HIV', 'HIV'),
+    ('STI', 'STI'),
+    ('HIV/PREGNANCY', 'HIV/PREGNANCY'),
+    ('ALL OF THE ABOVE', 'ALL OF THE ABOVE'),
+    ('DONT KNOW', 'DONT KNOW'),
+    ('OTHER,', 'OTHER,'),
+)
+
+SEX_PARTNER = (
+    ('SPOUSE.', 'SPOUSE.'),
+    ('BOYFRIEND/GIRLFRIEND', 'BOYFRIEND/GIRLFRIEND'),
+    ('FAMILY MEMBER', 'FAMILY MEMBER'),
+    ('EMPLOYER', 'EMPLOYER'),
+    ('COLLEAGUE', 'COLLEAGUE'),
+    ('SUPERVISOR', 'SUPERVISOR'),
+    ('STRANGER', 'STRANGER'),
+    ('FRIEND', 'FRIEND'),
+    ('OTHER,', 'OTHER,'),
+)
+
+ASSISTANCE = (
+    ('MEDICAL', 'MEDICAL'),
+    ('LEGAL/POLICE', 'LEGAL/POLICE'),
+    ('SOCIAL', 'SOCIAL'),
+    ('COUNSELING', 'COUNSELING'),
+    ('NONE', 'NONE'),
+    ('OTHER', 'OTHER'),
+)
+
+VIOLANCE = (
+    ('YES Pushed or shoved you', 'YES Pushed or shoved you'),
+    ('YES, Choked or burned you', 'YES, Choked or burned you'),
+    ('YES, Threatened or used a gun, knife or other ',
+     'YES, Threatened or used a gun, knife or other '),
+    ('YES, weapon against you', 'YES, weapon against you'),
+    ('YES, Physically forced you to have sexual',
+     'YES, Physically forced you to have sexual'),
+    ('YES, intercourse against your will',
+     'YES, intercourse against your will'),
+    ('YES, Forced you to do something sexual you found degrading or '
+     'humiliating',
+     'YES, Forced you to do something sexual you found degrading or '
+     'humiliating'),
+    ('YES, Made you afraid of what would happen if you did not have '
+     'sexual intercourse',
+     'YES, Made you afraid of what would happen if you did not have '
+     'sexual intercourse'),
+
+)
+
+VIOLANCE_WHO = (
+    ('By an intimate female partner', 'By an intimate female partner'),
+    ('By an intimate male partner', 'By an intimate male partner'),
+    ('By a non-intimate partner', 'By a non-intimate partner'),
+)
+
+SERIAL_CONCURRENT = (
+    ('concurrent', 'concurrent'),
+    ('serial', 'serial'),
+)
+
+CONDOM_REASON = (
+    ('HIV/STI PREVENTION ', 'HIV/STI PREVENTION '),
+    ('PREGNANCY  PREVENTION', 'PREGNANCY  PREVENTION'),
+    ('BOTH HIV/STI AND PREGNANCY', 'BOTH HIV/STI AND PREGNANCY'),
+    ('NO TRUST OF PARTNER', 'NO TRUST OF PARTNER'),
+    ('PARTNER INSISTED', 'PARTNER INSISTED'),
+    ('DONT KNOW', 'DONT KNOW'),
+)
+
+CONDOM_NOT_USED_REASON = (
+    ('USE OTHER FAMILY PLANNING METHOD', 'USE OTHER FAMILY PLANNING METHOD'),
+    ('YOU OR YOUR PARTNER REFUSED', 'YOU OR YOUR PARTNER REFUSED'),
+    ('YOU OR YOUR PARTNER DRUNK/HIGH ON  DRUGS',
+     'YOU OR YOUR PARTNER DRUNK/HIGH ON  DRUGS'),
+    ('IT REDUCES PLEASURE', 'IT REDUCES PLEASURE'),
+    ('WE  TRUST EACH OTHER', 'WE  TRUST EACH OTHER'),
+    ('OTHER', 'OTHER'),
+)
+
+CONDOM_PLACE = (
+    ('SHOP/PETROL STATION', 'SHOP/PETROL STATION'),
+    ('PHARMACY', 'PHARMACY'),
+    ('HOSPITAL/CLINIC', 'HOSPITAL/CLINIC'),
+    ('BAR/HOTEL/RESTAURANT', 'BAR/HOTEL/RESTAURANT'),
+    ('OFFICE/PLACE OF WORK', 'OFFICE/PLACE OF WORK'),
+    ('PUBLIC DISPENSER', 'PUBLIC DISPENSER'),
+    ('ANOTHER PERSON', 'ANOTHER PERSON'),
+    ('DONT KNOW', 'DONT KNOW'),
+    ('OTHER', 'OTHER'),
+)
+
+DRUNK_HIGH_SEX = (
+    ('YES, I WAS', 'YES, I WAS'),
+    ('YES, HE/SHE WAS', 'YES, HE/SHE WAS'),
+    ('YES BOTH OF US', 'YES BOTH OF US'),
+    ('NO', 'NO'),
+    ('DON’T KNOW', 'DON’T KNOW'),
+)
+
+CONDOM_PERSUATION = (
+    ('YES, ALL THE TIME', 'YES, ALL THE TIME'),
+    ('YES, SOMETIMES', 'YES, SOMETIMES'),
+    ('NO', 'NO'),
+    ('DONT KNOW', 'DONT KNOW'),
+)
