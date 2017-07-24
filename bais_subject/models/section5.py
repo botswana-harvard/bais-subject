@@ -5,7 +5,7 @@ from edc_base.model_fields import OtherCharField
 from ..choices import (YES_NO, YES_NO_DNTKNW, TRANSMISSION_PREVENTION,
                        TREATMENT_OPTIONS, ARV_USES, ARV_CONCERN,
                        YES_NO_NEVER_HAD_SEX_DNTKNW, SEXUAL_BEHAVIOUR,
-                       TB_INFECTION, TB_SPREAD, TB_CURE)
+                       TB_INFECTION, TB_SPREAD, TB_CURE, SMC_SOURCE)
 
 
 class Section5:
@@ -301,6 +301,66 @@ class Section5:
         verbose_name='How can Tb be cured?',
         max_length=250,
         choices=TB_CURE,
+        blank=True,
+        null=True
+    )
+
+    smc_programme = models.CharField(
+        verbose_name='Have you ever heard of Safe Male Circumcision or SMC programme?',
+        max_length=35,
+        choices=YES_NO,
+        null=True,
+        blank=False,
+    )
+
+    smc_programme_awareness = models.CharField(
+        verbose_name='In the past 4 weeks, have you heard or '
+        'seen any information on Safe Male Circumcision (SMC)?',
+        max_length=35,
+        choices=YES_NO,
+        null=True,
+        blank=False,
+    )
+
+    smc_programme_source = models.CharField(
+        verbose_name='From what source(s) did you receive this'
+        'information about Safe Male Circumcision or SMC',
+        max_length=35,
+        choices=SMC_SOURCE,
+        null=True,
+        blank=False,
+    )
+
+    smc_programme_interest = models.CharField(
+        verbose_name='Suppose you had male children aged below 18 years'
+        ' would you get them circumcised?',
+        max_length=35,
+        choices=YES_NO,
+        null=True,
+        blank=False,
+    )
+
+    smc_condomize_ = models.CharField(
+        verbose_name='Do you think a circumcised male should stop using condoms?',
+        max_length=35,
+        choices=YES_NO,
+        null=True,
+        blank=False,
+    )
+
+    condom_collection = models.CharField(
+        verbose_name='Do you think it should be acceptable for a woman to obtain male condoms?',
+        max_length=35,
+        choices=YES_NO,
+        null=True,
+        blank=False,
+    )
+
+    condom_collection_other = OtherCharField(
+        verbose_name='Do you think it should be acceptable'
+        ' for a man to obtain female condoms?',
+        max_length=250,
+        choices=YES,
         blank=True,
         null=True
     )
