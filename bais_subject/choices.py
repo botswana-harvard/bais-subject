@@ -14,6 +14,13 @@ YES_NO_DNTKNW = (
     ('Don\'t Know', 'Don\'t Know')
 )
 
+YES_NO_NEVER_HAD_SEX_DNTKNW = (
+    ('YES', 'YES'),
+    ('NO', 'NO'),
+    ('NEVER HAD SEX', 'NEVER HAD SEX'),
+    ('Don\'t Know', 'Don\'t Know')
+)
+
 EDUCATION = (
     ('NONE', 'NONE')
     ('NON-FORMAL', 'NON-FORMAL'),

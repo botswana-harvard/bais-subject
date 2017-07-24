@@ -3,7 +3,8 @@ from django.db import models
 from edc_base.model_fields import OtherCharField
 
 from ..choices import (YES_NO, YES_NO_DNTKNW, TRANSMISSION_PREVENTION,
-                       TREATMENT_OPTIONS, ARV_USES, ARV_CONCERN)
+                       TREATMENT_OPTIONS, ARV_USES, ARV_CONCERN,
+                       YES_NO_NEVER_HAD_SEX_DNTKNW)
 
 
 class Section5:
@@ -225,6 +226,24 @@ class Section5:
         choices=ARV_CONCERN,
         blank=True,
         null=True
+    )
+
+    arv_treatment_condomize = models.CharField(
+        verbose_name='Do you think that people on ARV’s should always use condoms?',
+        max_length=35,
+        choices=YES_NO_DNTKNW,
+        help_text="",
+        null=True,
+        blank=False,
+    )
+
+    arv_sexual_behaviour = models.CharField(
+        verbose_name='Has introduction of ARVs influenced your sexual behavior?',
+        max_length=35,
+        choices=YES_NO_NEVER_HAD_SEX_DNTKNW,
+        help_text="",
+        null=True,
+        blank=False,
     )
 
     class Meta:
