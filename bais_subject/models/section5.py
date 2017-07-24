@@ -4,7 +4,8 @@ from edc_base.model_fields import OtherCharField
 
 from ..choices import (YES_NO, YES_NO_DNTKNW, TRANSMISSION_PREVENTION,
                        TREATMENT_OPTIONS, ARV_USES, ARV_CONCERN,
-                       YES_NO_NEVER_HAD_SEX_DNTKNW)
+                       YES_NO_NEVER_HAD_SEX_DNTKNW, SEXUAL_BEHAVIOUR,
+                       TB_INFECTION, TB_SPREAD, TB_CURE)
 
 
 class Section5:
@@ -244,6 +245,64 @@ class Section5:
         help_text="",
         null=True,
         blank=False,
+    )
+
+    arv_sexual_behaviour_other = OtherCharField(
+        verbose_name='If yes, what ways',
+        max_length=250,
+        choices=SEXUAL_BEHAVIOUR,
+        blank=True,
+        null=True
+    )
+
+    arv_intake = models.CharField(
+        verbose_name='Do you think a person on ARVs should '
+        'discontinue/stop taking them once they feel better?',
+        max_length=35,
+        choices=YES_NO_DNTKNW,
+        help_text="",
+        null=True,
+        blank=False,
+    )
+
+    tb_appearance = models.CharField(
+        verbose_name='Is it possible for a healthy looking person to have TB?',
+        max_length=35,
+        choices=YES_NO_DNTKNW,
+        null=True,
+        blank=False,
+    )
+
+    tb_infection = models.CharField(
+        verbose_name='In your opinion, who can be infected with TB?',
+        max_length=35,
+        choices=TB_INFECTION,
+        null=True,
+        blank=False,
+    )
+
+    tb_spread = models.CharField(
+        verbose_name='In your opinion, who can be infected with TB?',
+        max_length=35,
+        choices=TB_SPREAD,
+        null=True,
+        blank=False,
+    )
+
+    tb_cure = models.CharField(
+        verbose_name='Do you think that TB can be treated /curable?',
+        max_length=35,
+        choices=YES_NO_DNTKNW,
+        null=True,
+        blank=False,
+    )
+
+    tb_cure_other = OtherCharField(
+        verbose_name='How can Tb be cured?',
+        max_length=250,
+        choices=TB_CURE,
+        blank=True,
+        null=True
     )
 
     class Meta:
