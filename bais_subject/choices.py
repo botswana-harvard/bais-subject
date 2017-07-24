@@ -8,6 +8,12 @@ YES_NO = (
     ('NO', 'NO')
 )
 
+YES_NO_UNSURE = (
+    ('YES', 'YES'),
+    ('NO', 'NO'),
+    ('UNSURE', 'UNSURE')
+)
+
 YES_NO_DNTKNW = (
     ('YES', 'YES'),
     ('NO', 'NO'),
