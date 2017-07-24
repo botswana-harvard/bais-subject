@@ -24,7 +24,7 @@ class Section2:
         choices=METHODS_OF_USE,
     )
 
-    substance_age = models.CharField(
+    substance_age = models.IntegerField(
         verbose_name='Age at First Use',
         max_length=15,
     )
@@ -43,7 +43,7 @@ class Section2:
         help_text='Tobacco'
     )
 
-    substance_age = models.CharField(
+    substance_age = models.IntegerField(
         verbose_name='Age at First Use',
         max_length=15,
     )
@@ -62,7 +62,7 @@ class Section2:
         help_text='Marijuana'
     )
 
-    substance_age = models.CharField(
+    substance_age = models.IntegerField(
         verbose_name='Age at First Use',
         max_length=15,
     )
@@ -81,7 +81,7 @@ class Section2:
         help_text='Cocaine'
     )
 
-    substance_age = models.CharField(
+    substance_age = models.IntegerField(
         verbose_name='Age at First Use',
         max_length=15,
     )
@@ -100,7 +100,7 @@ class Section2:
         help_text='Crack Cocaine'
     )
 
-    substance_age = models.CharField(
+    substance_age = models.IntegerField(
         verbose_name='Age at First Use',
         max_length=15,
     )
@@ -119,7 +119,7 @@ class Section2:
         help_text='Methcathinone'
     )
 
-    substance_age = models.CharField(
+    substance_age = models.IntegerField(
         verbose_name='Age at First Use',
         max_length=15,
     )
@@ -138,7 +138,7 @@ class Section2:
         help_text='Nyaope'
     )
 
-    substance_age = models.CharField(
+    substance_age = models.IntegerField(
         verbose_name='Age at First Use',
         max_length=15,
     )
@@ -157,7 +157,7 @@ class Section2:
         help_text='Heroine'
     )
 
-    substance_age = models.CharField(
+    substance_age = models.IntegerField(
         verbose_name='Age at First Use',
         max_length=15,
     )
@@ -183,7 +183,7 @@ class Section2:
         help_text='Codeine'
     )
 
-    substance_age = models.CharField(
+    substance_age = models.IntegerField(
         verbose_name='Age at First Use',
         max_length=15,
     )
