@@ -2,7 +2,8 @@ from django.db import models
 
 from edc_base.model_fields import OtherCharField
 
-from ..choices import YES_NO, YES_NO_DNTKNW, TRANSMISSION_PREVENTION
+from ..choices import (YES_NO, YES_NO_DNTKNW, TRANSMISSION_PREVENTION,
+                       TREATMENT_OPTIONS, ARV_USES, ARV_CONCERN)
 
 
 class Section5:
@@ -167,6 +168,61 @@ class Section5:
         verbose_name='If yes, what ways',
         max_length=250,
         choices=TRANSMISSION_PREVENTION,
+        blank=True,
+        null=True
+    )
+
+    hiv_and_aids_awareness = models.CharField(
+        verbose_name='If a mother is infected with HIV AND AIDS,'
+        ' is there any way to avoid transmission to the newborn baby?',
+        max_length=35,
+        choices=YES_NO_DNTKNW,
+        help_text="",
+        null=True,
+        blank=False,
+    )
+
+    hiv_and_aids_awareness_other = OtherCharField(
+        verbose_name='If yes, what ways',
+        max_length=250,
+        choices=TRANSMISSION_PREVENTION,
+        blank=True,
+        null=True
+    )
+
+    hiv_and_aids_awareness = models.CharField(
+        verbose_name='What treatment options are available'
+        ' for HIV infected people?',
+        max_length=35,
+        choices=TREATMENT_OPTIONS,
+        help_text="",
+        null=True,
+        blank=False,
+    )
+
+    arv_treatment = models.CharField(
+        verbose_name='What do you believe anti -retroviral (ARVs) do?',
+        max_length=35,
+        choices=ARV_USES,
+        help_text="",
+        null=True,
+        blank=False,
+    )
+
+    arv_treatment_concern = models.CharField(
+        verbose_name='Has your personal concern about getting HIV changed'
+        'since the introduction of ARV’s?',
+        max_length=35,
+        choices=ARV_USES,
+        help_text="",
+        null=True,
+        blank=False,
+    )
+
+    arv_treatment_concern_other = OtherCharField(
+        verbose_name='If yes, what ways',
+        max_length=250,
+        choices=ARV_CONCERN,
         blank=True,
         null=True
     )
