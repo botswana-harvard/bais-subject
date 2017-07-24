@@ -2,7 +2,7 @@ from django.db import models
 
 from edc_base.model_fields import OtherCharField
 
-from ..choices import (YES_NO, TESTING_REASONS)
+from ..choices import (YES_NO, TESTING_REASONS, TB_NONDISCLOSURE)
 
 
 class Section6:
@@ -175,8 +175,11 @@ class Section6:
     tb_diagnosis_tested_other = OtherCharField(
         verbose_name='If No,why not',
         max_length=35,
-        choices=TESTING_REASONS,
+        choices=TB_NONDISCLOSURE,
         help_text="",
         null=True,
         blank=False
     )
+
+    class Meta:
+        app_label = 'bais_subject'

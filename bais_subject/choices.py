@@ -27,6 +27,14 @@ YES_NO_NEVER_HAD_SEX_DNTKNW = (
     ('Don\'t Know', 'Don\'t Know')
 )
 
+BABY_TEST = (
+    ('YES', 'YES (6-8 weeks)'),
+    ('YES 2', '7 weeks - 18 months'),
+    ('NO', 'NO'),
+    ('DON’T KNOW WANT TO TELL ', 'DON’T KNOW TO TELL'),
+    ('DON’T KNOW', 'DON’T KNOW')
+)
+
 EDUCATION = (
     ('NONE', 'NONE')
     ('NON-FORMAL', 'NON-FORMAL'),
@@ -248,7 +256,7 @@ TB_DISCLOSURE = (
 )
 
 TB_NONDISCLOSURE = (
-    ('FEAR OF STIGMASTISATIOn', 'FEAR OF STIGMATISATION'),
+    ('FEAR OF STIGMASTISATION', 'FEAR OF STIGMATISATION'),
     ('KEEP IT A SECRET', 'KEEP IT A SECRET'),
     ('OTHER', 'OTHER, SPECFIY')
 )
