@@ -1,6 +1,8 @@
 from django.db import models
 
-from ..choices import YES_NO, YES_NO_DNTKNW
+from edc_base.model_fields import OtherCharField
+
+from ..choices import YES_NO, YES_NO_DNTKNW, TRANSMISSION_PREVENTION
 
 
 class Section5:
@@ -9,7 +11,7 @@ class Section5:
      and level of Access to Interventions
      """
     hiv_and_aids_awareness = models.CharField(
-        verbose_name="Have you ever heard of HIV or an illness called AIDS?",
+        verbose_name='Have you ever heard of HIV or an illness called AIDS?',
         max_length=35,
         choices=YES_NO,
         help_text="",
@@ -93,7 +95,8 @@ class Section5:
     )
 
     hiv_and_aids_awareness = models.CharField(
-        verbose_name="Can people reduce their chances of getting HIV and AIDS by using condom correctly everytime they have sex?",
+        verbose_name='Can people reduce their chances of getting HIV'
+        ' and AIDS by using condom correctly everytime they have sex?',
         max_length=35,
         choices=YES_NO_DNTKNW,
         help_text="",
@@ -102,7 +105,8 @@ class Section5:
     )
 
     hiv_and_aids_awareness = models.CharField(
-        verbose_name="Do you think a person can get infected with HIV through mosquito bites?",
+        verbose_name='Do you think a person can get infected'
+        ' with HIV through mosquito bites?',
         max_length=35,
         choices=YES_NO_DNTKNW,
         help_text="",
@@ -111,7 +115,9 @@ class Section5:
     )
 
     hiv_and_aids_awareness = models.CharField(
-        verbose_name="Can people reduce their chances of getting HIV and AIDS by having only one uninfected sex partner who has no other partners?",
+        verbose_name='Can people reduce their chances of getting'
+        'HIV and AIDS by having only one uninfected'
+        'sex partner who has no other partners?',
         max_length=35,
         choices=YES_NO_DNTKNW,
         help_text="",
@@ -120,7 +126,8 @@ class Section5:
     )
 
     hiv_and_aids_awareness = models.CharField(
-        verbose_name="Can a person get infected with HIv by sharing a  meal (from the same plate) with a person who has HIV and aids? ",
+        verbose_name='Can a person get infected with HIv by sharing a '
+        ' meal (from the same plate) with a person who has HIV and aids?',
         max_length=35,
         choices=YES_NO_DNTKNW,
         help_text="",
@@ -144,6 +151,24 @@ class Section5:
         help_text="",
         null=True,
         blank=False,
+    )
+
+    hiv_and_aids_awareness = models.CharField(
+        verbose_name='If a mother is infected with HIV AND AIDS,'
+        ' is there any way to avoid transmission to the unborn baby?',
+        max_length=35,
+        choices=YES_NO_DNTKNW,
+        help_text="",
+        null=True,
+        blank=False,
+    )
+
+    hiv_and_aids_awareness_other = OtherCharField(
+        verbose_name='If yes, what ways',
+        max_length=250,
+        choices=TRANSMISSION_PREVENTION,
+        blank=True,
+        null=True
     )
 
     class Meta:
