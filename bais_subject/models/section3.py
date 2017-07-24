@@ -19,7 +19,7 @@ from ..choices import (
     CONDOM_PERSUATION)
 
 
-class Section2:
+class Section3(models.Model):
 
     sexual_intercouse = models.CharField(
         verbose_name='Have you ever had sexual intercourse?',

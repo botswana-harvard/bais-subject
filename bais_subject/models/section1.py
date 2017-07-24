@@ -13,7 +13,7 @@ from ..choices import (
     SPOUSE_VISIT)
 
 
-class Section1:
+class Section1(models.Model):
 
     respondent_sex = models.CharField(
         verbose_name='Choose sex of the respondent',
