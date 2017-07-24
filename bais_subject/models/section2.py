@@ -2,12 +2,13 @@ from django.db import models
 
 from edc_base.model_fields import OtherCharField
 
-from ..choices import YES_NO
+from ..choices import (
+    YES_NO,
+    METHODS_OF_USE,
+    SUBSTANCE_FREQUENCY)
 
-from ..side import METHODS_OF_USE, SUBSTANCE_FREQUENCY
 
-
-class Section2:
+class Section2(models.Model):
 
     #    TODO: Make this an inline form
 
