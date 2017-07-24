@@ -2,10 +2,11 @@ from django.db import models
 
 from edc_base.model_fields import OtherCharField
 
-from ..choices import (YES_NO, YES_NO_DNTKNW, TRANSMISSION_PREVENTION,
+from ..choices import (YES_NO, YES_NO_UNSURE, YES_NO_DNTKNW, TRANSMISSION_PREVENTION,
                        TREATMENT_OPTIONS, ARV_USES, ARV_CONCERN,
                        YES_NO_NEVER_HAD_SEX_DNTKNW, SEXUAL_BEHAVIOUR,
-                       TB_INFECTION, TB_SPREAD, TB_CURE, SMC_SOURCE)
+                       TB_INFECTION, TB_SPREAD, TB_CURE, SMC_SOURCE,
+                       CONDOM_CONSENT)
 
 
 class Section5:
@@ -360,9 +361,26 @@ class Section5:
         verbose_name='Do you think it should be acceptable'
         ' for a man to obtain female condoms?',
         max_length=250,
-        choices=YES,
+        choices=YES_NO_UNSURE,
         blank=True,
         null=True
+    )
+
+    condom_consent = OtherCharField(
+        verbose_name=' Do you agree that a woman has a right to decide'
+        'if she will have safe sex? (e.g use a condom)',
+        max_length=35,
+        choices=YES_NO_UNSURE,
+        null=True,
+        blank=False,
+    )
+
+    condom_consent_other = OtherCharField(
+        verbose_name=' Why not?',
+        max_length=35,
+        choices=CONDOM_CONSENT,
+        null=True,
+        blank=False,
     )
 
     class Meta:
