@@ -28,10 +28,10 @@ YES_NO_NEVER_HAD_SEX_DNTKNW = (
 )
 
 BABY_TEST = (
-    ('YES', 'YES (6-8 weeks)'),
+    ('YES', '6-8 weeks'),
     ('YES 2', '7 weeks - 18 months'),
     ('NO', 'NO'),
-    ('DON’T KNOW WANT TO TELL ', 'DON’T KNOW TO TELL'),
+    ('DON’T WANT TO TELL ', 'DON’T WANT TO TELL'),
     ('DON’T KNOW', 'DON’T KNOW')
 )
 
