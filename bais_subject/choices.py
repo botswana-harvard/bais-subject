@@ -573,3 +573,19 @@ CANCER_TEST = (
     ('Six months back', 'Six months back'),
     ('A year ago', 'A year ago'),
 )
+
+HOUSEHOLD_RELATION = (
+    ('HEAD', 'HEAD'),
+    ('SPOUSE', 'SPOUSE'),
+    ('SON/DAUGHTER', 'SON/DAUGHTER'),
+    ('STEPCHILD', 'STEPCHILD'),
+    ('GRANDCHILD', 'GRANDCHILD'),
+    ('PARENT', 'PARENT'),
+    ('GRANDPARENT', 'GRANDPARENT'),
+    ('BROTHER/SISTER', 'BROTHER/SISTER'),
+    ('NEPHEW/NIECE', 'NEPHEW/NEICE'),
+    ('SON/DAUGHTER IN LAW', 'SON/DAUGHTER IN LAW'),
+    ('PARENT IN LAW', 'PARENT IN LAW'),
+    ('OTHER RELATIVE', 'OTHER RELATIVE'),
+    ('NOT RELATED', 'NOT RELTED'),
+)

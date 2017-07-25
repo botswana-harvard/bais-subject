@@ -10,7 +10,7 @@ from ..choices import (YES_NO, YES_NO_DONTWANT,
 # TODO: Youngest BabyDate
 
 
-class Section7:
+class Section7(models.Model):
 
     given_birth = models.CharField(
         verbose_name='Have you ever given birth?',

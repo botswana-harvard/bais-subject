@@ -8,7 +8,7 @@ from ..choices import (YES_NO, TB_TREATMENT_SOURCE, TB_TIMES_TREATED,
                        TB_HELP_RESULT, TB_NO_HELP_REASON, CANCER_TEST)
 
 
-class Section8:
+class Section8(models.Model):
 
     tb_current_treatment = models.CharField(
         verbose_name='Are you on TB treatment now?',

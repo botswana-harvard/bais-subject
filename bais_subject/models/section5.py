@@ -9,7 +9,7 @@ from ..choices import (YES_NO, YES_NO_UNSURE, YES_NO_DNTKNW, TRANSMISSION_PREVEN
                        CONDOM_CONSENT)
 
 
-class Section5:
+class Section5(models.Model):
 
     """ Knowledge About HIV and AIDS and TB
      and level of Access to Interventions

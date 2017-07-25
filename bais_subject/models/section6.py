@@ -5,7 +5,7 @@ from edc_base.model_fields import OtherCharField
 from ..choices import (YES_NO, TESTING_REASONS, TB_NONDISCLOSURE)
 
 
-class Section6:
+class Section6(models.Model):
 
     meal_sharing = models.CharField(
         verbose_name='Would you ever share a meal (from the same plate)'
