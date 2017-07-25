@@ -144,6 +144,13 @@ class HouseholdQuestionnaireAnswers(models.Model):
         choices=UNPAID_REASON,
     )
 
+    person_work_unpaid_reason_other = OtherCharField(
+        verbose_name='If other, specify',
+        max_length=250,
+        blank=True,
+        null=True
+    )
+
     person_main_work = models.CharField(
         verbose_name='What was the person\'s mainly working as '
         'during the past 7 days?',
