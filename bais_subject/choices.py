@@ -589,3 +589,64 @@ HOUSEHOLD_RELATION = (
     ('OTHER RELATIVE', 'OTHER RELATIVE'),
     ('NOT RELATED', 'NOT RELTED'),
 )
+
+CITIZENSHIP = (
+    ('Botswana', 'Botswana'),
+    ('Angola', 'Angola'),
+    ('Lesotho', 'Lesotho'),
+    ('Malawi', 'Malawi'),
+    ('Mozambique', 'Mozambique'),
+    ('Namibia', 'Namibia'),
+    ('SouthAfrica', 'SouthAfrica'),
+    ('Swaziland', 'Swaziland'),
+    ('Zambia', 'Zambia'),
+    ('Zimbabwe', 'Zimbabwe'),
+    ('Tanzania', 'Tanzania'),
+    ('India', 'India'),
+    ('Mauritius', 'Mauritius'),
+    ('UK', 'UK'),
+    ('USA', 'USA'),
+    ('Other', 'Other'),
+)
+
+PERSON_HOUSEHOLD_LIVE = (
+    ('Yes, spent the night', 'Yes, spent the night'),
+    ('Yes, did not spend the night', 'Yes, did not spend the night'),
+    ('No, visitor', 'No, visitor'),
+)
+
+ATTENDED_SCHOOL = (
+    ('Yes, attending', 'Yes, attending'),
+    ('Yes, left', 'Yes, left'),
+    ('No', 'No'),
+)
+
+STUDY_LEVEL = (
+    ('Primary', 'Primary'),
+    ('Secondary', 'Secondary'),
+    ('Tertiary', 'Tertiary'),
+    ('None', 'None'),
+    ('Don\'t know', 'Don\'t know'),
+)
+
+UNPAID_REASON = (
+    ('Actively seeking work', 'Actively seeking work'),
+    ('Housework', 'Housework'),
+    ('Student', 'Student'),
+    ('Too old to work', 'Too old to work'),
+    ('Too sick to work', 'Too sick to work'),
+    ('Other', 'Other'),
+)
+
+MAIN_WORK = (
+    ('Employee - Paid cash  ', 'Employee - Paid cash  '),
+    ('Employee - Paid in kind only  ', 'Employee - Paid in kind only  '),
+    ('Self-employed(no employees)  ', 'Self-employed(no employees)  '),
+    ('Self-employed(with employees)    ', 'Self-employed(with employees)    '),
+    ('Member - Producer, Cooperatives ', 'Member - Producer, Cooperatives '),
+    ('Unpaid helper in family business    ',
+     'Unpaid helper in family business    '),
+    ('Working at own lands/cattlepost   ', 'Working at own lands/cattlepost   '),
+    ('Apprentice    ', 'Apprentice    '),
+    ('Volunteer', 'Volunteer'),
+)
