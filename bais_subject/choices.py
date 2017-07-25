@@ -590,7 +590,6 @@ HOUSEHOLD_RELATION = (
     ('NOT RELATED', 'NOT RELTED'),
 )
 
-<<<<<<< Updated upstream
 CITIZENSHIP = (
     ('Botswana', 'Botswana'),
     ('Angola', 'Angola'),
