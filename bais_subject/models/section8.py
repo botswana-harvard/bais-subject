@@ -2,7 +2,9 @@ from django.db import models
 
 from edc_base.model_fields import OtherCharField
 
-from ..choices import (YES_NO, TB_TREATMENT_SOURCE, TB_TIMES_TREATED)
+from ..choices import (YES_NO, TB_TREATMENT_SOURCE, TB_TIMES_TREATED,
+                        TB_SPUTUM_SAMPLE, TB_NO_SPUTUM, TB_HELP,
+                         TB_HELP_RESULT)
 
 
 class Section8:
@@ -69,7 +71,7 @@ class Section8:
         null=True,
         blank=False
     )
-    
+
     tb_cough_sputum = models.CharField(
         verbose_name='Do you cough up sputum?',
         max_length=35,
@@ -78,7 +80,7 @@ class Section8:
         null=True,
         blank=False
     )
-    
+
     tb_bloody_sputum = models.CharField(
         verbose_name='Does that sputum have blood in it?',
         max_length=35,
@@ -87,7 +89,7 @@ class Section8:
         null=True,
         blank=False
     )
-    
+
     tb_sputum_sample = models.CharField(
         verbose_name='Did you submit a sputum sample?',
         max_length=35,
@@ -100,8 +102,100 @@ class Section8:
     tb_sputum_sample_result = models.OtherField(
         verbose_name='If YES,What was the result?',
         max_length=35,
+        choices=TB_SPUTUM_SAMPLE,
+        help_text="",
+        null=True,
+        blank=False
+    )
+
+    tb_sputum_sample_result = models.OtherField(
+        verbose_name='If NO,Why not?',
+        max_length=35,
+        choices=TB_NO_SPUTUM,
+        help_text="",
+        null=True,
+        blank=False
+    )
+
+    tb_fever = models.CharField(
+        verbose_name='Do you have a fever?',
+        max_length=35,
         choices=YES_NO,
         help_text="",
         null=True,
         blank=False
-    )               
+    )
+
+    tb_sputum_sample_result = models.OtherField(
+        verbose_name='If YES,for how long?',
+        max_length=35,
+        choices=YES_NO,
+        help_text="",
+        null=True,
+        blank=False
+    )
+
+    tb_night_sweat = models.CharField(
+        verbose_name='Do you have drenching night sweats?'
+        '(So that you have to change your bedclothes)',
+        max_length=35,
+        choices=YES_NO,
+        help_text="",
+        null=True,
+        blank=False
+    ) 
+
+    tb_night_sweat_other = models.OtherField(
+        verbose_name='IF YEs, for how long?',
+        max_length=35,
+        choices=YES_NO,
+        help_text="",
+        null=True,
+        blank=False
+    )
+
+    tb_weight_loss = models.CharField(
+        verbose_name='In the past month, have you unexpectedly lost weight?',
+        max_length=35,
+        choices=YES_NO,
+        help_text="",
+        null=True,
+        blank=False
+    ) 
+
+    tb_help = models.CharField(
+        verbose_name='Thinking about these current symptoms,'
+        ' did you consult with someone for help?',
+        max_length=35,
+        choices=YES_NO,
+        help_text="",
+        null=True,
+        blank=False
+    )
+
+    tb_first_help = models.CharField(
+        verbose_name='Where did you FIRST go for help?',
+        max_length=35,
+        choices=TB_HELP,
+        help_text="",
+        null=True,
+        blank=False
+    )
+
+    tb_first_help_result = models.CharField(
+        verbose_name='If you consulted, what happened?                     ',
+        max_length=35,
+        choices=TB_HELP,
+        help_text="",
+        null=True,
+        blank=False
+    )
+
+    tb_no_help = models.CharField(
+        verbose_name='If you consulted, what happened?                     ',
+        max_length=35,
+        choices=TB_HELP_RESULT,
+        help_text="",
+        null=True,
+        blank=False
+    )
