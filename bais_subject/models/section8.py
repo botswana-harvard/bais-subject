@@ -1,10 +1,11 @@
 from django.db import models
 
 from edc_base.model_fields import OtherCharField
+from edc_base.model_validators import date_not_future
 
 from ..choices import (YES_NO, TB_TREATMENT_SOURCE, TB_TIMES_TREATED,
-                        TB_SPUTUM_SAMPLE, TB_NO_SPUTUM, TB_HELP,
-                         TB_HELP_RESULT, TB_NO_HELP_REASON, CANCER_TEST)
+                       TB_SPUTUM_SAMPLE, TB_NO_SPUTUM, TB_HELP,
+                       TB_HELP_RESULT, TB_NO_HELP_REASON, CANCER_TEST)
 
 
 class Section8:
@@ -45,13 +46,9 @@ class Section8:
         blank=False
     )
 
-    tb_treatment_date = models.CharField(
+    tb_treatment_date = models.DateField(
         verbose_name='In which month and year did you start treatment?',
-        max_length=35,
-        choices=,
-        help_text="",
-        null=True,
-        blank=False
+        validators=[date_not_future],
     )
 
     tb_cough = models.CharField(
@@ -97,7 +94,7 @@ class Section8:
         help_text="",
         null=True,
         blank=False
-    ) 
+    )
 
     tb_sputum_sample_result = models.OtherField(
         verbose_name='If YES,What was the result?',
@@ -143,7 +140,7 @@ class Section8:
         help_text="",
         null=True,
         blank=False
-    ) 
+    )
 
     tb_night_sweat_other = models.OtherField(
         verbose_name='IF YEs, for how long?',
@@ -161,7 +158,7 @@ class Section8:
         help_text="",
         null=True,
         blank=False
-    ) 
+    )
 
     tb_help = models.CharField(
         verbose_name='Thinking about these current symptoms,'
@@ -185,7 +182,7 @@ class Section8:
     tb_first_help_result = models.CharField(
         verbose_name='If you consulted, what happened?',
         max_length=35,
-        choices=TB_HELP,
+        choices=TB_HELP_RESULT,
         help_text="",
         null=True,
         blank=False
@@ -199,7 +196,7 @@ class Section8:
         null=True,
         blank=False
     )
-    
+
     diabetes_diagnosis = models.CharField(
         verbose_name='Have you ever been diagnosed with diabetes?',
         max_length=35,
@@ -207,9 +204,8 @@ class Section8:
         help_text="",
         null=True,
         blank=False
-    )    
-    
-    
+    )
+
     diabetes_treatment = models.CharField(
         verbose_name='Are you currently taking treatment for your diabetes?',
         max_length=35,
@@ -218,17 +214,17 @@ class Section8:
         null=True,
         blank=False
     )
-    
+
     cervical_cancer_screening = models.OtherField(
         verbose_name='Have you ever been screened by a doctor'
         ' or other health professional for cervical cancer?',
         max_length=35,
-        choices=YES_NO, #MOnth ago
+        choices=YES_NO,  # MOnth ago
         help_text="",
         null=True,
         blank=False
     )
-    
+
     last_cancer_test = models.OtherField(
         verbose_name='In the last 2 years when was the last time'
         'you tested for cancer? ',
@@ -237,7 +233,7 @@ class Section8:
         help_text="",
         null=True,
         blank=False
-    ) 
+    )
 
     cancer_test_result = models.CharField(
         verbose_name='Did the Doctor tell you that you may'
@@ -249,7 +245,6 @@ class Section8:
         blank=False
     )
 
-
     cancer_treatment_referral = models.OtherField(
         verbose_name='Were you referred for cervical cancer treatment?',
         max_length=35,
@@ -257,4 +252,7 @@ class Section8:
         help_text="",
         null=True,
         blank=False
-    ) 
+    )
+
+    class Meta:
+        app_label = 'bais_subject'

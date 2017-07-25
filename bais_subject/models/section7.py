@@ -1,8 +1,9 @@
 from django.db import models
 
 from edc_base.model_fields import OtherCharField
+from edc_base.model_validators import date_not_future
 
-from ..choices import (YES_NO, YES_NO_DONTWANT, TESTING_REASONS, TB_NONDISCLOSURE,
+from ..choices import (YES_NO, YES_NO_DONTWANT,
                        BABY_TEST, BABY_TEST_RESULT, BABY_FEEDING,
                        ANTE_NATAL_REASONS, ANTE_NATAL_TEST_RESULT)
 
@@ -27,12 +28,9 @@ class Section7:
         blank=False,
     )
 
-    baby_dob = models.IntegerField(
+    baby_dob = models.DateField(
         verbose_name='What is the date of birth of your youngest baby?',
-        max_length=35,
-        choices=YES_NO,
-        null=True,
-        blank=False,
+        validators=[date_not_future],
     )
 
     baby_hiv_test = models.CharField(
@@ -124,3 +122,6 @@ class Section7:
         null=True,
         blank=False,
     )
+
+    class Meta:
+        app_label = 'bais_subject'
