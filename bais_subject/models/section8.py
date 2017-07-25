@@ -96,7 +96,7 @@ class Section8(models.Model):
         blank=False
     )
 
-    tb_sputum_sample_result = models.OtherField(
+    tb_sputum_sample_result = OtherCharField(
         verbose_name='If YES,What was the result?',
         max_length=35,
         choices=TB_SPUTUM_SAMPLE,
@@ -105,7 +105,7 @@ class Section8(models.Model):
         blank=False
     )
 
-    tb_sputum_sample_result = models.OtherField(
+    tb_sputum_sample_result = OtherCharField(
         verbose_name='If NO,Why not?',
         max_length=35,
         choices=TB_NO_SPUTUM,
@@ -123,7 +123,7 @@ class Section8(models.Model):
         blank=False
     )
 
-    tb_sputum_sample_result = models.OtherField(
+    tb_sputum_sample_result = OtherCharField(
         verbose_name='If YES,for how long?',
         max_length=35,
         choices=YES_NO,
@@ -142,7 +142,7 @@ class Section8(models.Model):
         blank=False
     )
 
-    tb_night_sweat_other = models.OtherField(
+    tb_night_sweat_other = OtherCharField(
         verbose_name='IF YEs, for how long?',
         max_length=35,
         choices=YES_NO,
@@ -215,7 +215,7 @@ class Section8(models.Model):
         blank=False
     )
 
-    cervical_cancer_screening = models.OtherField(
+    cervical_cancer_screening = models.CharField(
         verbose_name='Have you ever been screened by a doctor'
         ' or other health professional for cervical cancer?',
         max_length=35,
@@ -225,7 +225,7 @@ class Section8(models.Model):
         blank=False
     )
 
-    last_cancer_test = models.OtherField(
+    last_cancer_test = OtherCharField(
         verbose_name='In the last 2 years when was the last time'
         'you tested for cancer? ',
         max_length=35,
@@ -245,7 +245,7 @@ class Section8(models.Model):
         blank=False
     )
 
-    cancer_treatment_referral = models.OtherField(
+    cancer_treatment_referral = models.CharField(
         verbose_name='Were you referred for cervical cancer treatment?',
         max_length=35,
         choices=YES_NO,
