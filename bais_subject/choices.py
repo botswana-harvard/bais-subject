@@ -590,6 +590,7 @@ HOUSEHOLD_RELATION = (
     ('NOT RELATED', 'NOT RELTED'),
 )
 
+<<<<<<< Updated upstream
 CITIZENSHIP = (
     ('Botswana', 'Botswana'),
     ('Angola', 'Angola'),
@@ -649,4 +650,15 @@ MAIN_WORK = (
     ('Working at own lands/cattlepost   ', 'Working at own lands/cattlepost   '),
     ('Apprentice    ', 'Apprentice    '),
     ('Volunteer', 'Volunteer'),
+)
+
+HELP_RECIEVED = (
+    ('COUNSELING', 'COUNSELING'),
+    ('FREE MEDICINE', 'FREE MEDICINE'),
+    ('EXTRA FOOD', 'EXTRA FOOD'),
+    ('MONEY', 'MONEY'),
+    ('HELP WITH TOILETRY', 'HELP WITH TOILETRY (wheel chairs,'
+     'disposable diapers, gloves)'),
+    ('OTHERS', 'OTHERS,SPECIFY'),
+
 )
