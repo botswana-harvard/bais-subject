@@ -558,3 +558,18 @@ TB_HELP_RESULT = (
     ('I WAS PRESCRIBED OTHER DRUGS', 'I WAS PRESCRIBED OTHER DRUGS'),
     ('OTHER, SPECIFY', 'OTHER, SPECIFY'),
 )
+
+TB_NO_HELP_REASON = (
+    ('NO M0NEY FOR TRANSPORT', 'NO M0NEY FOR TRANSPORT'),
+    ('HEALTH FACILITY WAS TOO FAR', 'HEALTH FACILITY WAS TOO FAR'),
+    ('I DID NOT FEEL SICK ENOUGH', 'I DID NOT FEEL SICK ENOUGH'),
+    ('I COUND NOT TAKE TIME OFF WORK', 'I COUND NOT TAKE TIME OFF WORK'),
+    ('OTHER, SPECIFY', 'OTHER, SPECIFY'),
+)
+
+CANCER_TEST = (
+    ('A month ago', 'A month ago'),
+    ('Three months back', 'Three months back'),
+    ('Six months back', 'Six months back'),
+    ('A year ago', 'A year ago'),
+)

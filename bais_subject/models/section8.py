@@ -4,7 +4,7 @@ from edc_base.model_fields import OtherCharField
 
 from ..choices import (YES_NO, TB_TREATMENT_SOURCE, TB_TIMES_TREATED,
                         TB_SPUTUM_SAMPLE, TB_NO_SPUTUM, TB_HELP,
-                         TB_HELP_RESULT)
+                         TB_HELP_RESULT, TB_NO_HELP_REASON, CANCER_TEST)
 
 
 class Section8:
@@ -183,7 +183,7 @@ class Section8:
     )
 
     tb_first_help_result = models.CharField(
-        verbose_name='If you consulted, what happened?                     ',
+        verbose_name='If you consulted, what happened?',
         max_length=35,
         choices=TB_HELP,
         help_text="",
@@ -192,10 +192,69 @@ class Section8:
     )
 
     tb_no_help = models.CharField(
-        verbose_name='If you consulted, what happened?                     ',
+        verbose_name='If you did not seek help, what were the reasons?',
         max_length=35,
-        choices=TB_HELP_RESULT,
+        choices=TB_NO_HELP_REASON,
         help_text="",
         null=True,
         blank=False
     )
+    
+    diabetes_diagnosis = models.CharField(
+        verbose_name='Have you ever been diagnosed with diabetes?',
+        max_length=35,
+        choices=YES_NO,
+        help_text="",
+        null=True,
+        blank=False
+    )    
+    
+    
+    diabetes_treatment = models.CharField(
+        verbose_name='Are you currently taking treatment for your diabetes?',
+        max_length=35,
+        choices=YES_NO,
+        help_text="",
+        null=True,
+        blank=False
+    )
+    
+    cervical_cancer_screening = models.OtherField(
+        verbose_name='Have you ever been screened by a doctor'
+        ' or other health professional for cervical cancer?',
+        max_length=35,
+        choices=YES_NO, #MOnth ago
+        help_text="",
+        null=True,
+        blank=False
+    )
+    
+    last_cancer_test = models.OtherField(
+        verbose_name='In the last 2 years when was the last time'
+        'you tested for cancer? ',
+        max_length=35,
+        choices=CANCER_TEST,
+        help_text="",
+        null=True,
+        blank=False
+    ) 
+
+    cancer_test_result = models.CharField(
+        verbose_name='Did the Doctor tell you that you may'
+        ' have problems with your cervix?',
+        max_length=35,
+        choices=YES_NO,
+        help_text="",
+        null=True,
+        blank=False
+    )
+
+
+    cancer_treatment_referral = models.OtherField(
+        verbose_name='Were you referred for cervical cancer treatment?',
+        max_length=35,
+        choices=YES_NO,
+        help_text="",
+        null=True,
+        blank=False
+    ) 
