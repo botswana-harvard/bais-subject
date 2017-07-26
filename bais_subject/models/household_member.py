@@ -5,7 +5,8 @@ from edc_base.model_validators import date_not_future
 
 from ..choices import (YES_NO, YES_NO_DNTKNW,
                        HELP_RECIEVED, HELP_RECIEVED_FROM, HELP_TYPE,
-                       SATISFACTION_LEVEL, DEATH_AGE, DEATH_CAUSE)
+                       SATISFACTION_LEVEL, DEATH_AGE, DEATH_CAUSE,
+                       TIME_SICK)
 
 
 class HouseholdMember(models.Model):
@@ -135,9 +136,16 @@ class HouseholdMember(models.Model):
 
     )
 
-    household_death_cause = models.IntegerField(
+    household_death_cause = models.CharField(
         verbose_name='From what cause did he/she die? ',
         choices=DEATH_CAUSE,
+        max_length=35,
+
+    )
+
+    household_time_sick = models.CharField(
+        verbose_name='For How long was he/she sick before he/she died?',
+        choices=TIME_SICK,
         max_length=35,
 
     )
