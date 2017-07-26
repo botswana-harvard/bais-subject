@@ -8,4 +8,4 @@ class AdminSite(DjangoAdminSite):
     site_url = '/bais_subject/list/'
 
 
-ambition_subject_admin = AdminSite(name='bais_subject_admin')
+bais_subject_admin = AdminSite(name='bais_subject_admin')
