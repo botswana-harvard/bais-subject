@@ -60,7 +60,7 @@ class Section5(models.Model):
         blank=False,
     )
 
-    hiv_and_aids_awareness = models.CharField(
+    tb_recent_information = models.CharField(
         verbose_name="In the past 4 weeks,have you heard or seen any information about TB?",
         max_length=35,
         choices=YES_NO,
@@ -79,7 +79,7 @@ class Section5(models.Model):
         help_text="Circle all that are mentioned more than one anwser is possible"
     )
 
-    hiv_and_aids_awareness = models.CharField(
+    tb_prevention = models.CharField(
         verbose_name="What can people do to prevent becoming infected with TB?",
         max_length=35,
         choices=YES_NO,
@@ -89,7 +89,7 @@ class Section5(models.Model):
         help_text="Circle all that are mentioned more than one anwser is possible"
     )
 
-    hiv_and_aids_awareness = models.CharField(
+    hiv_and_aids_appearance = models.CharField(
         verbose_name="Is it possible for a healthy looking person to have HIV?",
         max_length=35,
         choices=YES_NO_DNTKNW,
@@ -98,7 +98,7 @@ class Section5(models.Model):
         blank=False,
     )
 
-    hiv_and_aids_awareness = models.CharField(
+    hiv_and_aids_condom_use = models.CharField(
         verbose_name='Can people reduce their chances of getting HIV'
         ' and AIDS by using condom correctly everytime they have sex?',
         max_length=35,
@@ -108,7 +108,7 @@ class Section5(models.Model):
         blank=False,
     )
 
-    hiv_and_aids_awareness = models.CharField(
+    hiv_and_aids_mosquito_bite = models.CharField(
         verbose_name='Do you think a person can get infected'
         ' with HIV through mosquito bites?',
         max_length=35,
@@ -118,7 +118,7 @@ class Section5(models.Model):
         blank=False,
     )
 
-    hiv_and_aids_awareness = models.CharField(
+    hiv_and_aids_partners = models.CharField(
         verbose_name='Can people reduce their chances of getting'
         'HIV and AIDS by having only one uninfected'
         'sex partner who has no other partners?',
@@ -129,7 +129,7 @@ class Section5(models.Model):
         blank=False,
     )
 
-    hiv_and_aids_awareness = models.CharField(
+    hiv_and_aids_sharing_meal = models.CharField(
         verbose_name='Can a person get infected with HIv by sharing a '
         ' meal (from the same plate) with a person who has HIV and aids?',
         max_length=35,
@@ -139,7 +139,7 @@ class Section5(models.Model):
         blank=False,
     )
 
-    hiv_and_aids_awareness = models.CharField(
+    hiv_and_aids_witchcraft = models.CharField(
         verbose_name="Can people get HIV because of witchcraft?",
         max_length=35,
         choices=YES_NO_DNTKNW,
@@ -148,7 +148,7 @@ class Section5(models.Model):
         blank=False,
     )
 
-    hiv_and_aids_awareness = models.CharField(
+    hiv_and_aids_mother_to_child = models.CharField(
         verbose_name="Can HIV be transmitted from mother to child?",
         max_length=35,
         choices=YES_NO_DNTKNW,
@@ -157,7 +157,7 @@ class Section5(models.Model):
         blank=False,
     )
 
-    hiv_and_aids_awareness = models.CharField(
+    hiv_and_aids_unborn_baby = models.CharField(
         verbose_name='If a mother is infected with HIV AND AIDS,'
         ' is there any way to avoid transmission to the unborn baby?',
         max_length=35,
@@ -175,7 +175,7 @@ class Section5(models.Model):
         null=True
     )
 
-    hiv_and_aids_awareness = models.CharField(
+    hiv_and_aids_newborn_baby = models.CharField(
         verbose_name='If a mother is infected with HIV AND AIDS,'
         ' is there any way to avoid transmission to the newborn baby?',
         max_length=35,
@@ -193,7 +193,7 @@ class Section5(models.Model):
         null=True
     )
 
-    hiv_and_aids_awareness = models.CharField(
+    hiv_and_aids_treatment_options = models.CharField(
         verbose_name='What treatment options are available'
         ' for HIV infected people?',
         max_length=35,
@@ -349,7 +349,7 @@ class Section5(models.Model):
         blank=False,
     )
 
-    condom_collection = models.CharField(
+    condom_male_collection = models.CharField(
         verbose_name='Do you think it should be acceptable for a woman to obtain male condoms?',
         max_length=35,
         choices=YES_NO,
