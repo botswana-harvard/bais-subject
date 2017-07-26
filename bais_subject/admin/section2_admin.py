@@ -8,7 +8,7 @@ from ..models import Section2
 
 
 @admin.register(Section2, site=bais_subject_admin)
-class Section1Admin(admin.ModelAdmin):
+class Section2Admin(admin.ModelAdmin):
 
     #     form = Section1Form
 
