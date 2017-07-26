@@ -3,14 +3,14 @@ from django.contrib import admin
 from edc_base.modeladmin_mixins import audit_fieldset_tuple
 
 from ..admin_site import bais_subject_admin
-# from ..forms import Section1Form
+from ..forms import Section3Form
 from ..models import Section3
 
 
 @admin.register(Section3, site=bais_subject_admin)
 class Section3Admin(admin.ModelAdmin):
 
-    #     form = Section1Form
+    form = Section3Form
 
     radio_fields = {
         'sexual_intercouse': admin.VERTICAL,
