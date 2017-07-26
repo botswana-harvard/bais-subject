@@ -5,7 +5,7 @@ from edc_base.model_validators import date_not_future
 
 from ..choices import (YES_NO, YES_NO_DNTKNW,
                        HELP_RECIEVED, HELP_RECIEVED_FROM, HELP_TYPE,
-                       SATISFACTION_LEVEL)
+                       SATISFACTION_LEVEL, DEATH_AGE, DEATH_CAUSE)
 
 
 class HouseholdMember(models.Model):
@@ -110,6 +110,34 @@ class HouseholdMember(models.Model):
         ' who lived with this household for atleast 14 days '
         'died in the past 12 months ',
         choices=YES_NO_DNTKNW,
+        max_length=35,
+
+    )
+
+    household_deaths_review = models.IntegerField(
+        verbose_name='How many household members '
+        'have died in the last 12 months ',
+        max_length=35,
+
+    )
+
+    household_death_name = models.IntegerField(
+        verbose_name='What was the name of the person who died? ',
+        choices=YES_NO_DNTKNW,
+        max_length=35,
+
+    )
+
+    household_death_age = models.IntegerField(
+        verbose_name='How old was he/she when he/she died? ',
+        choices=DEATH_AGE,
+        max_length=35,
+
+    )
+
+    household_death_cause = models.IntegerField(
+        verbose_name='From what cause did he/she die? ',
+        choices=DEATH_CAUSE,
         max_length=35,
 
     )

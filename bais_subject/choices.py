@@ -697,3 +697,17 @@ SATISFACTION_LEVEL = (
     ('SATISFIED', 'SATISFIED'),
     ('NOT SATISFIED', 'NOT SATISFIED'),
 )
+
+DEATH_AGE = (
+    ('AGE', 'AGE'),
+    ('DON\'T KNOW', 'DON\'T KNOW'),
+)
+
+DEATH_CAUSE = (
+    ('AGE', 'AGE'),
+    ('STOKE', 'STROKE'),
+    ('TB', 'TB'),
+    ('MALARIA', 'MALARIA'),
+    ('VIOLENCE/INJURIES', 'VIOLENCE/INJURIES')
+    ('CAR/ROAD ACCIDENT', 'CAR/ROAD ACCIDENT')
+)
