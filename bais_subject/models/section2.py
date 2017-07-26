@@ -19,18 +19,18 @@ class Section2(models.Model):
         help_text='Alcohol'
     )
 
-    substance_method = models.CharField(
+    substance_method_alcohol = models.CharField(
         verbose_name='Method of use',
         max_length=15,
         choices=METHODS_OF_USE,
     )
 
-    substance_age = models.IntegerField(
+    substance_age_alcohol = models.IntegerField(
         verbose_name='Age at First Use',
         max_length=15,
     )
 
-    substance_frequency = models.CharField(
+    substance_frequency_alcohol = models.CharField(
         verbose_name='During the past 12 months, how frequently have '
         'you had the following substance?',
         max_length=15,
@@ -44,9 +44,16 @@ class Section2(models.Model):
         help_text='Tobacco'
     )
 
-    substance_age = models.IntegerField(
+    substance_age_tobacco = models.IntegerField(
         verbose_name='Age at First Use',
         max_length=15,
+    )
+
+    substance_frequency_tobacco = models.CharField(
+        verbose_name='During the past 12 months, how frequently have '
+        'you had the following substance?',
+        max_length=15,
+        choices=SUBSTANCE_FREQUENCY,
     )
 
     taken_marijuana = models.CharField(
@@ -56,12 +63,12 @@ class Section2(models.Model):
         help_text='Marijuana'
     )
 
-    substance_age = models.IntegerField(
+    substance_age_marijuana = models.IntegerField(
         verbose_name='Age at First Use',
         max_length=15,
     )
 
-    substance_frequency = models.CharField(
+    substance_frequency_marijuana = models.CharField(
         verbose_name='During the past 12 months, how frequently have '
         'you had the following substance?',
         max_length=15,
@@ -75,31 +82,31 @@ class Section2(models.Model):
         help_text='Cocaine'
     )
 
-    substance_age = models.IntegerField(
+    substance_age_cocaine = models.IntegerField(
         verbose_name='Age at First Use',
         max_length=15,
     )
 
-    substance_frequency = models.CharField(
+    substance_frequency_cocaine = models.CharField(
         verbose_name='During the past 12 months, how frequently have '
         'you had the following substance?',
         max_length=15,
         choices=SUBSTANCE_FREQUENCY,
     )
 
-    taken_crack_cocaine = models.CharField(
+    taken_crack_cocaine_crack = models.CharField(
         verbose_name='Have you taken any Crack Cocaine',
         max_length=5,
         choices=YES_NO,
         help_text='Crack Cocaine'
     )
 
-    substance_age = models.IntegerField(
+    substance_age_crack = models.IntegerField(
         verbose_name='Age at First Use',
         max_length=15,
     )
 
-    substance_frequency = models.CharField(
+    substance_frequency_crack = models.CharField(
         verbose_name='During the past 12 months, how frequently have '
         'you had the following substance?',
         max_length=15,
@@ -113,12 +120,12 @@ class Section2(models.Model):
         help_text='Methcathinone'
     )
 
-    substance_age = models.IntegerField(
+    substance_age_meth = models.IntegerField(
         verbose_name='Age at First Use',
         max_length=15,
     )
 
-    substance_frequency = models.CharField(
+    substance_frequency_meth = models.CharField(
         verbose_name='During the past 12 months, how frequently have '
         'you had the following substance?',
         max_length=15,
@@ -132,12 +139,12 @@ class Section2(models.Model):
         help_text='Nyaope'
     )
 
-    substance_age = models.IntegerField(
+    substance_age_nyaope = models.IntegerField(
         verbose_name='Age at First Use',
         max_length=15,
     )
 
-    substance_frequency = models.CharField(
+    substance_frequency_nyaope = models.CharField(
         verbose_name='During the past 12 months, how frequently have '
         'you had the following substance?',
         max_length=15,
@@ -151,12 +158,12 @@ class Section2(models.Model):
         help_text='Heroine'
     )
 
-    substance_age = models.IntegerField(
+    substance_age_heroine = models.IntegerField(
         verbose_name='Age at First Use',
         max_length=15,
     )
 
-    substance_frequency = models.CharField(
+    substance_frequency_heroine = models.CharField(
         verbose_name='During the past 12 months, how frequently have '
         'you had the following substance?',
         max_length=15,
@@ -170,6 +177,18 @@ class Section2(models.Model):
         help_text='Ecstasy (MDMA)'
     )
 
+    substance_age_ecstacy = models.IntegerField(
+        verbose_name='Age at First Use',
+        max_length=15,
+    )
+
+    substance_frequency_ecstacy = models.CharField(
+        verbose_name='During the past 12 months, how frequently have '
+        'you had the following substance?',
+        max_length=15,
+        choices=SUBSTANCE_FREQUENCY,
+    )
+
     taken_codeine = models.CharField(
         verbose_name='Have you taken any Codeine',
         max_length=5,
@@ -177,12 +196,12 @@ class Section2(models.Model):
         help_text='Codeine'
     )
 
-    substance_age = models.IntegerField(
+    substance_age_codeine = models.IntegerField(
         verbose_name='Age at First Use',
         max_length=15,
     )
 
-    substance_frequency = models.CharField(
+    substance_frequency_codeine = models.CharField(
         verbose_name='During the past 12 months, how frequently have '
         'you had the following substance?',
         max_length=15,
@@ -190,7 +209,7 @@ class Section2(models.Model):
     )
 
     substance_other = OtherCharField(
-        verbose_name='Other: ',
+        verbose_name='Other: ?',
         max_length=250,
         blank=True,
         null=True,
