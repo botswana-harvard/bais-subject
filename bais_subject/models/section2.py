@@ -94,7 +94,7 @@ class Section2(models.Model):
         choices=SUBSTANCE_FREQUENCY,
     )
 
-    taken_crack_cocaine_crack = models.CharField(
+    taken_crack_cocaine = models.CharField(
         verbose_name='Have you taken any Crack Cocaine',
         max_length=5,
         choices=YES_NO,
