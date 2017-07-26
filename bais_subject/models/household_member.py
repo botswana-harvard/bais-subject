@@ -4,7 +4,8 @@ from edc_base.model_fields import OtherCharField
 from edc_base.model_validators import date_not_future
 
 from ..choices import (YES_NO, YES_NO_DNTKNW,
-                       HELP_RECIEVED, HELP_RECIEVED_FROM, HELP_TYPE)
+                       HELP_RECIEVED, HELP_RECIEVED_FROM, HELP_TYPE,
+                       SATISFACTION_LEVEL)
 
 
 class HouseholdMember(models.Model):
@@ -88,4 +89,27 @@ class HouseholdMember(models.Model):
         max_length=35,
         null=True,
         blank=False,
+    )
+
+    household_help_provider = models.CharField(
+        verbose_name='Who provided the help or support? ',
+        choices=HELP_RECIEVED_FROM,
+        max_length=35,
+    )
+
+    household_help_review = models.CharField(
+        verbose_name='How satisfied is the household with the care'
+        ' or assistance given to ill persons? ',
+        choices=SATISFACTION_LEVEL,
+        max_length=35,
+
+    )
+
+    household_deaths = models.CharField(
+        verbose_name='Think back over the past 12 months. Has anyone'
+        ' who lived with this household for atleast 14 days '
+        'died in the past 12 months ',
+        choices=YES_NO_DNTKNW,
+        max_length=35,
+
     )
