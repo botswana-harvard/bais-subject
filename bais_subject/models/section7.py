@@ -82,7 +82,7 @@ class Section7(models.Model):
         blank=False,
     )
 
-    ante_natal_clinic_other = models.OtherField(
+    ante_natal_clinic_other = OtherCharField(
         verbose_name='If not, why? ',
         max_length=35,
         choices=ANTE_NATAL_REASONS,
@@ -99,7 +99,7 @@ class Section7(models.Model):
         blank=False,
     )
 
-    ante_natal_clinic_test_other = models.OtherField(
+    ante_natal_clinic_test_other = OtherCharField(
         verbose_name=' What was the result of your HIV test? ',
         max_length=35,
         choices=ANTE_NATAL_TEST_RESULT,
@@ -115,7 +115,7 @@ class Section7(models.Model):
         blank=False,
     )
 
-    ante_natal_clinic_partner_test = models.OtherField(
+    ante_natal_clinic_partner_test = OtherCharField(
         verbose_name='What was the result of your partner’s HIV test?',
         max_length=35,
         choices=ANTE_NATAL_TEST_RESULT,
