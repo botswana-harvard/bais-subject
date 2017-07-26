@@ -49,13 +49,6 @@ class Section2(models.Model):
         max_length=15,
     )
 
-    substance_frequency = models.CharField(
-        verbose_name='During the past 12 months, how frequently have '
-        'you had the following substance?',
-        max_length=15,
-        choices=SUBSTANCE_FREQUENCY,
-    )
-
     taken_marijuana = models.CharField(
         verbose_name='Have you taken any of the following SUBSTANCE?',
         max_length=5,
