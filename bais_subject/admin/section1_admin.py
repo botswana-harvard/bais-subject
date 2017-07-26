@@ -26,7 +26,7 @@ class Section1Admin(admin.ModelAdmin):
         'spouse_visit': admin.VERTICAL}
 
     fieldsets = (
-        ('Initial Report', {
+        ('Section 1', {
             'fields': (
                 'respondent_sex',
                 'respondent_age',
