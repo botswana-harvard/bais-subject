@@ -45,7 +45,7 @@ class HouseholdQuestionnaireAnswers(models.Model):
         choices=MALE_FEMALE,
     )
 
-    person_gender = models.CharField(
+    person_age = models.CharField(
         verbose_name='How old is the person in completed years?',
         max_length=45,
         help_text='RECORD EXACT AGE IN YEARS AND MONTHS FOR THOSE '
