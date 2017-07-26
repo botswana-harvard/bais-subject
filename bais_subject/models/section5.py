@@ -31,7 +31,7 @@ class Section5(models.Model):
         blank=False
     )
 
-    hiv_and_aids_awareness = models.CharField(
+    hiv_and_aids_information = models.CharField(
         verbose_name="From what source(s) did you recieve information about HIV and AIDS?",
         max_length=35,
         choices=YES_NO,
@@ -41,7 +41,7 @@ class Section5(models.Model):
         help_text="Circle all that are mentioned more than one anwser is possible"
     )
 
-    hiv_and_aids_awareness = models.CharField(
+    hiv_and_aids_prevention = models.CharField(
         verbose_name="What can people do to prevent becoming infected with HIV?",
         max_length=35,
         choices=YES_NO,
@@ -51,7 +51,7 @@ class Section5(models.Model):
         help_text="Circle all that are mentioned more than one anwser is possible"
     )
 
-    hiv_and_aids_awareness = models.CharField(
+    tb_awareness = models.CharField(
         verbose_name="Have you ever heard of TB?",
         max_length=35,
         choices=YES_NO,
