@@ -19,7 +19,6 @@ class Section5(models.Model):
         max_length=35,
         choices=YES_NO,
         help_text="",
-        null=True,
     )
 
     hiv_and_aids_awareness_b = models.CharField(
@@ -27,8 +26,6 @@ class Section5(models.Model):
         max_length=35,
         choices=YES_NO,
         help_text="",
-        null=True,
-        blank=False
     )
 
     hiv_and_aids_information = models.CharField(
@@ -36,8 +33,6 @@ class Section5(models.Model):
         max_length=35,
         choices=YES_NO,
         help_text="",
-        null=True,
-        blank=False,
         help_text="Circle all that are mentioned more than one anwser is possible"
     )
 
@@ -46,8 +41,6 @@ class Section5(models.Model):
         max_length=35,
         choices=YES_NO,
         help_text="",
-        null=True,
-        blank=False,
         help_text="Circle all that are mentioned more than one anwser is possible"
     )
 
@@ -56,8 +49,6 @@ class Section5(models.Model):
         max_length=35,
         choices=YES_NO,
         help_text="",
-        null=True,
-        blank=False,
     )
 
     tb_recent_information = models.CharField(
@@ -65,8 +56,6 @@ class Section5(models.Model):
         max_length=35,
         choices=YES_NO,
         help_text="",
-        null=True,
-        blank=False,
     )
 
     hiv_and_aids_awareness = models.CharField(
@@ -74,8 +63,6 @@ class Section5(models.Model):
         max_length=35,
         choices=YES_NO,
         help_text="",
-        null=True,
-        blank=False,
         help_text="Circle all that are mentioned more than one anwser is possible"
     )
 
@@ -94,8 +81,6 @@ class Section5(models.Model):
         max_length=35,
         choices=YES_NO_DNTKNW,
         help_text="",
-        null=True,
-        blank=False,
     )
 
     hiv_and_aids_condom_use = models.CharField(
@@ -104,8 +89,6 @@ class Section5(models.Model):
         max_length=35,
         choices=YES_NO_DNTKNW,
         help_text="",
-        null=True,
-        blank=False,
     )
 
     hiv_and_aids_mosquito_bite = models.CharField(
@@ -114,8 +97,6 @@ class Section5(models.Model):
         max_length=35,
         choices=YES_NO_DNTKNW,
         help_text="",
-        null=True,
-        blank=False,
     )
 
     hiv_and_aids_partners = models.CharField(
@@ -125,8 +106,6 @@ class Section5(models.Model):
         max_length=35,
         choices=YES_NO_DNTKNW,
         help_text="",
-        null=True,
-        blank=False,
     )
 
     hiv_and_aids_sharing_meal = models.CharField(
@@ -135,8 +114,6 @@ class Section5(models.Model):
         max_length=35,
         choices=YES_NO_DNTKNW,
         help_text="",
-        null=True,
-        blank=False,
     )
 
     hiv_and_aids_witchcraft = models.CharField(
@@ -144,8 +121,6 @@ class Section5(models.Model):
         max_length=35,
         choices=YES_NO_DNTKNW,
         help_text="",
-        null=True,
-        blank=False,
     )
 
     hiv_and_aids_mother_to_child = models.CharField(
@@ -153,8 +128,6 @@ class Section5(models.Model):
         max_length=35,
         choices=YES_NO_DNTKNW,
         help_text="",
-        null=True,
-        blank=False,
     )
 
     hiv_and_aids_unborn_baby = models.CharField(
@@ -163,16 +136,12 @@ class Section5(models.Model):
         max_length=35,
         choices=YES_NO_DNTKNW,
         help_text="",
-        null=True,
-        blank=False,
     )
 
     hiv_and_aids_awareness_other = OtherCharField(
         verbose_name='If yes, what ways',
         max_length=250,
         choices=TRANSMISSION_PREVENTION,
-        blank=True,
-        null=True
     )
 
     hiv_and_aids_newborn_baby = models.CharField(
@@ -180,17 +149,12 @@ class Section5(models.Model):
         ' is there any way to avoid transmission to the newborn baby?',
         max_length=35,
         choices=YES_NO_DNTKNW,
-        help_text="",
-        null=True,
-        blank=False,
     )
 
     hiv_and_aids_awareness_other = OtherCharField(
         verbose_name='If yes, what ways',
         max_length=250,
         choices=TRANSMISSION_PREVENTION,
-        blank=True,
-        null=True
     )
 
     hiv_and_aids_treatment_options = models.CharField(
@@ -198,18 +162,12 @@ class Section5(models.Model):
         ' for HIV infected people?',
         max_length=35,
         choices=TREATMENT_OPTIONS,
-        help_text="",
-        null=True,
-        blank=False,
     )
 
     arv_treatment = models.CharField(
         verbose_name='What do you believe anti -retroviral (ARVs) do?',
         max_length=35,
         choices=ARV_USES,
-        help_text="",
-        null=True,
-        blank=False,
     )
 
     arv_treatment_concern = models.CharField(
@@ -217,43 +175,30 @@ class Section5(models.Model):
         'since the introduction of ARV’s?',
         max_length=35,
         choices=ARV_USES,
-        help_text="",
-        null=True,
-        blank=False,
     )
 
     arv_treatment_concern_other = OtherCharField(
         verbose_name='If yes, what ways',
         max_length=250,
         choices=ARV_CONCERN,
-        blank=True,
-        null=True
     )
 
     arv_treatment_condomize = models.CharField(
         verbose_name='Do you think that people on ARV’s should always use condoms?',
         max_length=35,
         choices=YES_NO_DNTKNW,
-        help_text="",
-        null=True,
-        blank=False,
     )
 
     arv_sexual_behaviour = models.CharField(
         verbose_name='Has introduction of ARVs influenced your sexual behavior?',
         max_length=35,
         choices=YES_NO_NEVER_HAD_SEX_DNTKNW,
-        help_text="",
-        null=True,
-        blank=False,
     )
 
     arv_sexual_behaviour_other = OtherCharField(
         verbose_name='If yes, what ways',
         max_length=250,
         choices=SEXUAL_BEHAVIOUR,
-        blank=True,
-        null=True
     )
 
     arv_intake = models.CharField(
@@ -261,57 +206,42 @@ class Section5(models.Model):
         'discontinue/stop taking them once they feel better?',
         max_length=35,
         choices=YES_NO_DNTKNW,
-        help_text="",
-        null=True,
-        blank=False,
     )
 
     tb_appearance = models.CharField(
         verbose_name='Is it possible for a healthy looking person to have TB?',
         max_length=35,
         choices=YES_NO_DNTKNW,
-        null=True,
-        blank=False,
     )
 
     tb_infection = models.CharField(
         verbose_name='In your opinion, who can be infected with TB?',
         max_length=35,
         choices=TB_INFECTION,
-        null=True,
-        blank=False,
     )
 
     tb_spread = models.CharField(
         verbose_name='In your opinion, who can be infected with TB?',
         max_length=35,
         choices=TB_SPREAD,
-        null=True,
-        blank=False,
     )
 
     tb_cure = models.CharField(
         verbose_name='Do you think that TB can be treated /curable?',
         max_length=35,
         choices=YES_NO_DNTKNW,
-        null=True,
-        blank=False,
     )
 
-    tb_cure_other = OtherCharField(
+    tb_cure_other = models.CharField(
         verbose_name='How can Tb be cured?',
         max_length=250,
         choices=TB_CURE,
-        blank=True,
-        null=True
     )
 
     smc_programme = models.CharField(
         verbose_name='Have you ever heard of Safe Male Circumcision or SMC programme?',
         max_length=35,
         choices=YES_NO,
-        null=True,
-        blank=False,
     )
 
     smc_programme_awareness = models.CharField(
@@ -319,8 +249,6 @@ class Section5(models.Model):
         'seen any information on Safe Male Circumcision (SMC)?',
         max_length=35,
         choices=YES_NO,
-        null=True,
-        blank=False,
     )
 
     smc_programme_source = models.CharField(
@@ -328,8 +256,6 @@ class Section5(models.Model):
         'information about Safe Male Circumcision or SMC',
         max_length=35,
         choices=SMC_SOURCE,
-        null=True,
-        blank=False,
     )
 
     smc_programme_interest = models.CharField(
@@ -337,45 +263,35 @@ class Section5(models.Model):
         ' would you get them circumcised?',
         max_length=35,
         choices=YES_NO,
-        null=True,
-        blank=False,
     )
 
     smc_condomize_ = models.CharField(
         verbose_name='Do you think a circumcised male should stop using condoms?',
         max_length=35,
         choices=YES_NO,
-        null=True,
-        blank=False,
     )
 
     condom_male_collection = models.CharField(
         verbose_name='Do you think it should be acceptable for a woman to obtain male condoms?',
         max_length=35,
         choices=YES_NO,
-        null=True,
-        blank=False,
     )
 
-    condom_collection_other = OtherCharField(
+    condom_collection_other = models.CharField(
         verbose_name='Do you think it should be acceptable'
         ' for a man to obtain female condoms?',
         max_length=250,
         choices=YES_NO_UNSURE,
-        blank=True,
-        null=True
     )
 
-    condom_consent = OtherCharField(
+    condom_consent = models.CharField(
         verbose_name=' Do you agree that a woman has a right to decide'
         'if she will have safe sex? (e.g use a condom)',
         max_length=35,
         choices=YES_NO_UNSURE,
-        null=True,
-        blank=False,
     )
 
-    condom_consent_other = OtherCharField(
+    condom_consent_other = models.CharField(
         verbose_name=' Why not?',
         max_length=35,
         choices=CONDOM_CONSENT,
