@@ -4,10 +4,10 @@ from edc_base.modeladmin_mixins import audit_fieldset_tuple
 
 from ..admin_site import bais_subject_admin
 from ..forms import Section4Form
-from ..models import Section3
+from ..models import Section4
 
 
-@admin.register(Section3, site=bais_subject_admin)
+@admin.register(Section4, site=bais_subject_admin)
 class Section3Admin(admin.ModelAdmin):
 
     form = Section4Form
