@@ -4,7 +4,7 @@ from edc_base.model_fields import OtherCharField
 from edc_base.model_validators import date_not_future
 
 from ..choices import (YES_NO, YES_NO_DNTKNW,
-                       HELP_RECIEVED, HELP_RECIEVED_FROM)
+                       HELP_RECIEVED, HELP_RECIEVED_FROM, HELP_TYPE)
 
 
 class HouseholdMember(models.Model):
@@ -80,5 +80,12 @@ class HouseholdMember(models.Model):
     household_illness_help = models.CharField(
         verbose_name='What kind of help or support did you recieve? ',
         max_length=35,
-        choices=YES_NO_DNTKNW,
+        choices=HELP_TYPE,
+    )
+
+    household_illness_help_other = OtherCharField(
+        verbose_name='Other (Specify) ',
+        max_length=35,
+        null=True,
+        blank=False,
     )
