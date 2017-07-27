@@ -15,7 +15,6 @@ class Section7Admin(admin.ModelAdmin):
     radio_fields = {
         'given_birth': admin.VERTICAL,
         'given_birth_past_5yrs': admin.VERTICAL,
-        'baby_dob': admin.VERTICAL,
         'baby_hiv_test': admin.VERTICAL,
         'baby_feeding': admin.VERTICAL,
         'currently_pregnant': admin.VERTICAL,
