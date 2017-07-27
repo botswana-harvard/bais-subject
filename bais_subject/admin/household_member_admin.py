@@ -14,7 +14,6 @@ class HouseholdMemberAdmin(admin.ModelAdmin):
 
     radio_fields = {
         'bedridden_member': admin.VERTICAL,
-        'member_age': admin.VERTICAL,
         'household_help': admin.VERTICAL,
         'household_help_received': admin.VERTICAL,
         'household_help_received': admin.VERTICAL,
@@ -25,7 +24,6 @@ class HouseholdMemberAdmin(admin.ModelAdmin):
         'household_help_provider': admin.VERTICAL,
         'household_help_review': admin.VERTICAL,
         'household_deaths': admin.VERTICAL,
-        'household_death_name': admin.VERTICAL,
         'household_death_age': admin.VERTICAL,
         'household_death_cause': admin.VERTICAL,
         'household_time_sick': admin.VERTICAL}
