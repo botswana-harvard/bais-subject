@@ -62,7 +62,7 @@ class Section5(models.Model):
         help_text="",
         help_text="Circle all that are mentioned more than one anwser is possible"
     )
-    
+
     tb_information_source_other = OtherCharField(
         verbose_name='Other,Specify',
         blank=False,
@@ -73,16 +73,14 @@ class Section5(models.Model):
         max_length=35,
         choices=YES_NO,
         help_text="",
-        null=True,
-        blank=False,
         help_text="Circle all that are mentioned more than one anwser is possible"
     )
-    
+
     tb_prevention_other = OtherCharField(
         verbose_name='Other,Specify',
         null=True,
-        blank=False
-    )    
+        blank=True,
+    )
 
     hiv_and_aids_appearance = models.CharField(
         verbose_name="Is it possible for a healthy looking person to have HIV?",
@@ -151,7 +149,7 @@ class Section5(models.Model):
         max_length=250,
         choices=TRANSMISSION_PREVENTION,
     )
-    
+
     hiv_and_aids_unborn_baby_transmission_other = OtherCharField(
         verbose_name='Other, Specify',
         max_length=35,
@@ -169,7 +167,7 @@ class Section5(models.Model):
         max_length=250,
         choices=TRANSMISSION_PREVENTION,
     )
-    
+
     hiv_and_aids_newborn_baby_transmission_other = OtherCharField(
         verbose_name='Other, Specify',
         max_length=250,
@@ -181,7 +179,7 @@ class Section5(models.Model):
         max_length=35,
         choices=TREATMENT_OPTIONS,
     )
-    
+
     hiv_and_aids_treatment_options_other = OtherCharField(
         verbose_name='OTHER, SPECIFY',
         max_length=35,
@@ -205,11 +203,11 @@ class Section5(models.Model):
         max_length=250,
         choices=ARV_CONCERN,
     )
-    
+
     arv_treatment_concern_yes_other = OtherCharField(
         verbose_name='Other, Specify',
         max_length=250,
-    )    
+    )
 
     arv_treatment_condomize = models.CharField(
         verbose_name='Do you think that people on ARV’s should always use condoms?',
@@ -228,11 +226,11 @@ class Section5(models.Model):
         max_length=250,
         choices=SEXUAL_BEHAVIOUR,
     )
-    
+
     arv_sexual_behaviour_yes_other = OtherCharField(
         verbose_name='OTHER, SPECIFY',
         max_length=250,
-    )    
+    )
 
     arv_intake = models.CharField(
         verbose_name='Do you think a person on ARVs should '
@@ -252,22 +250,22 @@ class Section5(models.Model):
         max_length=35,
         choices=TB_INFECTION,
     )
-    
+
     tb_infection_other = OtherCharField(
         verbose_name='OTHER, SPECIFY',
         max_length=35,
-    )    
+    )
 
     tb_spread = models.CharField(
         verbose_name='How can a person get tb?',
         max_length=35,
         choices=TB_SPREAD,
     )
-    
+
     tb_spread_other = OtherCharField(
         verbose_name='OTHER, SPECIFY',
         max_length=35,
-    )    
+    )
 
     tb_cure = models.CharField(
         verbose_name='Do you think that TB can be treated /curable?',
@@ -280,11 +278,11 @@ class Section5(models.Model):
         max_length=250,
         choices=TB_CURE,
     )
-    
+
     tb_cure_yes_other = OtherCharField(
         verbose_name='OTHER, SPECIFY',
         max_length=250,
-    )    
+    )
 
     smc_programme = models.CharField(
         verbose_name='Have you ever heard of Safe Male Circumcision or SMC programme?',
@@ -305,11 +303,11 @@ class Section5(models.Model):
         max_length=35,
         choices=SMC_SOURCE,
     )
-    
-   smc_programme_source_other = OtherCharField(
+
+    smc_programme_source_other = OtherCharField(
         verbose_name='OTHER, SPECIFY',
         max_length=35,
-    )    
+    )
 
     smc_programme_interest = models.CharField(
         verbose_name='Suppose you had male children aged below 18 years'
@@ -351,14 +349,11 @@ class Section5(models.Model):
         null=True,
         blank=False,
     )
-    
+
     condom_consent_woman_other = OtherCharField(
         verbose_name=' OTHER, SPECIFY',
         max_length=35,
-        choices=CONDOM_CONSENT,
-        null=True,
-        blank=False,
-    )    
+    )
 
     class Meta:
         app_label = 'bais_subject'
