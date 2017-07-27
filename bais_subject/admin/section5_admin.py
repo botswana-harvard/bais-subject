@@ -46,8 +46,7 @@ class Section5Admin(admin.ModelAdmin):
         'smc_condomize': admin.VERTICAL,
         'condom_male_collection': admin.VERTICAL,
         'condom_collection_man': admin.VERTICAL,
-        'condom_consent': admin.VERTICAL,
-        'condom_consent_woman': admin.VERTICAL, }
+        'condom_consent': admin.VERTICAL, }
 
     fieldsets = (
         ('Section 5', {
@@ -82,7 +81,8 @@ class Section5Admin(admin.ModelAdmin):
                 'smc_programme_source',
                 'smc_programme_interest',
                 'smc_condomize',
-                'condom_male_collection')},
+                'condom_male_collection'
+                'condom_consent',)},
          ),
         audit_fieldset_tuple
     )
