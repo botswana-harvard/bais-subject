@@ -14,12 +14,9 @@ class Section5Admin(admin.ModelAdmin):
 
     radio_fields = {
         'hiv_and_aids_awareness': admin.VERTICAL,
-        'hiv_and_aids_awareness_b': admin.VERTICAL,
         'hiv_and_aids_information': admin.VERTICAL,
         'hiv_and_aids_prevention': admin.VERTICAL,
         'tb_awareness': admin.VERTICAL,
-        'tb_recent_information': admin.VERTICAL,
-        'tb_information_source': admin.VERTICAL,
         'tb_prevention': admin.VERTICAL,
         'hiv_and_aids_appearance': admin.VERTICAL,
         'hiv_and_aids_condom_use': admin.VERTICAL,
@@ -61,8 +58,6 @@ class Section5Admin(admin.ModelAdmin):
                 'hiv_and_aids_information',
                 'hiv_and_aids_prevention',
                 'tb_awareness',
-                'tb_recent_information',
-                'tb_information_source',
                 'tb_prevention',
                 'hiv_and_aids_appearance',
                 'hiv_and_aids_condom_use',
