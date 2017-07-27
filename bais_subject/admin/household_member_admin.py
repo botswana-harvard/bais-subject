@@ -13,21 +13,21 @@ class HouseholdMemberAdmin(admin.ModelAdmin):
 
     radio_fields = {
         'bedridden_member': admin.VERTICAL,
-        'person_gender': admin.VERTICAL,
-        'person_citizenship': admin.VERTICAL,
-        'person_household_live': admin.VERTICAL,
-        'person_marital_status': admin.VERTICAL,
-        'person_biological_mother_alive': admin.VERTICAL,
-        'person_biological_mother_household_live': admin.VERTICAL,
-        'person_biological_father_alive': admin.VERTICAL,
-        'person_biological_father_household_live': admin.VERTICAL,
-        'person_attended_school': admin.VERTICAL,
-        'person_currently_studying': admin.VERTICAL,
-        'person_highest_study_level': admin.VERTICAL,
-        'person_work_profit': admin.VERTICAL,
-        'person_work_unpaid': admin.VERTICAL,
-        'person_work_unpaid_reason': admin.VERTICAL,
-        'person_main_work': admin.VERTICAL}
+        'member_age': admin.VERTICAL,
+        'household_help': admin.VERTICAL,
+        'household_help_received': admin.VERTICAL,
+        'household_help_received',
+        'household_help_received_from': admin.VERTICAL,
+        'household_illness': admin.VERTICAL,
+        'household_illness_support': admin.VERTICAL,
+        'household_illness_help': admin.VERTICAL,
+        'household_help_provider': admin.VERTICAL,
+        'household_help_review': admin.VERTICAL,
+        'household_deaths': admin.VERTICAL,
+        'household_death_name': admin.VERTICAL,
+        'household_death_age': admin.VERTICAL,
+        'household_death_cause': admin.VERTICAL,
+        'household_time_sick': admin.VERTICAL}
 
     fieldsets = (
         ('Household Member', {
@@ -45,7 +45,7 @@ class HouseholdMemberAdmin(admin.ModelAdmin):
                 'household_deaths',
                 ' household_deaths_review',
                 'household_death_name',
-                'phousehold_death_age',
+                'household_death_age',
                 'household_death_cause',
                 'household_time_sick',)},
          ),

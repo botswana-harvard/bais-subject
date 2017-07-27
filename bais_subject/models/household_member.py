@@ -72,7 +72,7 @@ class HouseholdMember(models.Model):
         choices=YES_NO,
     )
 
-    household_illness = models.CharField(
+    household_illness_support = models.CharField(
         verbose_name='In the past 12 months has your household recieved  any help or support specifically for'
         'children living with sick parents/gaurdians ',
         max_length=35,
