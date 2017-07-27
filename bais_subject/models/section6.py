@@ -14,9 +14,6 @@ class Section6(models.Model):
         ' with a person you knew or suspected had HIV AND AIDS?',
         max_length=35,
         choices=YES_NO,
-        help_text="",
-        null=True,
-        blank=False
     )
 
     aids_household_care = models.CharField(
@@ -24,9 +21,6 @@ class Section6(models.Model):
         ' would you be willing to care for him or her in your household?',
         max_length=35,
         choices=YES_NO,
-        help_text="",
-        null=True,
-        blank=False
     )
 
     tb_household_care = models.CharField(
@@ -34,9 +28,6 @@ class Section6(models.Model):
         ' would you be willing to care for him or her in your household?',
         max_length=35,
         choices=YES_NO,
-        help_text="",
-        null=True,
-        blank=False
     )
 
     tb_household_care = models.CharField(
@@ -44,9 +35,6 @@ class Section6(models.Model):
         ' would you be willing to care for him or her in your household?',
         max_length=35,
         choices=YES_NO,
-        help_text="",
-        null=True,
-        blank=False
     )
 
     aids_housekeeper = models.CharField(
@@ -56,9 +44,6 @@ class Section6(models.Model):
         ' working/assisting with babysitting in your house? ',
         max_length=35,
         choices=YES_NO,
-        help_text="",
-        null=True,
-        blank=False
     )
 
     aids_teacher = models.CharField(
@@ -66,9 +51,6 @@ class Section6(models.Model):
         ' should s/he be allowed to continue teaching in school?',
         max_length=35,
         choices=YES_NO,
-        help_text="",
-        null=True,
-        blank=False
     )
 
     aids_shopkeeper = models.CharField(
@@ -76,9 +58,7 @@ class Section6(models.Model):
         ' HIV or AIDS, would you buy vegetables from them?',
         max_length=35,
         choices=YES_NO,
-        help_text="",
-        null=True,
-        blank=False
+
     )
 
     aids_family_member = models.CharField(
@@ -87,8 +67,6 @@ class Section6(models.Model):
         max_length=35,
         choices=YES_NO,
         help_text="",
-        null=True,
-        blank=False
     )
 
     aids_children = models.CharField(
@@ -96,9 +74,6 @@ class Section6(models.Model):
         'should attend school with children who are HIV negative?',
         max_length=35,
         choices=YES_NO,
-        help_text="",
-        null=True,
-        blank=False
     )
 
     aids_room_sharing = models.CharField(
@@ -106,9 +81,6 @@ class Section6(models.Model):
         'with a person you knew has been diagnosed with TB?',
         max_length=35,
         choices=YES_NO,
-        help_text="",
-        null=True,
-        blank=False
     )
 
     aids_hiv_testing = models.CharField(
