@@ -64,7 +64,7 @@ class Section5(models.Model):
 
     tb_information_source_other = OtherCharField(
         verbose_name='Other,Specify',
-        blank=False,
+        blank=True,
     )
 
     tb_prevention = models.CharField(
@@ -345,7 +345,7 @@ class Section5(models.Model):
         max_length=35,
         choices=CONDOM_CONSENT,
         null=True,
-        blank=False,
+        blank=True,
     )
 
     condom_consent_woman_other = OtherCharField(

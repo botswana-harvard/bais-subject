@@ -109,8 +109,8 @@ class Section6(models.Model):
     aids_hiv_test_reason_other = OtherCharField(
         verbose_name='SPECIFY OTHER',
         max_length=35,
-        null=False,
-        blank=False,
+        null=True,
+        blank=True,
     )
 
     aids_hiv_not_tested = models.CharField(
@@ -122,8 +122,8 @@ class Section6(models.Model):
     aids_hiv_not_tested_other = OtherCharField(
         verbose_name='OTHER SPECIFY',
         max_length=35,
-        null=False,
-        blank=False,
+        null=True,
+        blank=True,
     )
 
     aids_hiv_test_result = models.CharField(
@@ -153,8 +153,8 @@ class Section6(models.Model):
     current_arv_supplier_other = OtherCharField(
         verbose_name='OTHER, SPECIFY',
         max_length=35,
-        null=False,
-        blank=False,
+        null=True,
+        blank=True,
     )
 
     not_on_arv_therapy = models.CharField(
@@ -166,8 +166,8 @@ class Section6(models.Model):
     not_on_arv_therapy_other = OtherCharField(
         verbose_name='OTHER SPECIFY',
         max_length=35,
-        null=False,
-        blank=False,
+        null=True,
+
     )
 
     tb_reaction = models.CharField(
@@ -180,8 +180,8 @@ class Section6(models.Model):
     tb_reaction_other = OtherCharField(
         verbose_name='OTHER SPECIFY',
         max_length=35,
-        null=False,
-        blank=False,
+        null=True,
+        blank=True,
     )
 
     tb_diagnosis = models.CharField(

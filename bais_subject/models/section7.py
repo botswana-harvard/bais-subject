@@ -17,7 +17,7 @@ class Section7(models.Model):
         max_length=35,
         choices=YES_NO,
         null=True,
-        blank=False
+        blank=True
     )
 
     given_birth_past_5yrs = models.CharField(
@@ -25,7 +25,7 @@ class Section7(models.Model):
         max_length=35,
         choices=YES_NO,
         null=True,
-        blank=False,
+        blank=True,
     )
 
     baby_dob = models.DateField(
@@ -39,7 +39,7 @@ class Section7(models.Model):
         max_length=35,
         choices=BABY_TEST,
         null=True,
-        blank=False,
+        blank=True,
     )
 
     baby_hiv_test_result = models.CharField(
@@ -47,7 +47,7 @@ class Section7(models.Model):
         max_length=35,
         choices=BABY_TEST_RESULT,
         null=True,
-        blank=False,
+        blank=True,
     )
 
     baby_arv = models.CharField(
@@ -55,7 +55,7 @@ class Section7(models.Model):
         max_length=35,
         choices=YES_NO_DONTWANT,
         null=True,
-        blank=False,
+        blank=True,
     )
 
     baby_feeding = models.CharField(
@@ -63,7 +63,7 @@ class Section7(models.Model):
         max_length=35,
         choices=BABY_FEEDING,
         null=True,
-        blank=False,
+        blank=True,
     )
 
     currently_pregnant = models.CharField(
@@ -71,7 +71,7 @@ class Section7(models.Model):
         max_length=35,
         choices=YES_NO,
         null=True,
-        blank=False,
+        blank=True,
     )
 
     ante_natal_clinic = models.CharField(
@@ -79,7 +79,7 @@ class Section7(models.Model):
         max_length=35,
         choices=YES_NO,
         null=True,
-        blank=False,
+        blank=True,
     )
 
     ante_natal_clinic_other = OtherCharField(
@@ -87,7 +87,7 @@ class Section7(models.Model):
         max_length=35,
         choices=ANTE_NATAL_REASONS,
         null=True,
-        blank=False,
+        blank=True,
     )
 
     ante_natal_clinic_test = models.CharField(
@@ -96,7 +96,7 @@ class Section7(models.Model):
         max_length=35,
         choices=YES_NO,
         null=True,
-        blank=False,
+        blank=True,
     )
 
     ante_natal_clinic_test_other = OtherCharField(
@@ -104,7 +104,7 @@ class Section7(models.Model):
         max_length=35,
         choices=ANTE_NATAL_TEST_RESULT,
         null=True,
-        blank=False,
+        blank=True,
     )
 
     ante_natal_clinic_partner_test = models.CharField(
@@ -112,7 +112,7 @@ class Section7(models.Model):
         max_length=35,
         choices=YES_NO,
         null=True,
-        blank=False,
+        blank=True,
     )
 
     ante_natal_clinic_partner_test = OtherCharField(
@@ -120,7 +120,7 @@ class Section7(models.Model):
         max_length=35,
         choices=ANTE_NATAL_TEST_RESULT,
         null=True,
-        blank=False,
+        blank=True,
     )
 
     class Meta:

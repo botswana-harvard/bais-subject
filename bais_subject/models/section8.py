@@ -16,7 +16,7 @@ class Section8(models.Model):
         choices=YES_NO,
         help_text="",
         null=True,
-        blank=False
+        blank=True
     )
 
     tb_treatment_source = models.CharField(
@@ -25,7 +25,7 @@ class Section8(models.Model):
         choices=TB_TREATMENT_SOURCE,
         help_text="",
         null=True,
-        blank=False
+        blank=True
     )
 
     tb_previous_treatment = models.CharField(
@@ -34,7 +34,7 @@ class Section8(models.Model):
         choices=YES_NO,
         help_text="",
         null=True,
-        blank=False
+        blank=True
     )
 
     tb_previous_times_treated = models.CharField(
@@ -43,7 +43,7 @@ class Section8(models.Model):
         choices=TB_TIMES_TREATED,
         help_text="",
         null=True,
-        blank=False
+        blank=True
     )
 
     tb_treatment_date = models.DateField(
@@ -57,7 +57,7 @@ class Section8(models.Model):
         choices=YES_NO,
         help_text="",
         null=True,
-        blank=False
+        blank=True
     )
 
     tb_cough_duration = models.CharField(
@@ -66,7 +66,7 @@ class Section8(models.Model):
         choices=YES_NO,
         help_text="",
         null=True,
-        blank=False
+        blank=True
     )
 
     tb_cough_sputum = models.CharField(
@@ -75,7 +75,7 @@ class Section8(models.Model):
         choices=YES_NO,
         help_text="",
         null=True,
-        blank=False
+        blank=True
     )
 
     tb_bloody_sputum = models.CharField(
@@ -84,7 +84,7 @@ class Section8(models.Model):
         choices=YES_NO,
         help_text="",
         null=True,
-        blank=False
+        blank=True
     )
 
     tb_sputum_sample = models.CharField(
@@ -93,7 +93,7 @@ class Section8(models.Model):
         choices=YES_NO,
         help_text="",
         null=True,
-        blank=False
+        blank=True
     )
 
     tb_sputum_sample_result = OtherCharField(
@@ -102,7 +102,7 @@ class Section8(models.Model):
         choices=TB_SPUTUM_SAMPLE,
         help_text="",
         null=True,
-        blank=False
+        blank=True
     )
 
     tb_sputum_sample_result = OtherCharField(
@@ -111,7 +111,7 @@ class Section8(models.Model):
         choices=TB_NO_SPUTUM,
         help_text="",
         null=True,
-        blank=False
+        blank=True
     )
 
     tb_fever = models.CharField(
@@ -120,7 +120,7 @@ class Section8(models.Model):
         choices=YES_NO,
         help_text="",
         null=True,
-        blank=False
+        blank=True
     )
 
     tb_fever_duration = OtherCharField(
@@ -129,7 +129,7 @@ class Section8(models.Model):
         choices=YES_NO,
         help_text="",
         null=True,
-        blank=False
+        blank=True
     )
 
     tb_night_sweat = models.CharField(
@@ -139,7 +139,7 @@ class Section8(models.Model):
         choices=YES_NO,
         help_text="",
         null=True,
-        blank=False
+        blank=True
     )
 
     tb_night_sweat_duration = models.CharField(
@@ -148,7 +148,7 @@ class Section8(models.Model):
         choices=YES_NO,
         help_text="",
         null=True,
-        blank=False
+        blank=True
     )
 
     tb_weight_loss = models.CharField(
@@ -157,7 +157,7 @@ class Section8(models.Model):
         choices=YES_NO,
         help_text="",
         null=True,
-        blank=False
+        blank=True
     )
 
     tb_help = models.CharField(
@@ -167,7 +167,7 @@ class Section8(models.Model):
         choices=YES_NO,
         help_text="",
         null=True,
-        blank=False
+        blank=True
     )
 
     tb_first_help = models.CharField(
@@ -176,7 +176,7 @@ class Section8(models.Model):
         choices=TB_HELP,
         help_text="",
         null=True,
-        blank=False
+        blank=True
     )
 
     tb_first_help_result = models.CharField(
@@ -185,7 +185,7 @@ class Section8(models.Model):
         choices=TB_HELP_RESULT,
         help_text="",
         null=True,
-        blank=False
+        blank=True
     )
 
     tb_no_help = models.CharField(
@@ -194,7 +194,7 @@ class Section8(models.Model):
         choices=TB_NO_HELP_REASON,
         help_text="",
         null=True,
-        blank=False
+        blank=True
     )
 
     diabetes_diagnosis = models.CharField(
@@ -203,7 +203,7 @@ class Section8(models.Model):
         choices=YES_NO,
         help_text="",
         null=True,
-        blank=False
+        blank=True
     )
 
     diabetes_treatment = models.CharField(
@@ -212,7 +212,7 @@ class Section8(models.Model):
         choices=YES_NO,
         help_text="",
         null=True,
-        blank=False
+        blank=True
     )
 
     cervical_cancer_screening = models.CharField(
@@ -222,7 +222,7 @@ class Section8(models.Model):
         choices=YES_NO,  # MOnth ago
         help_text="",
         null=True,
-        blank=False
+        blank=True
     )
 
     last_cancer_test = OtherCharField(
@@ -232,7 +232,7 @@ class Section8(models.Model):
         choices=CANCER_TEST,
         help_text="",
         null=True,
-        blank=False
+        blank=True
     )
 
     cancer_test_result = models.CharField(
@@ -242,7 +242,7 @@ class Section8(models.Model):
         choices=YES_NO,
         help_text="",
         null=True,
-        blank=False
+        blank=True
     )
 
     cancer_treatment_referral = models.CharField(
@@ -251,7 +251,7 @@ class Section8(models.Model):
         choices=YES_NO,
         help_text="",
         null=True,
-        blank=False
+        blank=True
     )
 
     class Meta:
