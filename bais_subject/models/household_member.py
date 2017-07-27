@@ -22,7 +22,7 @@ class HouseholdMember(models.Model):
     member_age = models.IntegerField(
         verbose_name='How old is this person in completed years?',
         null=True,
-        blank=False,
+        blank=True,
     )
 
     household_help = models.CharField(
@@ -42,7 +42,7 @@ class HouseholdMember(models.Model):
         verbose_name='Other (Specify)',
         max_length=35,
         null=True,
-        blank=False,
+        blank=True,
     )
 
     household_help_received_from = models.CharField(
@@ -55,7 +55,7 @@ class HouseholdMember(models.Model):
         verbose_name='Anyone else?',
         max_length=35,
         null=True,
-        blank=False,
+        blank=True,
     )
 
     household_illness = models.CharField(
@@ -82,7 +82,7 @@ class HouseholdMember(models.Model):
         verbose_name='Other (Specify) ',
         max_length=35,
         null=True,
-        blank=False,
+        blank=True,
     )
 
     household_help_provider = models.CharField(
