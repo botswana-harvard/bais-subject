@@ -4,9 +4,10 @@ from edc_base.modeladmin_mixins import audit_fieldset_tuple
 
 from ..admin_site import bais_subject_admin
 from ..forms import HouseholdMemberForm
+from ..models import HouseholdMember
 
 
-@admin.register(HouseholdMember site=bais_subject_admin)
+@admin.register(HouseholdMember, site=bais_subject_admin)
 class HouseholdMemberAdmin(admin.ModelAdmin):
 
     form = HouseholdMemberForm
@@ -16,7 +17,7 @@ class HouseholdMemberAdmin(admin.ModelAdmin):
         'member_age': admin.VERTICAL,
         'household_help': admin.VERTICAL,
         'household_help_received': admin.VERTICAL,
-        'household_help_received',
+        'household_help_received': admin.VERTICAL,
         'household_help_received_from': admin.VERTICAL,
         'household_illness': admin.VERTICAL,
         'household_illness_support': admin.VERTICAL,
