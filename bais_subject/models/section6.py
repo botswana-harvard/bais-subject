@@ -113,9 +113,6 @@ class Section6(models.Model):
         verbose_name='Have you ever been tested for HIV?',
         max_length=35,
         choices=YES_NO,
-        help_text="",
-        null=True,
-        blank=False
     )
 
     aids_hiv_times_tested = models.IntegerField(
@@ -123,62 +120,42 @@ class Section6(models.Model):
         ' have you been tested for HIV and received your results?',
         max_length=35,
         choices=YES_NO,
-        help_text="",
-        null=True,
-        blank=False
     )
 
     aids_hiv_times_tested_other = OtherCharField(
         verbose_name='Did you test together with your partner?',
         max_length=250,
         choices=YES_NO,
-        blank=True,
-        null=True
     )
 
     aids_hiv_times_tested_other = OtherCharField(
         verbose_name='What was the main reason for testing?',
         max_length=35,
         choices=TESTING_REASONS,
-        help_text="",
-        null=True,
-        blank=False
     )
 
     aids_hiv_not_tested = OtherCharField(
         verbose_name='Why haven’t you tested?',
         max_length=35,
         choices=TESTING_REASONS,
-        help_text="",
-        null=True,
-        blank=False
     )
 
     tb_diagnosis = models.CharField(
         verbose_name='If you were diagnosed with Tb,would you tell anyone?',
         max_length=35,
         choices=YES_NO,
-        help_text="",
-        null=True,
-        blank=False
     )
 
     tb_diagnosis_disclosure = models.CharField(
         verbose_name='If yes, whom would you tell?',
         max_length=35,
         choices=YES_NO,
-        help_text="",
-        null=True,
-        blank=False
     )
 
     tb_diagnosis_tested_other = OtherCharField(
         verbose_name='If No,why not',
         max_length=35,
         choices=TB_NONDISCLOSURE,
-        help_text="",
-        null=True,
-        blank=False
     )
 
     class Meta:
