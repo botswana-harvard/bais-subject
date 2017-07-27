@@ -2,7 +2,9 @@ from django.db import models
 
 from edc_base.model_fields import OtherCharField
 
-from ..choices import (YES_NO, TESTING_REASONS, TB_NONDISCLOSURE)
+from ..choices import (YES_NO, TESTING_REASONS, TB_NONDISCLOSURE,
+                       HIV_TEST_RESULT, ARV_USAGE, ARV_TREATMENT_SOURCE,
+                       REASONS_ARV_NOT_TAKEN, TB_REACTION)
 
 
 class Section6(models.Model):
@@ -138,6 +140,58 @@ class Section6(models.Model):
         verbose_name='Why haven’t you tested?',
         max_length=35,
         choices=TESTING_REASONS,
+    )
+
+    aids_hiv_test_result = models.CharField(
+        verbose_name='What was the result of your last HIV test?  ',
+        max_length=35,
+        choices=HIV_TEST_RESULT,
+    )
+
+    current_arv_therapy = models.CharField(
+        verbose_name='Are you currently taking ARVs?',
+        max_length=35,
+        choices=ARV_USAGE,
+    )
+
+    current_arv_supplier = models.CharField(
+        verbose_name='Where are you taking your ARVs?',
+        max_length=35,
+        choices=ARV_TREATMENT_SOURCE,
+    )
+
+    current_arv_supplier_other = OtherCharField(
+        verbose_name='OTHER, SPECIFY',
+        max_length=35,
+        null=False,
+        blank=False,
+    )
+
+    not_on_arv_therapy = models.CharField(
+        verbose_name='Why aren\'t you taking your ARVs?',
+        max_length=35,
+        choices=REASONS_ARV_NOT_TAKEN,
+    )
+
+    not_on_arv_therapy_other = OtherCharField(
+        verbose_name='OTHER SPECIFY',
+        max_length=35,
+        null=False,
+        blank=False,
+    )
+
+    tb_reaction = models.CharField(
+        verbose_name='What would be your reaction'
+        ' if you found out you had TB ?',
+        max_length=35,
+        choices=TB_REACTION,
+    )
+
+    tb_reaction_other = OtherCharField(
+        verbose_name='OTHER SPECIFY',
+        max_length=35,
+        null=False,
+        blank=False,
     )
 
     tb_diagnosis = models.CharField(
