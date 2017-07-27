@@ -30,7 +30,6 @@ class Section3(models.Model):
     sexual_intercourse_age = models.IntegerField(
         verbose_name='At what age did you first have sexual '
         'intercourse?',
-        max_length=15,
     )
 
     sexual_intercouse_consent = models.CharField(
@@ -148,7 +147,6 @@ class Section3(models.Model):
     sex_partners_count = models.IntegerField(
         verbose_name='In the last 12 months with how many people '
         'overall have you had sex?',
-        max_length=5
     )
 
     partners_serial_concurrent = models.CharField(
