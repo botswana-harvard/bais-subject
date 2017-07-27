@@ -30,7 +30,7 @@ class Section6(models.Model):
     )
 
     tb_household_care = models.CharField(
-        verbose_name='If a member of your family became sick with HIV AND AIDS,'
+        verbose_name='If a member of your family became sick with TB,'
         ' would you be willing to care for him or her in your household?',
         max_length=35,
         choices=YES_NO,
@@ -124,28 +124,48 @@ class Section6(models.Model):
         choices=YES_NO,
     )
 
-    aids_hiv_times_tested_other = OtherCharField(
+    aids_hiv_test_partner = models.CharField(
         verbose_name='Did you test together with your partner?',
         max_length=250,
         choices=YES_NO,
     )
 
-    aids_hiv_times_tested_other = OtherCharField(
+    aids_hiv_test_reason = models.CharField(
         verbose_name='What was the main reason for testing?',
         max_length=35,
         choices=TESTING_REASONS,
     )
 
-    aids_hiv_not_tested = OtherCharField(
+    aids_hiv_test_reason_other = OtherCharField(
+        verbose_name='SPECIFY OTHER',
+        max_length=35,
+        null=False,
+        blank=False,
+    )
+
+    aids_hiv_not_tested = models.CharField(
         verbose_name='Why haven’t you tested?',
         max_length=35,
         choices=TESTING_REASONS,
+    )
+
+    aids_hiv_not_tested_other = OtherCharField(
+        verbose_name='OTHER SPECIFY',
+        max_length=35,
+        null=False,
+        blank=False,
     )
 
     aids_hiv_test_result = models.CharField(
         verbose_name='What was the result of your last HIV test?  ',
         max_length=35,
         choices=HIV_TEST_RESULT,
+    )
+
+    aids_hiv_test_result_disclosure = models.CharField(
+        verbose_name='Did you tell anyone the result of your the test?  ',
+        max_length=35,
+        choices=YES_NO,
     )
 
     current_arv_therapy = models.CharField(
@@ -206,7 +226,7 @@ class Section6(models.Model):
         choices=YES_NO,
     )
 
-    tb_diagnosis_tested_other = OtherCharField(
+    tb_diagnosis_no_disclosure = OtherCharField(
         verbose_name='If No,why not',
         max_length=35,
         choices=TB_NONDISCLOSURE,
