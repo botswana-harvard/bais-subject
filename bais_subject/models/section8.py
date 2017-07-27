@@ -123,7 +123,7 @@ class Section8(models.Model):
         blank=False
     )
 
-    tb_sputum_sample_result = OtherCharField(
+    tb_fever_duration = OtherCharField(
         verbose_name='If YES,for how long?',
         max_length=35,
         choices=YES_NO,
@@ -142,7 +142,7 @@ class Section8(models.Model):
         blank=False
     )
 
-    tb_night_sweat_other = OtherCharField(
+    tb_night_sweat_duration = models.CharField(
         verbose_name='IF YEs, for how long?',
         max_length=35,
         choices=YES_NO,

@@ -17,7 +17,7 @@ class Section6(models.Model):
         blank=False
     )
 
-    household_care = models.CharField(
+    aids_household_care = models.CharField(
         verbose_name='If a member of your family became sick with HIV AND AIDS,'
         ' would you be willing to care for him or her in your household?',
         max_length=35,
@@ -27,7 +27,7 @@ class Section6(models.Model):
         blank=False
     )
 
-    aids_household_care = models.CharField(
+    tb_household_care = models.CharField(
         verbose_name='If a member of your family became sick with HIV AND AIDS,'
         ' would you be willing to care for him or her in your household?',
         max_length=35,

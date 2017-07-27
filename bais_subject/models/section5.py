@@ -80,8 +80,8 @@ class Section5(models.Model):
     
     tb_prevention_other = OtherCharField(
         verbose_name='Other,Specify',
-        null=,
-        blank=
+        null=True,
+        blank=False
     )    
 
     hiv_and_aids_appearance = models.CharField(
