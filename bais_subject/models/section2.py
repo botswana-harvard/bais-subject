@@ -27,7 +27,6 @@ class Section2(models.Model):
 
     substance_age_alcohol = models.IntegerField(
         verbose_name='Age at First Use',
-        max_length=15,
     )
 
     substance_frequency_alcohol = models.CharField(
@@ -46,7 +45,6 @@ class Section2(models.Model):
 
     substance_age_tobacco = models.IntegerField(
         verbose_name='Age at First Use',
-        max_length=15,
     )
 
     substance_frequency_tobacco = models.CharField(
@@ -65,7 +63,6 @@ class Section2(models.Model):
 
     substance_age_marijuana = models.IntegerField(
         verbose_name='Age at First Use',
-        max_length=15,
     )
 
     substance_frequency_marijuana = models.CharField(
@@ -84,7 +81,6 @@ class Section2(models.Model):
 
     substance_age_cocaine = models.IntegerField(
         verbose_name='Age at First Use',
-        max_length=15,
     )
 
     substance_frequency_cocaine = models.CharField(
@@ -103,7 +99,6 @@ class Section2(models.Model):
 
     substance_age_crack = models.IntegerField(
         verbose_name='Age at First Use',
-        max_length=15,
     )
 
     substance_frequency_crack = models.CharField(
@@ -122,7 +117,6 @@ class Section2(models.Model):
 
     substance_age_meth = models.IntegerField(
         verbose_name='Age at First Use',
-        max_length=15,
     )
 
     substance_frequency_meth = models.CharField(
@@ -141,7 +135,6 @@ class Section2(models.Model):
 
     substance_age_nyaope = models.IntegerField(
         verbose_name='Age at First Use',
-        max_length=15,
     )
 
     substance_frequency_nyaope = models.CharField(
@@ -160,7 +153,6 @@ class Section2(models.Model):
 
     substance_age_heroine = models.IntegerField(
         verbose_name='Age at First Use',
-        max_length=15,
     )
 
     substance_frequency_heroine = models.CharField(
@@ -179,7 +171,6 @@ class Section2(models.Model):
 
     substance_age_ecstacy = models.IntegerField(
         verbose_name='Age at First Use',
-        max_length=15,
     )
 
     substance_frequency_ecstacy = models.CharField(
@@ -198,7 +189,6 @@ class Section2(models.Model):
 
     substance_age_codeine = models.IntegerField(
         verbose_name='Age at First Use',
-        max_length=15,
     )
 
     substance_frequency_codeine = models.CharField(
