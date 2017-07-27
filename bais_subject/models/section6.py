@@ -120,8 +120,6 @@ class Section6(models.Model):
     aids_hiv_times_tested = models.IntegerField(
         verbose_name='In the past 12 months how many times'
         ' have you been tested for HIV and received your results?',
-        max_length=35,
-        choices=YES_NO,
     )
 
     aids_hiv_test_partner = models.CharField(
