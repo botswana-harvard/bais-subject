@@ -20,7 +20,7 @@ class Section5Admin(admin.ModelAdmin):
         'tb_awareness': admin.VERTICAL,
         'tb_recent_information': admin.VERTICAL,
         'tb_information_source': admin.VERTICAL,
-        'ttb_information_source_other': admin.VERTICAL,
+        'tb_information_source_other': admin.VERTICAL,
         'tb_prevention': admin.VERTICAL,
         'tb_prevention_other': admin.VERTICAL,
         'hiv_and_aids_appearance': admin.VERTICAL,
