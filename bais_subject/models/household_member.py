@@ -21,7 +21,6 @@ class HouseholdMember(models.Model):
 
     member_age = models.IntegerField(
         verbose_name='How old is this person in completed years?',
-        max_length=35,
         null=True,
         blank=False,
     )
@@ -118,13 +117,11 @@ class HouseholdMember(models.Model):
     household_deaths_review = models.IntegerField(
         verbose_name='How many household members '
         'have died in the last 12 months ',
-        max_length=35,
 
     )
 
-    household_death_name = models.IntegerField(
+    household_death_name = models.CharField(
         verbose_name='What was the name of the person who died? ',
-        choices=YES_NO_DNTKNW,
         max_length=35,
 
     )
@@ -132,7 +129,6 @@ class HouseholdMember(models.Model):
     household_death_age = models.IntegerField(
         verbose_name='How old was he/she when he/she died? ',
         choices=DEATH_AGE,
-        max_length=35,
 
     )
 
