@@ -30,16 +30,12 @@ class HouseholdMember(models.Model):
         ' from outside in relation to the reported illnesses?',
         max_length=35,
         choices=YES_NO_DNTKNW,
-        null=True,
-        blank=False,
     )
 
     household_help_received = models.CharField(
         verbose_name='What kind of assistance did you recieve?',
         max_length=35,
-        choices=HELP_RECIEVED,
-        null=True,
-        blank=False,
+        choices=HELP_RECIEVED
     )
 
     household_help_received_other = OtherCharField(
@@ -52,9 +48,7 @@ class HouseholdMember(models.Model):
     household_help_received_from = models.CharField(
         verbose_name='Who provided the care or assistance?',
         max_length=35,
-        choices=HELP_RECIEVED_FROM,
-        null=True,
-        blank=False,
+        choices=HELP_RECIEVED_FROM
     )
 
     household_help_received_from_other = OtherCharField(
