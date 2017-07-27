@@ -2,12 +2,11 @@ from django.contrib import admin
 
 from edc_base.modeladmin_mixins import audit_fieldset_tuple
 
-from ..admin_site import bais_subject_admin
 from ..forms import Section1Form
 from ..models import Section1
 
 
-@admin.register(Section1, site=bais_subject_admin)
+@admin.register(Section1)
 class Section1Admin(admin.ModelAdmin):
 
     form = Section1Form
