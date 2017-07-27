@@ -4,14 +4,12 @@ from edc_base.modeladmin_mixins import audit_fieldset_tuple
 
 from ..admin_site import bais_subject_admin
 from ..forms import HouseholdQuestionnaireForm
-from ..models import (
-    HouseholdQuestionnaireName,
-    HouseholdQuestionnaireAnswers)
+from ..models import HouseholdQuestionnaire
 
 # TODO: confirm the syntax
 
 
-@admin.register(HouseholdQuestionnaireName, HouseholdQuestionnaireAnswers, site=bais_subject_admin)
+@admin.register(HouseholdQuestionnaire, site=bais_subject_admin)
 class HouseholdQuestionnaireAdmin(admin.ModelAdmin):
 
     form = HouseholdQuestionnaireForm

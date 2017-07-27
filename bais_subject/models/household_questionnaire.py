@@ -16,19 +16,12 @@ from ..choices import (
     MAIN_WORK)
 
 
-class HouseholdQuestionnaireName(models.Model):
+class HouseholdQuestionnaire(models.Model):
 
     persons_list = models.CharField(
         verbose_name='Please give me names of all persons who slept '
         'with this household last night.',
         max_length=50,
-    )
-
-
-class HouseholdQuestionnaireAnswers(models.Model):
-
-    household_questionnaire_name = models.ForeignKey(
-        HouseholdQuestionnaireName
     )
 
     person_household_head_rel = models.CharField(

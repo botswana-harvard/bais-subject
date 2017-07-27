@@ -1,15 +1,11 @@
 from django.forms.models import BaseModelForm
 
-from ..models import (
-    HouseholdQuestionnaireName,
-    HouseholdQuestionnaireAnswers)
+from ..models import HouseholdQuestionnaire
 
 
 class HouseholdQuestionnaireForm(BaseModelForm):
 
     # TODO: Confirm the syntax
     class Meta:
-        model = (
-            HouseholdQuestionnaireName,
-            HouseholdQuestionnaireAnswers)
+        model = HouseholdQuestionnaire
         fields = '__all__'
