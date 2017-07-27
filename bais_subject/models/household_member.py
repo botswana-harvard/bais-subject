@@ -1,8 +1,6 @@
 from django.db import models
 
 from edc_base.model_fields import OtherCharField
-from edc_base.model_validators import date_not_future
-
 from ..choices import (YES_NO, YES_NO_DNTKNW,
                        HELP_RECIEVED, HELP_RECIEVED_FROM, HELP_TYPE,
                        SATISFACTION_LEVEL, DEATH_AGE, DEATH_CAUSE,
