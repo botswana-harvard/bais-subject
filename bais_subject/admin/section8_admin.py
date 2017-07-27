@@ -17,7 +17,6 @@ class Section8Admin(admin.ModelAdmin):
         'tb_treatment_source': admin.VERTICAL,
         'tb_previous_treatment': admin.VERTICAL,
         'tb_previous_times_treated': admin.VERTICAL,
-        'tb_treatment_date': admin.VERTICAL,
         'tb_cough': admin.VERTICAL,
         'tb_cough_duration': admin.VERTICAL,
         'tb_cough_sputum': admin.VERTICAL,
