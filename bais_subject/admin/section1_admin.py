@@ -21,7 +21,6 @@ class Section1Admin(admin.ModelAdmin):
         'commodity': admin.VERTICAL,
         'religion': admin.VERTICAL,
         'marital_status': admin.VERTICAL,
-        'respondent_age': admin.VERTICAL,
         'living_with_spouse': admin.VERTICAL,
         'spouse_visit': admin.VERTICAL}
 
@@ -43,7 +42,10 @@ class Section1Admin(admin.ModelAdmin):
                 'religion',
                 'religion_other',
                 'marital_status',
-                'respondent_age',)},
+                'respondent_marriage_age',
+                'living_with_spouse',
+                'spouse_visit',
+                'respondent_married_years')},
          ),
         audit_fieldset_tuple
     )
