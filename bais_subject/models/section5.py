@@ -59,7 +59,6 @@ class Section5(models.Model):
         verbose_name="From what source(s) did you recieve information about TB?",
         max_length=35,
         choices=YES_NO,
-        help_text="",
         help_text="Circle all that are mentioned more than one anwser is possible"
     )
 
@@ -72,7 +71,6 @@ class Section5(models.Model):
         verbose_name="What can people do to prevent becoming infected with TB?",
         max_length=35,
         choices=YES_NO,
-        help_text="",
         help_text="Circle all that are mentioned more than one anwser is possible"
     )
 
