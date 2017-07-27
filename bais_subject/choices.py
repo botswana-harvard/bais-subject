@@ -32,7 +32,7 @@ YES_NO_DNTKNW = (
     ('Don\'t Know', 'Don\'t Know')
 )
 
-YES_NO_NEVER_HAD_SEX_DNTKNW = (
+ARV_INFLUENCE = (
     ('YES', 'YES'),
     ('NO', 'NO'),
     ('NEVER HAD SEX', 'NEVER HAD SEX'),

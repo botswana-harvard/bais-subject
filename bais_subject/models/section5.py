@@ -4,7 +4,7 @@ from edc_base.model_fields import OtherCharField
 
 from ..choices import (YES_NO, YES_NO_UNSURE, YES_NO_DNTKNW, TRANSMISSION_PREVENTION,
                        TREATMENT_OPTIONS, ARV_USES, ARV_CONCERN,
-                       YES_NO_NEVER_HAD_SEX_DNTKNW, SEXUAL_BEHAVIOUR,
+                       ARV_INFLUENCE, SEXUAL_BEHAVIOUR,
                        TB_INFECTION, TB_SPREAD, TB_CURE, SMC_SOURCE,
                        CONDOM_CONSENT)
 
@@ -92,7 +92,6 @@ class Section5(models.Model):
         ' and AIDS by using condom correctly everytime they have sex?',
         max_length=35,
         choices=YES_NO_DNTKNW,
-        help_text="",
     )
 
     hiv_and_aids_mosquito_bite = models.CharField(
@@ -100,7 +99,6 @@ class Section5(models.Model):
         ' with HIV through mosquito bites?',
         max_length=35,
         choices=YES_NO_DNTKNW,
-        help_text="",
     )
 
     hiv_and_aids_partners = models.CharField(
@@ -109,7 +107,6 @@ class Section5(models.Model):
         'sex partner who has no other partners?',
         max_length=35,
         choices=YES_NO_DNTKNW,
-        help_text="",
     )
 
     hiv_and_aids_sharing_meal = models.CharField(
@@ -117,21 +114,18 @@ class Section5(models.Model):
         ' meal (from the same plate) with a person who has HIV and aids?',
         max_length=35,
         choices=YES_NO_DNTKNW,
-        help_text="",
     )
 
     hiv_and_aids_witchcraft = models.CharField(
         verbose_name="Can people get HIV because of witchcraft?",
         max_length=35,
         choices=YES_NO_DNTKNW,
-        help_text="",
     )
 
     hiv_and_aids_mother_to_child = models.CharField(
         verbose_name="Can HIV be transmitted from mother to child?",
         max_length=35,
         choices=YES_NO_DNTKNW,
-        help_text="",
     )
 
     hiv_and_aids_unborn_baby = models.CharField(
@@ -139,7 +133,6 @@ class Section5(models.Model):
         ' is there any way to avoid transmission to the unborn baby?',
         max_length=35,
         choices=YES_NO_DNTKNW,
-        help_text="",
     )
 
     hiv_and_aids_unborn_baby_transmission = models.CharField(
@@ -216,7 +209,7 @@ class Section5(models.Model):
     arv_sexual_behaviour = models.CharField(
         verbose_name='Has introduction of ARVs influenced your sexual behavior?',
         max_length=35,
-        choices=YES_NO_NEVER_HAD_SEX_DNTKNW,
+        choices=ARV_INFLUENCE,
     )
 
     arv_sexual_behaviour_yes = models.CharField(
@@ -251,7 +244,7 @@ class Section5(models.Model):
 
     tb_infection_other = OtherCharField(
         verbose_name='OTHER, SPECIFY',
-        max_length=35,
+        max_length=250,
     )
 
     tb_spread = models.CharField(
