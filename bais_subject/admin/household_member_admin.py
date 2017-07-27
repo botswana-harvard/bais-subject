@@ -2,12 +2,11 @@ from django.contrib import admin
 
 from edc_base.modeladmin_mixins import audit_fieldset_tuple
 
-from ..admin_site import bais_subject_admin
 from ..forms import HouseholdMemberForm
 from ..models import HouseholdMember
 
 
-@admin.register(HouseholdMember, site=bais_subject_admin)
+@admin.register(HouseholdMember)
 class HouseholdMemberAdmin(admin.ModelAdmin):
 
     form = HouseholdMemberForm
