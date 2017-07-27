@@ -22,9 +22,6 @@ class Section1(models.Model):
 
     respondent_age = models.IntegerField(
         verbose_name='How old are you in complete years?',
-        max_length=5,
-        blank=False,
-        null=False,
     )
 
     respondent_education = models.CharField(
@@ -111,12 +108,9 @@ class Section1(models.Model):
         choices=MARITAL_STATUS
     )
 
-    respondent_age = models.IntegerField(
+    respondent_marriage_age = models.IntegerField(
         verbose_name='How old were you when you first married/started'
         ' living together?',
-        max_length=5,
-        blank=False,
-        null=False,
         help_text='AGE IN YEARS'
     )
 
@@ -132,10 +126,9 @@ class Section1(models.Model):
         choices=SPOUSE_VISIT
     )
 
-    respondent_age = models.IntegerField(
+    respondent_married_years = models.IntegerField(
         verbose_name='For how many years have you been married or '
         'living together? ',
-        max_length=5,
         help_text='RECORD 00 IF LESS THAN ONE YEAR.'
     )
 
