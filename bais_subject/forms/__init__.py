@@ -1,4 +1,5 @@
 from .household_questionnaire_form import HouseholdQuestionnaireForm
+from .household_member_form import HouseholdMemberForm
 from .section1_form import Section1Form
 from .section2_form import Section2Form
 from .section3_form import Section3Form

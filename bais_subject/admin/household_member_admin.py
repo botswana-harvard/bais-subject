@@ -3,21 +3,16 @@ from django.contrib import admin
 from edc_base.modeladmin_mixins import audit_fieldset_tuple
 
 from ..admin_site import bais_subject_admin
-from ..forms import HouseholdQuestionnaireForm
-from ..models import (
-    HouseholdQuestionnaireName,
-    HouseholdQuestionnaireAnswers)
-
-# TODO: confirm the syntax
+from ..forms import HouseholdMemberForm
 
 
-@admin.register(HouseholdQuestionnaireName, HouseholdQuestionnaireAnswers, site=bais_subject_admin)
-class HouseholdQuestionnaireAdmin(admin.ModelAdmin):
+@admin.register(HouseholdMember site=bais_subject_admin)
+class HouseholdMemberAdmin(admin.ModelAdmin):
 
-    form = HouseholdQuestionnaireForm
+    form = HouseholdMemberForm
 
     radio_fields = {
-        'person_household_head_rel': admin.VERTICAL,
+        'bedridden_member': admin.VERTICAL,
         'person_gender': admin.VERTICAL,
         'person_citizenship': admin.VERTICAL,
         'person_household_live': admin.VERTICAL,
@@ -35,30 +30,24 @@ class HouseholdQuestionnaireAdmin(admin.ModelAdmin):
         'person_main_work': admin.VERTICAL}
 
     fieldsets = (
-        ('Household Questionnaire', {
+        ('Household Member', {
             'fields': (
-                'persons_list',
-                'person_household_head_rel',
-                'person_gender',
-                'person_age',
-                'person_citizenship',
-                'person_citizenship_other',
-                'person_household_live',
-                'person_marital_status',
-                'person_biological_mother_alive',
-                'person_biological_mother_household_live',
-                'person_biological_father_alive',
-                'person_biological_father_household_live',
-                'person_attended_school',
-                'person_currently_studying',
-                'person_highest_study_level',
-                'person_work_profit',
-                'person_work_unpaid',
-                'person_work_unpaid_reason',
-                'person_work_unpaid_reason_other',
-                'person_main_work',
-                'person_work_type',
-                'person_work_product',)},
+                'bedridden_member',
+                'member_age',
+                'household_help',
+                'household_help_received',
+                'household_help_received_from',
+                'household_illness',
+                'household_illness_support',
+                'household_illness_help',
+                ' household_help_provider',
+                'household_help_review',
+                'household_deaths',
+                ' household_deaths_review',
+                'household_death_name',
+                'phousehold_death_age',
+                'household_death_cause',
+                'household_time_sick',)},
          ),
         audit_fieldset_tuple
     )
