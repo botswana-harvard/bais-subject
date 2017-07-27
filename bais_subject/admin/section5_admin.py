@@ -87,20 +87,20 @@ class Section5Admin(admin.ModelAdmin):
                 'hiv_and_aids_unborn_baby_transmission',
                 'hiv_and_aids_newborn_baby',
                 'hiv_and_aids_treatment_options'
-                'arv_treatment'
-                'arv_treatment_concern'
-                'arv_treatment_condomize'
-                'arv_sexual_behaviour'
-                'arv_intake'
-                'tb_appearance'
-                'tb_infection'
-                'tb_spread'
-                'tb_cure'
-                'smc_programme'
-                'smc_programme_awareness'
-                'smc_programme_source'
-                'smc_programme_interest'
-                'smc_condomize'
+                'arv_treatment',
+                'arv_treatment_concern',
+                'arv_treatment_condomize',
+                'arv_sexual_behaviour',
+                'arv_intake',
+                'tb_appearance',
+                'tb_infection',
+                'tb_spread',
+                'tb_cure',
+                'smc_programme',
+                'smc_programme_awareness',
+                'smc_programme_source',
+                'smc_programme_interest',
+                'smc_condomize',
                 'condom_male_collection')},
          ),
         audit_fieldset_tuple
