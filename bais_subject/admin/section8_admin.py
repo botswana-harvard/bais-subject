@@ -61,7 +61,7 @@ class Section8Admin(admin.ModelAdmin):
                 'tb_no_help',
                 'diabetes_diagnosis',
                 'diabetes_treatment',
-                'cancer_test_result')},
+                'cancer_test_result',)},
          ),
         audit_fieldset_tuple
     )
