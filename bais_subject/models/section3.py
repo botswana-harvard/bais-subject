@@ -1,6 +1,7 @@
 from django.db import models
 
 from edc_base.model_fields import OtherCharField
+from edc_base.model_mixins import BaseUuidModel
 
 from ..choices import (
     YES_NO,
@@ -19,7 +20,7 @@ from ..choices import (
     CONDOM_PERSUATION)
 
 
-class Section3(models.Model):
+class Section3(BaseUuidModel):
 
     sexual_intercouse = models.CharField(
         verbose_name='Have you ever had sexual intercourse?',
@@ -389,5 +390,5 @@ class Section3(models.Model):
         choices=YES_NO,
     )
 
-    class Meta:
+    class Meta(BaseUuidModel.Meta):
         app_label = 'bais_subject'

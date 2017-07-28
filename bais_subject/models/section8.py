@@ -2,13 +2,14 @@ from django.db import models
 
 from edc_base.model_fields import OtherCharField
 from edc_base.model_validators import date_not_future
+from edc_base.model_mixins import BaseUuidModel
 
 from ..choices import (YES_NO, TB_TREATMENT_SOURCE, TB_TIMES_TREATED,
                        TB_SPUTUM_SAMPLE, TB_NO_SPUTUM, TB_HELP,
                        TB_HELP_RESULT, TB_NO_HELP_REASON, CANCER_TEST)
 
 
-class Section8(models.Model):
+class Section8(BaseUuidModel):
 
     tb_current_treatment = models.CharField(
         verbose_name='Are you on TB treatment now?',
@@ -254,5 +255,5 @@ class Section8(models.Model):
         blank=True
     )
 
-    class Meta:
+    class Meta(BaseUuidModel.Meta):
         app_label = 'bais_subject'

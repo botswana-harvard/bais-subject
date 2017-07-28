@@ -1,6 +1,7 @@
 from django.db import models
 
 from edc_base.model_fields import OtherCharField
+from edc_base.model_mixins import BaseUuidModel
 
 from ..choices import (
     YES_NO_DNTKNW,
@@ -11,7 +12,7 @@ from ..choices import (
     STI_SYMPTOMS,)
 
 
-class Section4(models.Model):
+class Section4(BaseUuidModel):
 
     circumcission = models.CharField(
         verbose_name='Are you circumcised?',
@@ -93,5 +94,5 @@ class Section4(models.Model):
         null=True
     )
 
-    class Meta:
+    class Meta(BaseUuidModel.Meta):
         app_label = 'bais_subject'

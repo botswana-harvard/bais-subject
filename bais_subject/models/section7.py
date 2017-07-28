@@ -2,6 +2,7 @@ from django.db import models
 
 from edc_base.model_fields import OtherCharField
 from edc_base.model_validators import date_not_future
+from edc_base.model_mixins import BaseUuidModel
 
 from ..choices import (YES_NO, YES_NO_DONTWANT,
                        BABY_TEST, BABY_TEST_RESULT, BABY_FEEDING,
@@ -10,7 +11,7 @@ from ..choices import (YES_NO, YES_NO_DONTWANT,
 # TODO: Youngest BabyDate
 
 
-class Section7(models.Model):
+class Section7(BaseUuidModel):
 
     given_birth = models.CharField(
         verbose_name='Have you ever given birth?',
@@ -123,5 +124,5 @@ class Section7(models.Model):
         blank=True,
     )
 
-    class Meta:
+    class Meta(BaseUuidModel.Meta):
         app_label = 'bais_subject'

@@ -1,6 +1,7 @@
 from django.db import models
 
 from edc_base.model_fields import OtherCharField
+from edc_base.model_mixins import BaseUuidModel
 
 from ..choices import (YES_NO, YES_NO_UNSURE, YES_NO_DNTKNW, TRANSMISSION_PREVENTION,
                        TREATMENT_OPTIONS, ARV_USES, ARV_CONCERN,
@@ -9,7 +10,7 @@ from ..choices import (YES_NO, YES_NO_UNSURE, YES_NO_DNTKNW, TRANSMISSION_PREVEN
                        CONDOM_CONSENT)
 
 
-class Section5(models.Model):
+class Section5(BaseUuidModel):
 
     """ Knowledge About HIV and AIDS and TB
      and level of Access to Interventions
@@ -346,5 +347,5 @@ class Section5(models.Model):
         max_length=35,
     )
 
-    class Meta:
+    class Meta(BaseUuidModel.Meta):
         app_label = 'bais_subject'

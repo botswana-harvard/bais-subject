@@ -1,6 +1,7 @@
 from django.db import models
 
 from edc_base.model_fields import OtherCharField
+from edc_base.model_mixins import BaseUuidModel
 
 from ..choices import (
     MALE_FEMALE,
@@ -13,7 +14,7 @@ from ..choices import (
     SPOUSE_VISIT)
 
 
-class Section1(models.Model):
+class Section1(BaseUuidModel):
 
     respondent_sex = models.CharField(
         verbose_name='Choose sex of the respondent',
@@ -132,5 +133,5 @@ class Section1(models.Model):
         help_text='RECORD 00 IF LESS THAN ONE YEAR.'
     )
 
-    class Meta:
+    class Meta(BaseUuidModel.Meta):
         app_label = 'bais_subject'

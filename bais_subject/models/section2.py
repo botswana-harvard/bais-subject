@@ -1,6 +1,7 @@
 from django.db import models
 
 from edc_base.model_fields import OtherCharField
+from edc_base.model_mixins import BaseUuidModel
 
 from ..choices import (
     YES_NO,
@@ -8,7 +9,7 @@ from ..choices import (
     SUBSTANCE_FREQUENCY)
 
 
-class Section2(models.Model):
+class Section2(BaseUuidModel):
 
     #    TODO: Make this an inline form
 
@@ -224,5 +225,5 @@ class Section2(models.Model):
         null=True,
     )
 
-    class Meta:
+    class Meta(BaseUuidModel.Meta):
         app_label = 'bais_subject'

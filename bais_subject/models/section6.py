@@ -1,13 +1,14 @@
 from django.db import models
 
 from edc_base.model_fields import OtherCharField
+from edc_base.model_mixins import BaseUuidModel
 
 from ..choices import (YES_NO, TESTING_REASONS, TB_NONDISCLOSURE,
                        HIV_TEST_RESULT, ARV_USAGE, ARV_TREATMENT_SOURCE,
                        REASONS_ARV_NOT_TAKEN, TB_REACTION)
 
 
-class Section6(models.Model):
+class Section6(BaseUuidModel):
 
     meal_sharing = models.CharField(
         verbose_name='Would you ever share a meal (from the same plate)'
@@ -204,5 +205,5 @@ class Section6(models.Model):
         choices=TB_NONDISCLOSURE,
     )
 
-    class Meta:
+    class Meta(BaseUuidModel.Meta):
         app_label = 'bais_subject'

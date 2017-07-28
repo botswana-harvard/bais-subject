@@ -1,6 +1,7 @@
 from django.db import models
 
 from edc_base.model_fields import OtherCharField
+from edc_base.model_mixins import BaseUuidModel
 
 from ..choices import (
     MALE_FEMALE,
@@ -16,7 +17,7 @@ from ..choices import (
     MAIN_WORK)
 
 
-class HouseholdQuestionnaire(models.Model):
+class HouseholdQuestionnaire(BaseUuidModel):
 
     persons_list = models.CharField(
         verbose_name='Please give me names of all persons who slept '
@@ -167,5 +168,5 @@ class HouseholdQuestionnaire(models.Model):
         'describe the Industry.',
     )
 
-    class Meta:
+    class Meta(BaseUuidModel.Meta):
         app_label = 'bais_subject'

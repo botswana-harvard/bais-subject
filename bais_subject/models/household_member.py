@@ -1,13 +1,15 @@
 from django.db import models
 
 from edc_base.model_fields import OtherCharField
+from edc_base.model_mixins import BaseUuidModel
+
 from ..choices import (YES_NO, YES_NO_DNTKNW,
                        HELP_RECIEVED, HELP_RECIEVED_FROM, HELP_TYPE,
                        SATISFACTION_LEVEL, DEATH_AGE, DEATH_CAUSE,
                        TIME_SICK)
 
 
-class HouseholdMember(models.Model):
+class HouseholdMember(BaseUuidModel):
 
     bedridden_member = models.CharField(
         verbose_name='Among the persons who are household members'
@@ -137,3 +139,6 @@ class HouseholdMember(models.Model):
         max_length=35,
 
     )
+
+    class Meta(BaseUuidModel.Meta):
+        app_label = 'bais_subject'
