@@ -1,9 +1,9 @@
-from django.forms.models import BaseModelForm
+from django import forms
 
 from ..models import Section7
 
 
-class Section7Form(BaseModelForm):
+class Section7Form(forms.ModelForm):
 
     class Meta:
         model = Section7

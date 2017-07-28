@@ -1,9 +1,9 @@
-from django.forms.models import BaseModelForm
+from django import forms
 
 from ..models import HouseholdMember
 
 
-class HouseholdMemberForm(BaseModelForm):
+class HouseholdMemberForm(forms.ModelForm):
 
     class Meta:
         model = HouseholdMember
