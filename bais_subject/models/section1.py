@@ -9,6 +9,7 @@ from ..choices import (
     EMPLOYMENT_STATUS,
     YES_NO,
     MINE_OCCUPATION,
+    COMMODITY,
     RELIGION,
     MARITAL_STATUS,
     SPOUSE_VISIT)
@@ -80,7 +81,7 @@ class Section1(BaseUuidModel):
     commodity = models.CharField(
         verbose_name='What is/was the type of the commodity mined?',
         max_length=45,
-        choices=MINE_OCCUPATION
+        choices=COMMODITY
     )
 
     commodity_other = OtherCharField(
