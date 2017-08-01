@@ -44,6 +44,12 @@ class Section2(BaseUuidModel):
         help_text='Tobacco'
     )
 
+    substance_method_tobacco = models.CharField(
+        verbose_name='Method of use',
+        max_length=15,
+        choices=METHODS_OF_USE,
+    )
+
     substance_age_tobacco = models.IntegerField(
         verbose_name='Age at First Use',
     )
@@ -60,6 +66,12 @@ class Section2(BaseUuidModel):
         max_length=5,
         choices=YES_NO,
         help_text='Marijuana'
+    )
+
+    substance_method_marijuana = models.CharField(
+        verbose_name='Method of use',
+        max_length=15,
+        choices=METHODS_OF_USE,
     )
 
     substance_age_marijuana = models.IntegerField(
@@ -80,6 +92,12 @@ class Section2(BaseUuidModel):
         help_text='Cocaine'
     )
 
+    substance_method_cocaine = models.CharField(
+        verbose_name='Method of use',
+        max_length=15,
+        choices=METHODS_OF_USE,
+    )
+
     substance_age_cocaine = models.IntegerField(
         verbose_name='Age at First Use',
     )
@@ -91,11 +109,17 @@ class Section2(BaseUuidModel):
         choices=SUBSTANCE_FREQUENCY,
     )
 
-    taken_crack_cocaine = models.CharField(
+    taken_crack = models.CharField(
         verbose_name='Have you taken any Crack Cocaine',
         max_length=5,
         choices=YES_NO,
         help_text='Crack Cocaine'
+    )
+
+    substance_method_crack = models.CharField(
+        verbose_name='Method of use',
+        max_length=15,
+        choices=METHODS_OF_USE,
     )
 
     substance_age_crack = models.IntegerField(
@@ -109,11 +133,17 @@ class Section2(BaseUuidModel):
         choices=SUBSTANCE_FREQUENCY,
     )
 
-    taken_methcathinone = models.CharField(
+    taken_meth = models.CharField(
         verbose_name='Have you taken any Methcathinone',
         max_length=5,
         choices=YES_NO,
         help_text='Methcathinone'
+    )
+
+    substance_method_meth = models.CharField(
+        verbose_name='Method of use',
+        max_length=15,
+        choices=METHODS_OF_USE,
     )
 
     substance_age_meth = models.IntegerField(
@@ -134,6 +164,12 @@ class Section2(BaseUuidModel):
         help_text='Nyaope'
     )
 
+    substance_method_nyaope = models.CharField(
+        verbose_name='Method of use',
+        max_length=15,
+        choices=METHODS_OF_USE,
+    )
+
     substance_age_nyaope = models.IntegerField(
         verbose_name='Age at First Use',
     )
@@ -150,6 +186,12 @@ class Section2(BaseUuidModel):
         max_length=5,
         choices=YES_NO,
         help_text='Heroine'
+    )
+
+    substance_method_heroine = models.CharField(
+        verbose_name='Method of use',
+        max_length=15,
+        choices=METHODS_OF_USE,
     )
 
     substance_age_heroine = models.IntegerField(
@@ -170,6 +212,12 @@ class Section2(BaseUuidModel):
         help_text='Ecstasy (MDMA)'
     )
 
+    substance_method_ecstasy = models.CharField(
+        verbose_name='Method of use',
+        max_length=15,
+        choices=METHODS_OF_USE,
+    )
+
     substance_age_ecstacy = models.IntegerField(
         verbose_name='Age at First Use',
     )
@@ -186,6 +234,12 @@ class Section2(BaseUuidModel):
         max_length=5,
         choices=YES_NO,
         help_text='Codeine'
+    )
+
+    substance_method_codeine = models.CharField(
+        verbose_name='Method of use',
+        max_length=15,
+        choices=METHODS_OF_USE,
     )
 
     substance_age_codeine = models.IntegerField(
