@@ -409,6 +409,7 @@ VIOLANCE = (
      'sexual intercourse',
      'YES, Made you afraid of what would happen if you did not have '
      'sexual intercourse'),
+    ('No', 'No'),
 
 )
 
