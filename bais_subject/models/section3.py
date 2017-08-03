@@ -151,7 +151,7 @@ class Section3(BaseUuidModel):
     )
 
     partners_serial_concurrent = models.CharField(
-        verbose_name='By who?',
+        verbose_name='Were your partners serial or concurrent?',
         max_length=45,
         choices=SERIAL_CONCURRENT
     )
