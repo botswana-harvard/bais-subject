@@ -77,7 +77,7 @@ class HouseholdQuestionnaire(BaseUuidModel):
         choices=YES_NO_DNTKNW,
     )
 
-    person_biological_mother_household_live = models.CharField(
+    person_biological_mother_household = models.CharField(
         verbose_name='Does the person\'s biological mother usually '
         'live in this household?',
         max_length=45,
@@ -90,7 +90,7 @@ class HouseholdQuestionnaire(BaseUuidModel):
         choices=YES_NO_DNTKNW,
     )
 
-    person_biological_father_household_live = models.CharField(
+    person_biological_father_household = models.CharField(
         verbose_name='Does the person\'s biological father usually '
         'live in this household?',
         max_length=45,
