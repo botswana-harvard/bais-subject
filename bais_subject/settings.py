@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'bais_subject',
+    'bais_subject_form_validators.apps.AppConfig'
 ]
 
 MIDDLEWARE = [
