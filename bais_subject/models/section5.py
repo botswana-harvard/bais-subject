@@ -3,7 +3,9 @@ from django.db import models
 from edc_base.model_fields import OtherCharField
 from edc_base.model_mixins import BaseUuidModel
 
-from ..choices import (YES_NO, YES_NO_UNSURE, YES_NO_DNTKNW, TRANSMISSION_PREVENTION,
+from ..choices import (YES_NO, YES_NO_UNSURE, HIV_PREVENTION,
+                       YES_NO_DNTKNW,
+                       TRANSMISSION_PREVENTION,
                        TREATMENT_OPTIONS, ARV_USES, ARV_CONCERN,
                        ARV_INFLUENCE, SEXUAL_BEHAVIOUR,
                        TB_INFECTION, TB_SPREAD, TB_CURE, SMC_SOURCE,
@@ -31,15 +33,25 @@ class Section5(BaseUuidModel):
     hiv_and_aids_information = models.CharField(
         verbose_name="From what source(s) did you recieve information about HIV and AIDS?",
         max_length=35,
-        choices=YES_NO,
+        choices=SMC_SOURCE,
         help_text="Circle all that are mentioned more than one anwser is possible"
+    )
+
+    hiv_and_aids_information_other = OtherCharField(
+        verbose_name="Other,Specify,",
+        max_length=35,
     )
 
     hiv_and_aids_prevention = models.CharField(
         verbose_name="What can people do to prevent becoming infected with HIV?",
         max_length=35,
-        choices=YES_NO,
+        choices=HIV_PREVENTION,
         help_text="Circle all that are mentioned more than one anwser is possible"
+    )
+
+    hiv_and_aids_prevention_other = OtherCharField(
+        verbose_name="Other, Specify",
+        max_length=35,
     )
 
     tb_awareness = models.CharField(
@@ -299,6 +311,8 @@ class Section5(BaseUuidModel):
     smc_programme_source_other = OtherCharField(
         verbose_name='OTHER, SPECIFY',
         max_length=35,
+        blank=True,
+        null=True
     )
 
     smc_programme_interest = models.CharField(
