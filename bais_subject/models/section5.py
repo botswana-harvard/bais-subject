@@ -4,7 +4,7 @@ from edc_base.model_fields import OtherCharField
 from edc_base.model_mixins import BaseUuidModel
 
 from ..choices import (YES_NO, YES_NO_UNSURE, HIV_PREVENTION,
-                       YES_NO_DNTKNW,
+                       TB_INFO_SOURCE, YES_NO_DNTKNW, TB_PREVENTION,
                        TRANSMISSION_PREVENTION,
                        TREATMENT_OPTIONS, ARV_USES, ARV_CONCERN,
                        ARV_INFLUENCE, SEXUAL_BEHAVIOUR,
@@ -71,7 +71,7 @@ class Section5(BaseUuidModel):
     tb_information_source = models.CharField(
         verbose_name="From what source(s) did you recieve information about TB?",
         max_length=35,
-        choices=YES_NO,
+        choices=TB_INFO_SOURCE,
         help_text="Circle all that are mentioned more than one anwser is possible"
     )
 
@@ -83,7 +83,7 @@ class Section5(BaseUuidModel):
     tb_prevention = models.CharField(
         verbose_name="What can people do to prevent becoming infected with TB?",
         max_length=35,
-        choices=YES_NO,
+        choices=TB_PREVENTION,
         help_text="Circle all that are mentioned more than one anwser is possible"
     )
 
@@ -123,7 +123,7 @@ class Section5(BaseUuidModel):
     )
 
     hiv_and_aids_sharing_meal = models.CharField(
-        verbose_name='Can a person get infected with HIv by sharing a '
+        verbose_name='Can a person get infected with HIV by sharing a '
         ' meal (from the same plate) with a person who has HIV and aids?',
         max_length=35,
         choices=YES_NO_DNTKNW,
@@ -135,7 +135,7 @@ class Section5(BaseUuidModel):
         choices=YES_NO_DNTKNW,
     )
 
-    hiv_and_aids_mother_to_child = models.CharField(
+    hiv_and_aids_mother_to_child = models.CharField(  # TODO: REVIEW
         verbose_name="Can HIV be transmitted from mother to child?",
         max_length=35,
         choices=YES_NO_DNTKNW,
@@ -157,6 +157,7 @@ class Section5(BaseUuidModel):
     hiv_and_aids_unborn_baby_transmission_other = OtherCharField(
         verbose_name='Other, Specify',
         max_length=35,
+        blank=True
     )
 
     hiv_and_aids_newborn_baby = models.CharField(
@@ -175,6 +176,7 @@ class Section5(BaseUuidModel):
     hiv_and_aids_newborn_baby_transmission_other = OtherCharField(
         verbose_name='Other, Specify',
         max_length=250,
+        blank=True,
     )
 
     hiv_and_aids_treatment_options = models.CharField(
