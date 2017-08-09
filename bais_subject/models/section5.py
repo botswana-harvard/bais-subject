@@ -201,7 +201,7 @@ class Section5(BaseUuidModel):
         verbose_name='Has your personal concern about getting HIV changed'
         'since the introduction of ARV’s?',
         max_length=35,
-        choices=ARV_USES,
+        choices=YES_NO,
     )
 
     arv_treatment_concern_yes = models.CharField(
@@ -210,10 +210,10 @@ class Section5(BaseUuidModel):
         choices=ARV_CONCERN,
     )
 
-    arv_treatment_concern_yes_other = OtherCharField(
-        verbose_name='Other, Specify',
-        max_length=250,
-    )
+#     arv_treatment_concern_yes_other = OtherCharField(
+#         verbose_name='Other, Specify',
+#         max_length=250,
+#     )
 
     arv_treatment_condomize = models.CharField(
         verbose_name='Do you think that people on ARV’s should always use condoms?',
@@ -260,6 +260,7 @@ class Section5(BaseUuidModel):
     tb_infection_other = OtherCharField(
         verbose_name='OTHER, SPECIFY',
         max_length=250,
+        blank=True
     )
 
     tb_spread = models.CharField(
@@ -273,21 +274,16 @@ class Section5(BaseUuidModel):
         max_length=35,
     )
 
-    tb_cure = models.CharField(
+    tb_curable = models.CharField(
         verbose_name='Do you think that TB can be treated /curable?',
         max_length=35,
         choices=YES_NO_DNTKNW,
     )
 
-    tb_cure_yes = models.CharField(
+    tb_cure = models.CharField(
         verbose_name='How can Tb be cured?',
         max_length=250,
         choices=TB_CURE,
-    )
-
-    tb_cure_yes_other = OtherCharField(
-        verbose_name='OTHER, SPECIFY',
-        max_length=250,
     )
 
     smc_programme = models.CharField(
@@ -361,6 +357,7 @@ class Section5(BaseUuidModel):
     condom_consent_woman_other = OtherCharField(
         verbose_name=' OTHER, SPECIFY',
         max_length=35,
+        blank=True
     )
 
     class Meta(BaseUuidModel.Meta):
