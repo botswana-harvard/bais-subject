@@ -260,7 +260,8 @@ class Section5(BaseUuidModel):
     tb_infection_other = OtherCharField(
         verbose_name='OTHER, SPECIFY',
         max_length=250,
-        blank=True
+        blank=True,
+        null=True
     )
 
     tb_spread = models.CharField(
@@ -349,15 +350,14 @@ class Section5(BaseUuidModel):
     condom_consent_woman = models.CharField(
         verbose_name=' Why not?',
         max_length=35,
-        choices=CONDOM_CONSENT,
-        null=True,
-        blank=True,
+        choices=CONDOM_CONSENT
     )
 
     condom_consent_woman_other = OtherCharField(
         verbose_name=' OTHER, SPECIFY',
         max_length=35,
-        blank=True
+        blank=True,
+        null=True
     )
 
     class Meta(BaseUuidModel.Meta):

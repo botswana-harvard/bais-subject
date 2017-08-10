@@ -97,7 +97,7 @@ class Section8(BaseUuidModel):
         blank=True
     )
 
-    tb_sputum_sample_result = OtherCharField(
+    tb_sputum_sample_result = models.CharField(
         verbose_name='If YES,What was the result?',
         max_length=35,
         choices=TB_SPUTUM_SAMPLE,
@@ -106,12 +106,23 @@ class Section8(BaseUuidModel):
         blank=True
     )
 
-    tb_sputum_sample_result = OtherCharField(
+    tb_sputum_sample_result_other = OtherCharField(
+        verbose_name='Other,Specify',
+        blank=True
+    )
+
+    tb_sputum_sample_no_result = models.CharField(
         verbose_name='If NO,Why not?',
         max_length=35,
         choices=TB_NO_SPUTUM,
         help_text="",
         null=True,
+        blank=True
+    )
+
+    tb_sputum_sample_no_result_other = OtherCharField(
+        verbose_name='Other,Specify',
+        max_length=35,
         blank=True
     )
 
@@ -124,12 +135,18 @@ class Section8(BaseUuidModel):
         blank=True
     )
 
-    tb_fever_duration = OtherCharField(
+    tb_fever_duration = models.CharField(
         verbose_name='If YES,for how long?',
         max_length=35,
         choices=YES_NO,
         help_text="",
         null=True,
+        blank=True
+    )
+
+    tb_fever_duration_other = OtherCharField(
+        verbose_name='Other,Specify',
+        max_length=35,
         blank=True
     )
 
@@ -226,13 +243,19 @@ class Section8(BaseUuidModel):
         blank=True
     )
 
-    last_cancer_test = OtherCharField(
+    last_cancer_test = models.CharField(
         verbose_name='In the last 2 years when was the last time'
         'you tested for cancer? ',
         max_length=35,
         choices=CANCER_TEST,
         help_text="",
         null=True,
+        blank=True
+    )
+
+    last_cancer_test_other = OtherCharField(
+        verbose_name='Other,specify',
+        max_length=35,
         blank=True
     )
 
