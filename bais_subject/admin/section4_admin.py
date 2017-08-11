@@ -11,9 +11,11 @@ class Section4Admin(admin.ModelAdmin):
 
     form = Section4Form
 
+    filter_horizontal = ('circumcission_reason',)
+
     radio_fields = {
         'circumcission': admin.VERTICAL,
-        'circumcission_reason': admin.VERTICAL,
+        #         'circumcission_reason': admin.VERTICAL,
         'circumcission_place': admin.VERTICAL,
         'circumcised_complications': admin.VERTICAL,
         'circumcission_intent': admin.VERTICAL,

@@ -3,9 +3,10 @@ from django.db import models
 from edc_base.model_fields import OtherCharField
 from edc_base.model_mixins import BaseUuidModel
 
+from .list_models import CircumcissionReason
+
 from ..choices import (
     YES_NO_DNTKNW,
-    CIRCUMICISSION_REASON,
     CIRCUMICISSION_PLACE,
     CIRCUMICISSION_INTENT_REASON,
     CIRCUMICISSION_REJECT_REASON,
@@ -28,10 +29,10 @@ class Section4(BaseUuidModel):
         help_text='YEAR'
     )
 
-    circumcission_reason = models.CharField(
+    circumcission_reason = models.ManyToManyField(
+        CircumcissionReason,
         verbose_name='Why were you circumcised?',
         max_length=45,
-        choices=CIRCUMICISSION_REASON,
     )
 
     circumcission_place = models.CharField(
