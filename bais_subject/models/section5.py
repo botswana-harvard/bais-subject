@@ -40,6 +40,9 @@ class Section5(BaseUuidModel):
     hiv_and_aids_information_other = OtherCharField(
         verbose_name="Other,Specify,",
         max_length=35,
+        blank=True,
+        null=True
+
     )
 
     hiv_and_aids_prevention = models.CharField(
@@ -78,6 +81,7 @@ class Section5(BaseUuidModel):
     tb_information_source_other = OtherCharField(
         verbose_name='Other,Specify',
         blank=True,
+        null=True
     )
 
     tb_prevention = models.CharField(
@@ -157,7 +161,8 @@ class Section5(BaseUuidModel):
     hiv_and_aids_unborn_baby_transmission_other = OtherCharField(
         verbose_name='Other, Specify',
         max_length=35,
-        blank=True
+        blank=True,
+        null=True
     )
 
     hiv_and_aids_newborn_baby = models.CharField(
@@ -177,6 +182,7 @@ class Section5(BaseUuidModel):
         verbose_name='Other, Specify',
         max_length=250,
         blank=True,
+        null=True
     )
 
     hiv_and_aids_treatment_options = models.CharField(
@@ -189,6 +195,8 @@ class Section5(BaseUuidModel):
     hiv_and_aids_treatment_options_other = OtherCharField(
         verbose_name='OTHER, SPECIFY',
         max_length=35,
+        blank=True,
+        null=True
     )
 
     arv_treatment = models.CharField(
@@ -236,6 +244,9 @@ class Section5(BaseUuidModel):
     arv_sexual_behaviour_yes_other = OtherCharField(
         verbose_name='OTHER, SPECIFY',
         max_length=250,
+        blank=True,
+        null=True
+
     )
 
     arv_intake = models.CharField(
@@ -273,6 +284,8 @@ class Section5(BaseUuidModel):
     tb_spread_other = OtherCharField(
         verbose_name='OTHER, SPECIFY',
         max_length=35,
+        blank=True,
+        null=True
     )
 
     tb_curable = models.CharField(
