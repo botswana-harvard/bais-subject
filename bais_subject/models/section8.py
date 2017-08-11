@@ -193,8 +193,8 @@ class Section8(BaseUuidModel):
     last_cancer_test_other = OtherCharField(
         verbose_name='Other,specify',
         max_length=35,
-        blank=True
-        null=True
+        blank=True,
+        null=True,
     )
 
     cancer_test_result = models.CharField(
