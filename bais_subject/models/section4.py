@@ -3,14 +3,15 @@ from django.db import models
 from edc_base.model_fields import OtherCharField
 from edc_base.model_mixins import BaseUuidModel
 
-from .list_models import CircumcissionReason
+from .list_models import (
+    CircumcissionReason,
+    CircumcissionIntentReason,
+    CircumcissionRejectReason,
+    StiSymptoms)
 
 from ..choices import (
     YES_NO_DNTKNW,
-    CIRCUMICISSION_PLACE,
-    CIRCUMICISSION_INTENT_REASON,
-    CIRCUMICISSION_REJECT_REASON,
-    STI_SYMPTOMS,)
+    CIRCUMICISSION_PLACE)
 
 
 class Section4(BaseUuidModel):
@@ -55,10 +56,10 @@ class Section4(BaseUuidModel):
         choices=YES_NO_DNTKNW,
     )
 
-    circumcission_intent_reason = models.CharField(
+    circumcission_intent_reason = models.ManyToManyField(
+        CircumcissionIntentReason,
         verbose_name='Why would you want to get circumcised?',
         max_length=45,
-        choices=CIRCUMICISSION_INTENT_REASON,
     )
 
     circumcission_intent_reason_other = OtherCharField(
@@ -68,10 +69,10 @@ class Section4(BaseUuidModel):
         null=True
     )
 
-    circumcission_reject_reason = models.CharField(
+    circumcission_reject_reason = models.ManyToManyField(
+        CircumcissionRejectReason,
         verbose_name='Why would you want to get circumcised?',
         max_length=45,
-        choices=CIRCUMICISSION_REJECT_REASON,
     )
 
     circumcission_reject_reason_other = OtherCharField(
@@ -81,11 +82,11 @@ class Section4(BaseUuidModel):
         null=True
     )
 
-    sti_symptoms = models.CharField(
+    sti_symptoms = models.ManyToManyField(
+        StiSymptoms,
         verbose_name='What signs and symptoms would lead you to '
         'think that a man or a woman has STIs? ',
         max_length=45,
-        choices=STI_SYMPTOMS,
     )
 
     sti_symptoms_other = OtherCharField(
