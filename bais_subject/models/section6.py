@@ -200,10 +200,17 @@ class Section6(BaseUuidModel):
         choices=YES_NO,
     )
 
-    tb_diagnosis_no_disclosure = OtherCharField(
+    tb_diagnosis_no_disclosure = models.CharField(
         verbose_name='If No,why not',
         max_length=35,
         choices=TB_NONDISCLOSURE,
+    )
+
+    tb_diagnosis_no_disclosure_other = OtherCharField(
+        verbose_name='If No,why not',
+        max_length=35,
+        blank=True,
+        null=True
     )
 
     class Meta(BaseUuidModel.Meta):
