@@ -95,6 +95,7 @@ class Section7(BaseUuidModel):
         verbose_name='Other,Specify ',
         max_length=35,
         blank=True,
+        null=True
     )
 
     ante_natal_clinic_test = models.CharField(

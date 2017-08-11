@@ -169,7 +169,8 @@ class Section6(BaseUuidModel):
     not_on_arv_therapy_other = OtherCharField(
         verbose_name='OTHER SPECIFY',
         max_length=35,
-        null=True,
+        blank=True,
+        null=True
 
     )
 
