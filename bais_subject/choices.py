@@ -1,440 +1,449 @@
-from edc_constants.constants import DWTA, DONT_KNOW, OTHER, NONE, NO
+from edc_constants.constants import (
+    DWTA,
+    DONT_KNOW,
+    OTHER,
+    NONE,
+    NO,
+    YES,
+    MALE,
+    FEMALE,
+    NEVER)
 
 MALE_FEMALE = (
-    ('MALE', 'MALE'),
-    ('FEMALE', 'FEMALE')
+    (MALE, 'Male'),
+    (FEMALE, 'Female')
 )
 
 YES_NO = (
-    ('YES', 'YES'),
-    ('NO', 'NO')
+    (YES, 'Yes'),
+    (NO, 'No')
 )
 
 YES_NO_UNSURE = (
-    ('YES', 'YES'),
-    ('NO', 'NO'),
-    ('UNSURE', 'UNSURE')
+    (YES, 'Yes'),
+    (NO, 'No'),
+    ('UNSURE', 'Unsure')
 )
 
 YES_NO_DONTWANT = (
-    ('YES', 'YES'),
-    ('NO', 'NO'),
-    (DWTA, 'DON\'T WANT TO ANSWER')
+    (YES, 'Yes'),
+    (NO, 'No'),
+    (DWTA, 'Don\'t want to answer')
 )
 ARV_USAGE = (
-    ('YES', 'YES (CONFIRMED)'),
-    ('YES', 'YES (NOT CONFIRMED)'),
-    ('NO', 'NO'),
-    (DWTA, 'DON\'T WANT TO ANSWER')
+    (YES, 'Yes (confirmed)'),
+    ('YES_NOT_CONFIRMED', 'Yes (not confirmed)'),
+    (NO, 'No'),
+    (DWTA, 'Don\'t want to answer')
 )
 
 YES_NO_DNTKNW = (
-    ('YES', 'YES'),
-    ('NO', 'NO'),
+    (YES, 'Yes'),
+    (NO, 'NO'),
     (DONT_KNOW, 'Don\'t Know')
 )
 
 ARV_INFLUENCE = (
-    ('YES', 'YES'),
-    ('NO', 'NO'),
-    ('NEVER_HAD_SEX', 'NEVER HAD SEX'),
+    (YES, 'Yes'),
+    (NO, 'No'),
+    ('NEVER_HAD_SEX', 'Never had sex'),
     (DONT_KNOW, 'Don\'t Know')
 )
 
 BABY_TEST = (
-    ('YES', '6-8 weeks'),
-    ('YES 2', '7 weeks - 18 months'),
-    ('NO', 'NO'),
-    (DWTA, 'DON\'T WANT TO ANSWER'),
+    ('YES_6_8_WEEK', '6-8 weeks'),
+    ('YES_18_MONTHS', '7 weeks - 18 months'),
+    (NO, 'NO'),
+    (DWTA, 'Don\'t want to answer'),
     (DONT_KNOW, 'Don\'t Know')
 )
 
 BABY_TEST_RESULT = (
-    ('POSITIVE ', 'POSITIVE'),
-    ('NEGATIVE', 'NEGATIVE'),
-    (DWTA, 'DON\'T WANT TO ANSWER'),
-    ('DID_NOT_RECIEVE_RESULTS', 'DID NOT RECIEVE RESULTS')
+    ('POSITIVE', 'Positive'),
+    ('NEGATIVE', 'Negative'),
+    (DWTA, 'Don\'t want to answer'),
+    ('DID_NOT_RECIEVE_RESULTS', 'Did not recieve result')
 )
 
 ANTE_NATAL_TEST_RESULT = (
-    ('POSITIVE ', 'POSITIVE'),
-    ('NEGATIVE', 'NEGATIVE'),
-    ('INDETERMINATE', 'INDETERMINATE'),
-    (DWTA, 'DON\'T WANT TO ANSWER'),
-    ('DID_NOT_RECIEVE_RESULTS', 'DID NOT RECIEVE RESULTS'),
+    ('POSITIVE ', 'Positive'),
+    ('NEGATIVE', 'Negative'),
+    ('INDETERMINATE', 'Indeterminate'),
+    (DWTA, 'Don\'t want to answer'),
+    ('DID_NOT_RECIEVE_RESULTS', 'Did not recieve reaults'),
     (DONT_KNOW, 'Don\'t Know')
 )
 
 BABY_FEEDING = (
-    ('FORMULA_EXCLUSIVELY', 'FORMULA EXCLUSIVELY'),
-    ('BREAST_MILK_EXCLUSIVELY', 'BREAST MILK EXCLUSIVELY'),
-    ('FORMULA_AND_BREAST_MILK ', 'FORMULA AND BREAST MILK'),
-    ('FORMULA_AND_SOLID_FOOD', 'FORMULA AND SOLID FOOD'),
-    ('BREAST_MILK_EXCLUSIVELY', 'BREAST MILK EXCLUSIVELY'),
-    ('BREAST_MILK_AND_SOLID_FOOD ', 'BREAST MILK AND SOLID FOOD'),
+    ('FORMULA_EXCLUSIVELY', 'Formula exclusively'),
+    ('BREAST_MILK_EXCLUSIVELY', 'Breast milk exclusively'),
+    ('FORMULA_AND_BREAST_MILK ', 'Formula and breast milk'),
+    ('FORMULA_AND_SOLID_FOOD', 'Formula and solid food'),
+    ('BREAST_MILK_AND_SOLID_FOOD ', 'Breast milk and solid food'),
     ('FORMULA_BREAST_MILK_AND_SOLID_FOOD',
-     'FORMULA, BREAST MILK AND SOLID FOOD')
+     'Formula, breast milk and solid food')
 )
 
 HIV_TEST_RESULT = (
-    ('POSITIVE ', 'POSITIVE'),
-    ('NEGATIVE', 'NEGATIVE'),
-    ('INDETERMINATE', 'INDETERMINATE'),
-    (DWTA, 'DON\'T WANT TO ANSWER'),
+    ('POSITIVE ', 'Positive'),
+    ('NEGATIVE', 'Negative'),
+    ('INDETERMINATE', 'Indeterminate'),
+    (DWTA, 'Don\'t want to answer'),
     (DONT_KNOW, 'Don\'t Know')
 )
 
 EDUCATION = (
-    ('NONE', 'NONE'),
-    ('NON_FORMAL', 'NON-FORMAL'),
-    ('PRIMARY', 'PRIMARY'),
-    ('JUNIOR_SECONDARY', 'JUNIOR SECONDARY'),
-    ('SENIOR_SECONDARY', 'SENIOR SECONDARY'),
-    ('HIGHER', 'HIGHER')
+    (NONE, 'None'),
+    ('NON_FORMAL', 'Non-formal'),
+    ('PRIMARY', 'Primary'),
+    ('JUNIOR_SECONDARY', 'Junior secondary'),
+    ('SENIOR_SECONDARY', 'Senior secondary'),
+    ('HIGHER', 'Higher')
 )
 
 EMPLOYMENT_STATUS = (
-    ('FULL_TIME', 'FULL-TIME EMPLOYED'),
-    ('SELF', 'SELF EMPLOYED'),
-    ('PART_TIME', 'PART-TIME EMPLOYED'),
-    ('OWN', 'WORKING AT OWN LANDS/CATTLEPOST'),
-    ('ACTIVELY_SEEKING_WORK', 'ACTIVELY SEEKING WORK'),
-    ('TOO_OLD_TO_WORK', 'TOO OLD TO WORK'),
-    ('PENSIONER', 'PENSIONER'),
-    ('STUDENT', 'STUDENT'),
-    (OTHER, 'OTHER')
+    ('FULL_TIME', 'Full-time employed'),
+    ('SELF', 'Self employed'),
+    ('PART_TIME', 'Part-time employed'),
+    ('OWN', 'Working at own lands/Cattlepost'),
+    ('ACTIVELY_SEEKING_WORK', 'Activiley seeking work'),
+    ('TOO_OLD_TO_WORK', 'Too old to work'),
+    ('PENSIONER', 'Pensioner'),
+    ('STUDENT', 'Student'),
+    (OTHER, 'Other, specify'),
 )
 
 MINE_OCCUPATION = (
-    ('LOADER', 'LOADER'),
-    ('BLASTER', 'BLASTER'),
-    ('SHAFTMAN', 'SHAFTMAN'),
-    ('FOREMAN', 'FOREMAN'),
-    ('DRILLER', 'DRILLER'),
-    (OTHER, 'OTHER')
+    ('LOADER', 'Loader'),
+    ('BLASTER', 'Blaster'),
+    ('SHAFTMAN', 'Shaftman'),
+    ('FOREMAN', 'Foreman'),
+    ('DRILLER', 'Driller'),
+    (OTHER, 'Other, specify'),
 )
 
 COMMODITY = (
-    ('QUARRY', 'QUARRY'),
-    ('COAL', 'COAL'),
-    ('KIMBERLITE', 'KIMBERLITE'),
-    ('COPPER_NICKLE', 'COPPER/NICKLE'),
-    ('ASBESTOS', 'ASBESTOS'),
-    (OTHER, 'OTHER')
+    ('QUARRY', 'Quarry'),
+    ('COAL', 'Coal'),
+    ('KIMBERLITE', 'Kimberlite'),
+    ('COPPER_NICKLE', 'Copper/Nickle'),
+    ('ASBESTOS', 'Asbestos'),
+    (OTHER, 'Other, specify'),
 )
 
 CONDOM_CONSENT = (
-    ('FEAR_OF_NEEDLES', 'FEAR OF NEEDLES'),
-    ('FEAR_OF_HIV_TEST_RESULTS', 'FEAR OF HIV TEST RESULTS'),
-    ('FEAR_OF_HIV_INFECTION', 'FEAR OF HIV INFECTION'),
-    ('NOT_ELIGIBLE', 'NOT ELIGIBLE'),
-    ('NO_INCENTIVES', 'NO INCENTIVES'),
-    ('LACK_OF_KNOWLEGDE', 'LACK OF KNOWLEGDE'),
-    (OTHER, 'OTHER,SPECIFY')
+    ('FEAR_OF_NEEDLES', 'Fear of needles'),
+    ('FEAR_OF_HIV_TEST_RESULTS', 'Fear of HIV test results'),
+    ('FEAR_OF_HIV_INFECTION', 'Fear of HIV infection'),
+    ('NOT_ELIGIBLE', 'Not eligible'),
+    ('NO_INCENTIVES', 'No incentives'),
+    ('LACK_OF_KNOWLEGDE', 'Lack of knowledge'),
+    (OTHER, 'Other, specify'),
 )
 
 RELIGION = (
-    ('CHRISTIANITY', 'CHRISTIANITY'),
-    ('ISLAM', 'ISLAM'),
-    ('BAHAI', 'BAHAI'),
-    ('HINDUISM', 'HINDUISM'),
-    ('BADIMO', 'BADIMO'),
-    ('NO', 'NO RELIGION'),
-    (OTHER, 'OTHER')
+    ('CHRISTIANITY', 'Christianity'),
+    ('ISLAM', 'Islam'),
+    ('BAHAI', 'Bahai'),
+    ('HINDUISM', 'Hinduism'),
+    ('BADIMO', 'Badimo'),
+    ('NO', 'No Religion'),
+    (OTHER, 'Other, specify'),
 )
 
 TREATMENT_OPTIONS = (
-    ('ANTIRETROVIRALS', 'ANTIRETROVIRALS'),
-    ('TRADITIONAL_HEALING', 'TRADITIONAL HEALING'),
-    ('SPIRITUAL_HEALING', 'SPIRITTUAL HEALING'),
-    ('HERBAL', 'HERBAL'),
-    (NONE, 'NONE'),
+    ('ANTIRETROVIRALS', 'ANtiretrovirals'),
+    ('TRADITIONAL_HEALING', 'Traditional healing'),
+    ('SPIRITUAL_HEALING', 'Spiritual healing'),
+    ('HERBAL', 'Herbal'),
+    (NONE, 'None'),
 )
 
 
 ARV_USES = (
-    ('CURE_AIDS', 'CURE AIDS'),
-    ('CURE_HIV', 'CURE HIV'),
-    ('SUPPRESS_HIV', 'SUPPRESS HIV'),
+    ('CURE_AIDS', 'Cure AIDS'),
+    ('CURE_HIV', 'Cure HIV'),
+    ('SUPPRESS_HIV', 'Suppress HIV'),
     (DONT_KNOW, 'Don\'t Know')
 )
 
 REASONS_ARV_NOT_TAKEN = (
-    ('NON_DISCLOSURE_TO_PARTNER', 'NON DISCLOSURE TO PARTNER'),
-    ('SPRITUALIST_SAID_I_AM_HEALED', 'SPRITUALIST SAID I AM HEALED'),
+    ('NON_DISCLOSURE_TO_PARTNER', 'Non disclosure to partner'),
+    ('SPRITUALIST_SAID_I_AM_HEALED', 'Spiritualist said I am healed'),
     ('DID_NOT_WANT_TO_BE_CONFINED_TO_MEDICATION',
-     'DID NOT WANT TO BE CONFINED TO MEDICATION'),
-    (OTHER, 'OTHER SPECIFY'),
+     'Did not want to be confined to medication'),
+    (OTHER, 'Other, specify'),
 )
 
 MARITAL_STATUS = (
-    ('NEVER', 'NEVER MARRIED'),
-    ('MARRIED', 'MARRIED'),
-    ('LIVING TOGETHER', 'LIVING TOGETHER'),
-    ('SEPARATED', 'SEPARATED'),
-    ('DIVORCED', 'DIVORCED'),
-    ('WIDOWED', 'WIDOWED')
+    ('NEVER', 'Never married'),
+    ('MARRIED', 'Married'),
+    ('LIVING TOGETHER', 'Living together'),
+    ('SEPARATED', 'Separated'),
+    ('DIVORCED', 'Divorced'),
+    ('WIDOWED', 'Widowed')
 )
 
 SPOUSE_VISIT = (
-    ('DAILY', 'DAILY'),
-    ('WEEKLY', 'WEEKLY'),
-    ('FORTNIGHTLY', 'FORTNIGHTLY'),
-    ('MONTHLY', 'MONTHLY'),
-    ('QUARTELY', 'QUARTELY'),
-    ('YEARLY', 'YEARLY'),
-    ('NEVER', 'NEVER')
+    ('DAILY', 'Daily'),
+    ('WEEKLY', 'Weekly'),
+    ('FORTNIGHTLY', 'Fortnightly'),
+    ('MONTHLY', 'Monthly'),
+    ('QUARTELY', 'Quartely'),
+    ('YEARLY', 'Yearly'),
+    (NEVER, 'Never')
 )
 
 TRANSMISSION_PREVENTION = (
     ('ANTIRETROVIRAL_THERAPY',
-     'ANTIRETROVIRAL THERAPY (AZT, DRUGS BEFORE BIRTH)'),
-    ('CAESAREAN_SECTION', 'CAESAREAN SECTION'),
+     'Antiretroviral Therapy (AZT, Drugs before birth)'),
+    ('CAESAREAN_SECTION', 'Caesarean section'),
     (DONT_KNOW, 'Don\'t Know')
 )
 
 ARV_CONCERN = (
-    ('LESS_CONCERNED ', 'LESS CONCERNED '),
-    ('MORE_CONCERNED ', 'MORE CONCERNED '),
+    ('LESS_CONCERNED ', 'Less concerned'),
+    ('MORE_CONCERNED ', 'More concerned '),
     (DONT_KNOW, 'Don\'t Know')
 )
 
 SEXUAL_BEHAVIOUR = (
-    ('LESS_CONDOM_USE', 'LESS CONDOM USE'),
-    ('MORE_CONDOM_USE', 'MORE CONDOM USE'),
-    ('LESS_SEXUAL_PARTNERS', 'LESS SEXUAL PARTNERS'),
-    ('MORE_SEXUAL_PARTNERS', 'MORE SEXUAL PARTNERS'),
+    ('LESS_CONDOM_USE', 'Less condom use'),
+    ('MORE_CONDOM_USE', 'More condom use'),
+    ('LESS_SEXUAL_PARTNERS', 'Less sexual partners'),
+    ('MORE_SEXUAL_PARTNERS', 'More sexual partners'),
     ('CONTINUE_TO_PRACTICE_MULTIPLE_AND_CONCURRENT_PARTNERSHIPS',
-     'CONTINUE TO PRACTICE MULTIPLE AND CONCURRENT PARTNERSHIPS'),
+     'Continue to practice multiple and concurrent partnerships'),
     ('DISCONTINUE_TO_PRACTICE_MULTIPLE_AND_CONCURRENT_PARTNERSHIPS',
-     'DISCONTINUE TO PRACTICE MULTIPLE AND CONCURRENT PARTNERSHIPS'),
-    ('ABSTINENCE', 'ABSTINENCE'),
+     'Discontinue to practice multiple and concurrent partnerships'),
+    ('ABSTINENCE', 'Abstinence'),
     (DONT_KNOW, 'Don\'t Know')
 )
 
 TB_INFECTION = (
-    ('ANYBODY', 'ANYBODY'),
-    ('ONLY_POOR_PEOPLE', 'ONLY POOR PEOPLE'),
-    ('ONLY_HOMELESS_PEOPLE', 'ONLY HOMELESS PEOPLE'),
-    ('ONLY_ALCOHOLICS', 'ONLY ALCOHOLICS'),
-    ('ONLY_DRUG_USERS', 'ONLY DRUG USERS'),
+    ('ANYBODY', 'Anybody'),
+    ('ONLY_POOR_PEOPLE', 'Only poor people'),
+    ('ONLY_HOMELESS_PEOPLE', 'Only homeless people'),
+    ('ONLY_ALCOHOLICS', 'Only alcoholics'),
+    ('ONLY_DRUG_USERS', 'Only drug users'),
     ('ONLY_PEOPLE_LIVING_WITH_HIV_AND_AIDS',
-     'ONLY PEOPLE LIVING WITH HIV AND AIDS'),
+     'Only people living with HIV/AID'),
     ('ONLY_PEOPLE_WHO_HAVE_BEEN_IN_PRISON',
-     'ONLY PEOPLE WHO HAVE BEEN IN PRISON'),
+     'Only people who have been in prison'),
     (DONT_KNOW, 'Don\'t Know')
 )
 
 TB_SPREAD = (
-    ('SHARING_A_MEAL', 'SHARING A MEAL'),
-    ('HUGGING', 'HUGGING'),
-    ('SHARING_CLOTHES', 'SHARING CLOTHES'),
+    ('SHARING_A_MEAL', 'Sharing a meal'),
+    ('HUGGING', 'Hugging'),
+    ('SHARING_CLOTHES', 'Sharing clothes'),
     ('SEX_WITH_A_WOMAN_WHO_MISCARRIED',
-     'SEX WITH A WOMAN WHO MISCARRIED'),
-    ('SEX_WITH_A_WIDOWER', 'SEX WITH A WIDOWER'),
-    ('BORN_IN_A_FAMILY_WITH_HIV', 'BORN IN A FAMILY WITH HIV'),
-    ('HANDSHAKE', 'HANDSHAKE'),
+     'sex with a woman who miscarried'),
+    ('SEX_WITH_A_WIDOWER', 'Sex with a widower'),
+    ('BORN_IN_A_FAMILY_WITH_HIV', 'Born in a family with HIV'),
+    ('HANDSHAKE', 'Handshake'),
     ('TOUCHING_ITEMS_IN_PUBLIC_PLACES ',
-     'TOUCHING ITEMS IN PUBLIC PLACES(Door knobs, etc.)'),
+     'Touching items in public places(Door knobs, etc.)'),
     (DONT_KNOW, 'Don\'t Know'),
-    (OTHER, 'OTHER, SPECIFY')
+    (OTHER, 'Other, specify'),
 )
 
 TB_CURE = (
-    ('HERBAL_REMEDIES', 'HERBAL REMEDIES'),
-    ('HOME_REST_WITHOUT_MEDICINE', 'HOME REST WITHOUT MEDICINE'),
-    ('PRAYNG', 'PRAYING'),
+    ('HERBAL_REMEDIES', 'Herbal remedies'),
+    ('HOME_REST_WITHOUT_MEDICINE', 'Home rest without medicine'),
+    ('PRAYNG', 'Praying'),
     ('SPECIFIC_DRUGS_GIVEN_BY_HEALTH_CENTER',
-     'SPECIFIC DRUGS GIVEN BY HEALTH CENTER'),
+     'Specific drug given by health center'),
     ('DOTS', 'DOTS')
 )
 
 TESTING_REASONS = (
-    ('ILLNESS ', 'ILLNESS'),
-    ('PREGNANCY ', 'PREGNANCY '),
-    ('WANTED_TO_HAVE_A_CHILD', 'WANTED TO HAVE A CHILD'),
-    ('HAD_UNPROTECTED_SEX', 'HAD UNPROTECTED SEX'),
-    ('RAPE', 'RAPE'),
-    ('PRE_MARITAL_NEW_PARTNER', 'PRE-MARITAL/ NEW PARTNER'),
-    ('JUST_WANTED_TO_KNOW', 'JUST WANTED TO KNOW'),
-    ('NEEDLE_PRICK', 'NEEDLE PRICK'),
-    ('ENCOURAGED_BY_SOMEONE', 'ENCOURAGED BY SOMEONE'),
+    ('ILLNESS ', 'Illness'),
+    ('PREGNANCY ', 'Pregnancy'),
+    ('WANTED_TO_HAVE_A_CHILD', 'Wanted to have a child'),
+    ('HAD_UNPROTECTED_SEX', 'Had unprotected sex'),
+    ('RAPE', 'Rape'),
+    ('PRE_MARITAL_NEW_PARTNER', 'Pre-marital/New partner'),
+    ('JUST_WANTED_TO_KNOW', 'Just wanted to know'),
+    ('NEEDLE_PRICK', 'Needle prick'),
+    ('ENCOURAGED_BY_SOMEONE', 'Encouraged by someone'),
     ('PRE_EMPLOYMENT_SCHOLARSHIP_REQUIREMENTS ',
-     'PRE-EMPLOYMENT/SCHOLARSHIP REQUIREMENTS '),
+     'Pre-employment/Scholarship requirements'),
     (DONT_KNOW, 'Don\'t Know'),
-    (OTHER, 'OTHER (SPECIFY)'),
+    (OTHER, 'Other, specify'),
 )
 
 TB_REACTION = (
-    ('FEAR', 'FEAR'),
-    ('SURPRISE', 'SURPRISE'),
-    ('SHAME', 'SHAME'),
-    ('EMBARASSMENT', 'EMBARASSMENT'),
-    ('SADNESS_OR_HOPELESSNESS', 'SADNESS OR HOPELESSNESS'),
-    (OTHER, 'OTHER SPECIFY'),
+    ('FEAR', 'Fear'),
+    ('SURPRISE', 'Surprise'),
+    ('SHAME', 'Shame'),
+    ('EMBARASSMENT', 'Embarassment'),
+    ('SADNESS_OR_HOPELESSNESS', 'Sadness or hopelessness'),
+    (OTHER, 'Other, specify'),
 )
 
 REASONS_NOT_TESTED = (
-    ('FEAR_OF_KNOWING_MY_STATUS', 'FEAR OF KNOWING MY STATUS'),
+    ('FEAR_OF_KNOWING_MY_STATUS', 'Fear of knowing my status'),
     ('FEAR_MY_PARTNERS_POSSIBLE_REACTION',
-     'FEAR MY PARTNER’S POSSIBLE REACTION'),
+     'Fear of my partners possible reaction'),
     ('MY_PARTNER_RECENTLY_TESTED_NEGATIVE',
-     'MY PARTNER RECENTLY TESTED NEGATIVE'),
-    ('FEAR_OF_NEEDLE_PRICK', 'FEAR OF NEEDLE PRICK'),
-    ('I_AM_NOT_AT_RISK', 'I AM NOT AT RISK'),
+     'MYy partner recently tested negative'),
+    ('FEAR_OF_NEEDLE_PRICK', 'Fear of needle prick'),
+    ('I_AM_NOT_AT_RISK', 'I am not at risk'),
     ('I_HAVE_NOT_HAD_THE_TIME_OR_CHANCE_TO_GO_FOR_TESTING',
-     'I HAVE NOT HAD THE TIME OR CHANCE TO GO FOR TESTING'),
-    ('JUST_WANTED_TO_KNOW', 'JUST WANTED TO KNOW'),
-    ('NEEDLE_PRICK', 'NEEDLE PRICK'),
-    ('ENCOURAGED_BY_SOMEONE', 'ENCOURAGED BY SOMEONE'),
+     'I have not had the time or chance to go for testing'),
+    ('JUST_WANTED_TO_KNOW', 'Just wanted to know'),
+    ('NEEDLE_PRICK', 'Needle prick'),
+    ('ENCOURAGED_BY_SOMEONE', 'Encouranged by someone'),
     ('PRE_EMPLOYMENT_SCHOLARSHIP_REQUIREMENTS ',
-     'PRE-EMPLOYMENT/SCHOLARSHIP REQUIREMENTS '),
+     'Pre-employment?Scholarship requirement'),
     ('I_DO_NOT_KNOW_WHERE_TO_GO_TO_GET_TESTED',
-     'I DO NOT KNOW WHERE TO GO TO GET TESTED'),
-    (OTHER, 'OTHER (SPECIFY)'),
+     'I do not know where to go to get tested'),
+    (OTHER, 'Other, specify'),
 )
 
 SMC_SOURCE = (
-    ('YOUTH_PROGRAM', 'YOUTH PROGRAM'),
-    ('TELEVISION_VIDEO', 'TELEVISION/VIDEO'),
-    ('RADIO', 'RADIO'),
-    ('NEWSPAPER', 'NEWSPAPER'),
-    ('HOSPTAL_CLINIC_VCT', 'HOSPITAL/CLINIC/VCT'),
-    ('POSTERS_BANNERS_BOOKLET', 'POSTERS/BANNERS/BOOKLET'),
-    ('TRADITIONAL_SPIRITUAL_HEALER', 'TRADITIONAL/ SPIRITUAL HEALER'),
-    ('WORKSHOP_SEMINAR', 'WORKSHOP/SEMINAR'),
-    ('INDIVIDUAL', 'INDIVIDUAL'),
-    ('CHURCH', 'CHURCH'),
-    ('KGOTLA', 'KGOTLA'),
+    ('YOUTH_PROGRAM', 'Youth program'),
+    ('TELEVISION_VIDEO', 'Television/Video'),
+    ('RADIO', 'Radio'),
+    ('NEWSPAPER', 'Newspaper'),
+    ('HOSPTAL_CLINIC_VCT', 'Hospital/Clinic/VCT'),
+    ('POSTERS_BANNERS_BOOKLET', 'Poster/Banner/Booklet'),
+    ('TRADITIONAL_SPIRITUAL_HEALER', 'Tradition/Spiritual healer'),
+    ('WORKSHOP_SEMINAR', 'Workshop/Seminar'),
+    ('INDIVIDUAL', 'Individual'),
+    ('CHURCH', 'Church'),
+    ('KGOTLA', 'Kgotla'),
     ('WORKPLACE_PROGRAMME ',
-     'WORKPLACE PROGRAMME ((PEER EDUCATOR, COUNSELLOR, CO-WORKER)'),
-    ('PEER_EDUCATOR', 'PEER EDUCATOR'),
-    ('SCHOOL', 'SCHOOL'),
+     'Workplace programme ((Peer educator, Counsellor, Co-worker)'),
+    ('PEER_EDUCATOR', 'Peer educator'),
+    ('SCHOOL', 'School'),
 )
 
 TB_INFO_SOURCE = (
-    ('YOUTH_PROGRAM', 'YOUTH PROGRAM'),
-    ('TELEVISION_VIDEO', 'TELEVISION/VIDEO'),
-    ('RADIO', 'RADIO'),
-    ('NEWSPAPER', 'NEWSPAPER'),
-    ('HOSPTAL_CLINIC_VCT', 'HOSPITAL/CLINIC/VCT'),
-    ('POSTERS_BANNERS_BOOKLET', 'POSTERS/BANNERS/BOOKLET'),
-    ('TRADITIONAL_SPIRITUAL_HEALER', 'TRADITIONAL/ SPIRITUAL HEALER'),
-    ('WORKSHOP_SEMINAR', 'WORKSHOP/SEMINAR'),
-    ('INDIVIDUAL', 'INDIVIDUAL'),
-    ('CHURCH', 'CHURCH'),
-    ('KGOTLA', 'KGOTLA'),
+    ('YOUTH_PROGRAM', 'Youth program'),
+    ('TELEVISION_VIDEO', 'Television/Video'),
+    ('RADIO', 'Radio'),
+    ('NEWSPAPER', 'Newspaper'),
+    ('HOSPTAL_CLINIC_VCT', 'Hospital/Clinic/VCT'),
+    ('POSTERS_BANNERS_BOOKLET', 'Poster/Banner/Booklet'),
+    ('TRADITIONAL_SPIRITUAL_HEALER', 'Tradition/Spiritual healer'),
+    ('WORKSHOP_SEMINAR', 'Workshop/Seminar'),
+    ('INDIVIDUAL', 'Individual'),
+    ('CHURCH', 'Church'),
+    ('KGOTLA', 'Kgotla'),
     ('WORKPLACE_PROGRAMME ',
-     'WORKPLACE PROGRAMME ((PEER EDUCATOR, COUNSELLOR, CO-WORKER)'),
-    ('PEER_EDUCATOR', 'PEER EDUCATOR'),
-    ('SCHOOL', 'SCHOOL'),
+     'Workplace programme ((Peer educator, Counsellor, Co-worker)'),
+    ('PEER_EDUCATOR', 'Peer educator'),
+    ('SCHOOL', 'School'),
 )
 
 TB_PREVENTION = (
-    ('KEEP_WINDOWS_OPEN', 'KEEP WINDOWS OPEN'),
-    ('COVER_YOUR_MOUTH_WHEN_COUGHING', 'COVER YOUR MOUTH WHEN COUGHING'),
-    ('AVOID_SHAKING_HANDS', 'AVOID SHAKING HANDS'),
-    ('GOOD_NUTRITION', 'GOOD NUTRITION'),
-    ('PRAYING', 'PRAYING'),
+    ('KEEP_WINDOWS_OPEN', 'Keep windows open'),
+    ('COVER_YOUR_MOUTH_WHEN_COUGHING',
+     'Cover your mouth when coughing'),
+    ('AVOID_SHAKING_HANDS', 'Avoid shaking hands'),
+    ('GOOD_NUTRITION', 'Good nutrition'),
+    ('PRAYING', 'Praying'),
     (DONT_KNOW, 'Don\'t Know')
 )
 
 
 TB_DISCLOSURE = (
-    ('SEX_PARTER', 'SEX PARTNER'),
-    ('SPOUSE', 'SPOUSE'),
-    ('FRIEND', 'FRIEND'),
-    ('FAMILY_MEMBER', 'FAMILY MEMBER(S)'),
-    ('OTHER_RELATIVE', 'OTHER RElATIVE(S)'),
-    ('HEALTHCARE_WORKER', 'HEALTHCARE WORKER'),
-    ('CO_WORKER', 'CO WORKER'),
-    (OTHER, 'OTHER(SPECIFY)')
+    ('SEX_PARTER', 'Sex partner'),
+    ('SPOUSE', 'Spouse'),
+    ('FRIEND', 'Friend'),
+    ('FAMILY_MEMBER', 'Family member(s)'),
+    ('OTHER_RELATIVE', 'Other relative(s)'),
+    ('HEALTHCARE_WORKER', 'Healthcare worker'),
+    ('CO_WORKER', 'Co-worker'),
+    (OTHER, 'Other, specify'),
 )
 
 HIV_PREVENTION = (
-    ('USE_CONDOMS', 'USE CONDOMS'),
-    ('HAVE_FEWER_PARTNERS', 'HAVE FEWER PARTNERS'),
-    ('BOTH_HAVE_PARTNERS', 'BOTH HAVE PARTNERS'),
-    ('NO_OTHER_PARTNERS', 'NO OTHER PARTNERS'),
-    ('NO_CASUAL_SEX', 'NO CASUAL SEX'),
-    ('NO_SEX_AT_ALL', 'NO SEX AT ALL'),
-    ('NO_COMMERCIAL_SEX', 'NO COMMERCIAL SEX'),
+    ('USE_CONDOMS', 'Use condoms'),
+    ('HAVE_FEWER_PARTNERS', 'Have fewer partners'),
+    ('BOTH_HAVE_PARTNERS', 'Both have partners'),
+    ('NO_OTHER_PARTNERS', 'No other partners'),
+    ('NO_CASUAL_SEX', 'No casual sex'),
+    ('NO_SEX_AT_ALL', 'No sex at all'),
+    ('NO_COMMERCIAL_SEX', 'No commercial sex'),
     ('AVOID_INJECTIONS_WITH CONTAMINATED NEEDLES',
-     'AVOID INJECTIONS WITH CONTAMINATED NEEDLES'),
-    ('AVOID_BLOOD_TRANSFUSIONS', 'AVOID BLOOD TRANSFUSIONS'),
+     'Avoid injections with contaminated needles'),
+    ('AVOID_BLOOD_TRANSFUSIONS', 'Avoid blood transfusions'),
     (DONT_KNOW, 'Don\'t Know')
 )
 
 TB_NONDISCLOSURE = (
-    ('FEAR_OF_STIGMASTISATION', 'FEAR OF STIGMATISATION'),
-    ('KEEP_IT_A_SECRET', 'KEEP IT A SECRET'),
-    (OTHER, 'OTHER, SPECFIY')
+    ('FEAR_OF_STIGMATISATION', 'Fear of stigmatisation'),
+    ('KEEP_IT_A_SECRET', 'Keep it a secret'),
+    (OTHER, 'Other, specify'),
 )
 
 METHODS_OF_USE = (
-    ('SMOKE', 'SMOKE'),
-    ('SNIFF', 'SNIFF'),
-    ('CHEW', 'CHEW'),
+    ('SMOKE', 'Smoke'),
+    ('SNIFF', 'Sniff'),
+    ('CHEW', 'Chew'),
 )
 
 SUBSTANCE_FREQUENCY = (
-    ('DAILY', 'DAILY'),
-    ('5_6_DAYS_PER_WEEK', '5-6 DAYS PER WEEK'),
-    ('1_4_DAYS_PER_WEEK', '1-4 DAYS PER WEEK'),
-    ('1_3_DAYS_PER_MONTH', '1-3 DAYS PER MONTH'),
-    ('LESS_THAN_MONTHLY', 'LESS THAN MONTHLY'),
+    ('DAILY', 'Daily'),
+    ('5_6_DAYS_PER_WEEK', '5-6 Days per week'),
+    ('1_4_DAYS_PER_WEEK', '1-4 Days per week'),
+    ('1_3_DAYS_PER_MONTH', '1-3 Days per month'),
+    ('LESS_THAN_MONTHLY', 'Less than monthly'),
 
 )
 
 SEXUAL_INTERCOURSE_INFLUENCE = (
-    ('MARITAL_FULFILMENT', 'MARITAL FULFILMENT'),
-    ('PERSUASION', 'PERSUASION'),
-    ('CURIOSITY', 'CURIOSITY'),
-    ('ECONOMIC_REASONS', 'ECONOMIC REASONS'),
-    ('RELATIONSHIP_FULFILMENT', 'RELATIONSHIP FULFILMENT'),
-    ('PEER_PRESSURE', 'PEER PRESSURE'),
-    ('OLD_ENOUGH', 'OLD ENOUGH'),
-    (OTHER, 'OTHERS'),
+    ('MARITAL_FULFILMENT', 'Marital fulfilment'),
+    ('PERSUASION', 'Persuasion'),
+    ('CURIOSITY', 'Curiosity'),
+    ('ECONOMIC_REASONS', 'Economic reason'),
+    ('RELATIONSHIP_FULFILMENT', 'Relationship fulfilment'),
+    ('PEER_PRESSURE', 'Peer pressure'),
+    ('OLD_ENOUGH', 'Old enough'),
+    (OTHER, 'Other, specify'),
 )
 
 SEXUAL_INTERCOURSE_PROTECTION = (
-    ('MALE_CONDOMS', 'MALE CONDOMS'),
-    ('FEMALE_CONDOMS', 'FEMALE CONDOMS'),
-    ('MODERN_CONTRACEPTIVES.', 'MODERN CONTRACEPTIVES.'),
-    ('TRADITIONAL_METHODS', 'TRADITIONAL METHODS'),
-    ('SPRITUAL_METHODS', 'SPRITUAL METHODS'),
-    (OTHER, 'OTHER'),
+    ('MALE_CONDOMS', 'Male condoms'),
+    ('FEMALE_CONDOMS', 'Female condoms'),
+    ('MODERN_CONTRACEPTIVES.', 'Modern contraceptives'),
+    ('TRADITIONAL_METHODS', 'Traditional methods'),
+    ('SPRITUAL_METHODS', 'Spritual methods'),
+    (OTHER, 'Other, specify'),
 )
 
 SEXUAL_INTERCOURSE_PROTECTION_REASON = (
-    ('PREGNANCY', 'PREGNANCY'),
+    ('PREGNANCY', 'Pregnancy'),
     ('HIV', 'HIV'),
     ('STI', 'STI'),
-    ('HIV_PREGNANCY', 'HIV/PREGNANCY'),
-    ('ALL_OF_THE_ABOVE', 'ALL OF THE ABOVE'),
+    ('HIV_PREGNANCY', 'HIV/Pregnancy'),
+    ('ALL_OF_THE_ABOVE', 'All of the above'),
     (DONT_KNOW, 'Don\'t Know'),
-    (OTHER, 'OTHER,'),
+    (OTHER, 'Other, specify'),
 )
 
 SEX_PARTNER = (
-    ('SPOUSE.', 'SPOUSE.'),
-    ('BOYFRIEND_GIRLFRIEND', 'BOYFRIEND/GIRLFRIEND'),
-    ('FAMILY_MEMBER', 'FAMILY MEMBER'),
-    ('EMPLOYER', 'EMPLOYER'),
-    ('COLLEAGUE', 'COLLEAGUE'),
-    ('SUPERVISOR', 'SUPERVISOR'),
-    ('STRANGER', 'STRANGER'),
-    ('FRIEND', 'FRIEND'),
-    (OTHER, 'OTHER,'),
+    ('SPOUSE.', 'Spouse'),
+    ('BOYFRIEND_GIRLFRIEND', 'Boyfriend/Girlfriend'),
+    ('FAMILY_MEMBER', 'Family member'),
+    ('EMPLOYER', 'Employer'),
+    ('COLLEAGUE', 'Colleague'),
+    ('SUPERVISOR', 'Supervisor'),
+    ('STRANGER', 'Stranger'),
+    ('FRIEND', 'Friend'),
+    (OTHER, 'Other, specify'),
 )
 
 ASSISTANCE = (
-    ('MEDICAL', 'MEDICAL'),
-    ('LEGAL_POLICE', 'LEGAL/POLICE'),
-    ('SOCIAL', 'SOCIAL'),
-    ('COUNSELING', 'COUNSELING'),
-    (NONE, 'NONE'),
-    (OTHER, 'OTHER'),
+    ('MEDICAL', 'Medical'),
+    ('LEGAL_POLICE', 'Legal/Police'),
+    ('SOCIAL', 'Social'),
+    ('COUNSELING', 'Counseling'),
+    (NONE, 'None'),
+    (OTHER, 'Other, specify'),
 )
 
 VIOLANCE = (
@@ -469,136 +478,138 @@ SERIAL_CONCURRENT = (
 )
 
 CONDOM_REASON = (
-    ('HIV_STI_PREVENTION ', 'HIV/STI PREVENTION '),
-    ('PREGNANCY_PREVENTION', 'PREGNANCY  PREVENTION'),
-    ('BOTH_HIV_STI_AND_PREGNANCY', 'BOTH HIV/STI AND PREGNANCY'),
-    ('NO_TRUST_OF_PARTNER', 'NO TRUST OF PARTNER'),
-    ('PARTNER_INSISTED', 'PARTNER INSISTED'),
+    ('HIV_STI_PREVENTION ', 'HIV/STI Prevention '),
+    ('PREGNANCY_PREVENTION', 'Pregnancy prevention'),
+    ('BOTH_HIV_STI_AND_PREGNANCY', 'Both HIV/STI and pregnancy'),
+    ('NO_TRUST_OF_PARTNER', 'No trust of partner'),
+    ('PARTNER_INSISTED', 'Partner insisted'),
     (DONT_KNOW, 'Don\'t Know')
 )
 
 CONDOM_NOT_USED_REASON = (
-    ('USE_OTHER', 'USE OTHER FAMILY PLANNING METHOD'),
-    ('YOU_OR_YOUR_PARTNER_REFUSED', 'YOU OR YOUR PARTNER REFUSED'),
+    ('USE_OTHER', 'Use other family planning methods'),
+    ('YOU_OR_YOUR_PARTNER_REFUSED', 'You or your partner refused'),
     ('YOU_OR_YOUR_PARTNER_DRUNK_HIGH_ON_DRUGS',
-     'YOU OR YOUR PARTNER DRUNK/HIGH ON  DRUGS'),
-    ('IT_REDUCES_PLEASURE', 'IT REDUCES PLEASURE'),
-    ('WE_TRUST_EACH_OTHER', 'WE  TRUST EACH OTHER'),
-    (OTHER, 'OTHER'),
+     'You or your partner drunk/high on drugs'),
+    ('IT_REDUCES_PLEASURE', 'It reduces pleasure'),
+    ('WE_TRUST_EACH_OTHER', 'We trust each other'),
+    (OTHER, 'Other, specify'),
 )
 
 CONDOM_PLACE = (
-    ('SHOP_PETROL_STATION', 'SHOP/PETROL STATION'),
-    ('PHARMACY', 'PHARMACY'),
-    ('HOSPITAL_CLINIC', 'HOSPITAL/CLINIC'),
-    ('BAR/HOTEL_RESTAURANT', 'BAR/HOTEL/RESTAURANT'),
-    ('OFFICE_PLACE_OF_WORK', 'OFFICE/PLACE OF WORK'),
-    ('PUBLIC_DISPENSER', 'PUBLIC DISPENSER'),
-    ('ANOTHER_PERSON', 'ANOTHER PERSON'),
+    ('SHOP_PETROL_STATION', 'Shop/Petrol station'),
+    ('PHARMACY', 'Pharmacy'),
+    ('HOSPITAL_CLINIC', 'Hospital/Clinic'),
+    ('BAR/HOTEL_RESTAURANT', 'Bar/Hotel/Restaurant'),
+    ('OFFICE_PLACE_OF_WORK', 'Office/Place of work'),
+    ('PUBLIC_DISPENSER', 'Public dispenser'),
+    ('ANOTHER_PERSON', 'Another person'),
     (DONT_KNOW, 'Don\'t Know'),
-    (OTHER, 'OTHER'),
+    (OTHER, 'Other, specify'),
 )
 
 DRUNK_HIGH_SEX = (
-    ('YES, I WAS', 'YES, I WAS'),
-    ('YES, HE/SHE WAS', 'YES, HE/SHE WAS'),
-    ('YES BOTH OF US', 'YES BOTH OF US'),
-    ('NO', 'NO'),
-    ('DON’T KNOW', 'DON’T KNOW'),
+    ('YES, I WAS', 'Yes, I was'),
+    ('YES, HE/SHE WAS', 'Yes, he/she was'),
+    ('YES BOTH OF US', 'Yes both of us'),
+    (NO, 'No'),
+    (DONT_KNOW, 'Don\'t Know'),
 )
 
 CONDOM_PERSUATION = (
-    ('YES_ALL_THE_TIME', 'YES, ALL THE TIME'),
-    ('YES_SOMETIMES', 'YES, SOMETIMES'),
-    (NO, 'NO'),
+    ('YES_ALL_THE_TIME', 'Yes, all the time'),
+    ('YES_SOMETIMES', 'Yes, sometimes'),
+    (NO, 'No'),
     (DONT_KNOW, 'Don\'t Know')
 )
 
 ANTE_NATAL_REASONS = (
-    ('DISTANCE FROM HEALTH FACILITY', 'DISTANCE FROM HEALTH FACILITY'),
-    ('LACK OF TRANSPORT', 'LACK OF TRANSPORT'),
-    ('POOR SERVICE DELIVERY', 'POOR SERVICE DELIVERY'),
-    ('DIDN’T KNOW WHERE TO GO', 'DIDN’T KNOW WHERE TO GO'),
-    ('DIDN’T UNDERSTAND NEED/BENEFIT', 'DIDN’T UNDERSTAND NEED/BENEFIT'),
-    ('NO FAMILY/SPOUSE SUPPORT', 'NO FAMILY/SPOUSE SUPPORT'),
-    (OTHER, 'OTHERS,SPECIFY')
+    ('DISTANCE FROM HEALTH FACILITY', 'Distance from health fscility'),
+    ('LACK OF TRANSPORT', 'Lack of transport'),
+    ('POOR SERVICE DELIVERY', 'Poor service delivery'),
+    ('DIDN\’T KNOW WHERE TO GO', 'Didn\'t know where to go'),
+    ('DIDN\’T UNDERSTAND NEED/BENEFIT',
+     'Didn\'t understand need/benefit'),
+    ('NO FAMILY/SPOUSE SUPPORT', 'No family/spouse support'),
+    (OTHER, 'Other, specify'),
 )
 
 CIRCUMICISSION_PLACE = (
-    ('GOVT_HEALTH_FACILITY', 'GOVT HEALTH FACILITY'),
-    ('PRIVATE_HEALTH_FACILITY', 'PRIVATE HEALTH FACILITY'),
-    ('TRADITIONAL', 'TRADITIONAL'),
+    ('GOVT_HEALTH_FACILITY', 'GOVT health facility'),
+    ('PRIVATE_HEALTH_FACILITY', 'Private health facility'),
+    ('TRADITIONAL', 'Traditional'),
     (DONT_KNOW, 'Don\'t Know')
 )
 
 TB_TREATMENT_SOURCE = (
-    ('GOVERNMENT_CLINIC', 'GOVERNMENT CLINIC'),
-    ('REFERRAL_OR_DISTRICT_HOSPITAL', 'REFERRAL OR DISTRICT HOSPITAL'),
-    ('PRIVATE_CLINIC_OR_HOSPITAL', 'PRIVATE CLINIC OR HOSPITAL'),
-    ('PHARMACY_CHEMIST', 'PHARMACY/ CHEMIST'),
-    ('TRADITIONAL_HEALER', 'TRADITIONAL HEALER'),
-    (OTHER, 'OTHER, SPECIFY'),
+    ('GOVERNMENT_CLINIC', 'Government clinic'),
+    ('REFERRAL_OR_DISTRICT_HOSPITAL', 'Referral or district hospital'),
+    ('PRIVATE_CLINIC_OR_HOSPITAL', 'Private clinic or hospital'),
+    ('PHARMACY_CHEMIST', 'Pharmacy/ Chemist'),
+    ('TRADITIONAL_HEALER', 'Traditional healer'),
+    (OTHER, 'Other, specify'),
 )
 
 ARV_TREATMENT_SOURCE = (
-    ('GOVERNMENT_CLINIC', 'GOVERNMENT CLINIC'),
-    ('REFERRAL_OR_DISTRICT_HOSPITAL', 'REFERRAL OR DISTRICT HOSPITAL'),
-    ('PRIVATE_CLINIC_OR_HOSPITAL', 'PRIVATE CLINIC OR HOSPITAL'),
-    ('PHARMACY_CHEMIST', 'PHARMACY/ CHEMIST'),
-    ('TRADITIONAL_HEALER', 'TRADITIONAL HEALER'),
-    (OTHER, 'OTHER, SPECIFY'),
+    ('GOVERNMENT_CLINIC', 'Government clinic'),
+    ('REFERRAL_OR_DISTRICT_HOSPITAL', 'Referral or district hospital'),
+    ('PRIVATE_CLINIC_OR_HOSPITAL', 'Private clinic or hospital'),
+    ('PHARMACY_CHEMIST', 'Pharmacy/ Chemist'),
+    ('TRADITIONAL_HEALER', 'Traditional healer'),
+    (OTHER, 'Other, specify'),
 )
 
 TB_TIMES_TREATED = (
-    ('NONE', 'NONE'),
-    ('ONCE', 'ONCE'),
-    ('TWO_TIMES', 'TWO TIMES'),
-    ('THREE_TIMES', 'THREE TIMES'),
+    (NONE, 'None'),
+    ('ONCE', 'Once'),
+    ('TWO_TIMES', 'Two times'),
+    ('THREE_TIMES', 'Three tomes'),
     (DONT_KNOW, 'Don\'t Know')
 )
 
 TB_SPUTUM_SAMPLE = (
-    ('POSITIVE_FOR_TB', 'POSITIVE FOR TB'),
-    ('NEGATIVE_FOR_TB', 'NEGATIVE FOR TB'),
-    ('AWAITING_RESULT', 'AWAITING RESULT'),
+    ('POSITIVE_FOR_TB', 'Positive TB'),
+    ('NEGATIVE_FOR_TB', 'Negative for TB'),
+    ('AWAITING_RESULTS', 'Awaiting results'),
     (DONT_KNOW, 'Don\'t Know')
 )
 
 TB_NO_SPUTUM = (
-    ('COULD_NOT_PRODUCE_SPUTUM', 'COULD NOT PRODUCE SPUTU'),
+    ('COULD_NOT_PRODUCE_SPUTUM', 'Could not produce sputum'),
     ('COULD_NOT_GET_TO_THE_CLINIC_OR_HEALTH_CENTRE',
-     'COULD NOT GET TO THE CLINIC OR HEALTH CENTRE'),
+     'Could not get to the clinic or health center'),
     ('I_WAS_NOT_ASKED_TO_SUBMIT_A_SPUTUM_SAMPLE',
-     'I WAS NOT ASKED TO SUBMIT A SPUTUM SAMPLE'),
-    ('NO_SPUTUM_CONTAINER', 'NO SPUTUM CONTAINER'),
-    (OTHER, 'OTHERS,SPECIFY'),
+     'I was not asked to submit a sputum sample'),
+    ('NO_SPUTUM_CONTAINER', 'No sputum container'),
+    (OTHER, 'Other, specify'),
 )
 
 TB_HELP = (
-    ('GOVERNMENT_CLINIC', 'GOVERNMENT CLINIC'),
+    ('GOVERNMENT_CLINIC', 'Government'),
     ('REFERRAL_OR_DISTRICT_HOSPITAL',
-     'REFERRAL OR DISTRICT HOSPITAL'),
-    ('PRIVATE_CLINIC_OR_HOSPITAL', 'PRIVATE CLINIC OR HOSPITAL'),
-    ('PHARMACY_CHEMIST', 'PHARMACY/ CHEMIST'),
-    ('TRADITIONAL_HEALER', 'TRADITIONAL HEALER'),
-    (OTHER, 'OTHER, SPECIFY'),
+     'Referral or district hospital'),
+    ('PRIVATE_CLINIC_OR_HOSPITAL', 'Private clinic or hospital'),
+    ('PHARMACY_CHEMIST', 'Pharmacy/Chemist'),
+    ('TRADITIONAL_HEALER', 'Traditional healther'),
+    (OTHER, 'Other, specify'),
 )
 
 TB_HELP_RESULT = (
-    ('I_WAS_PRESCRIBED_CHEST_X_RAY', 'I WAS PRESCRIBED CHEST X RAY'),
+    ('I_WAS_PRESCRIBED_CHEST_X_RAY', 'I was prescribed chest X-Ray'),
     ('I_WAS_ASKED_TO_SUBMIT_SPUTUM_SAMPLE',
-     'I WAS ASKED TO SUBMIT SPUTUM SAMPLE'),
-    ('I_WAS_GIVEN_TB_DRUGS', 'I WAS GIVEN TB DRUGS'),
-    ('I_WAS_PRESCRIBED_OTHER_DRUGS', 'I WAS PRESCRIBED OTHER DRUGS'),
-    (OTHER, 'OTHER, SPECIFY'),
+     'I was asked to submit sputum sample'),
+    ('I_WAS_GIVEN_TB_DRUGS', 'I was given TB drugs'),
+    ('I_WAS_PRESCRIBED_OTHER_DRUGS', 'I was prescribed other drugs'),
+    (OTHER, 'Other, specify'),
 )
 
 TB_NO_HELP_REASON = (
-    ('NO_M0NEY_FOR_TRANSPORT', 'NO M0NEY FOR TRANSPORT'),
-    ('HEALTH_FACILITY_WAS_TOO_FAR', 'HEALTH FACILITY WAS TOO FAR'),
-    ('I_DID_NOT_FEEL_SICK_ENOUGH', 'I DID NOT FEEL SICK ENOUGH'),
-    ('I_COULD_NOT_TAKE_TIME_OFF_WORK', 'I COUND NOT TAKE TIME OFF WORK'),
-    (OTHER, 'OTHER, SPECIFY'),
+    ('NO_M0NEY_FOR_TRANSPORT', 'No money for transport'),
+    ('HEALTH_FACILITY_WAS_TOO_FAR', 'Health facility was too far'),
+    ('I_DID_NOT_FEEL_SICK_ENOUGH', 'I did not feel sick enough'),
+    ('I_COULD_NOT_TAKE_TIME_OFF_WORK',
+     'I could not take time off work'),
+    (OTHER, 'Other, specify'),
 )
 
 CANCER_TEST = (
@@ -609,19 +620,19 @@ CANCER_TEST = (
 )
 
 HOUSEHOLD_RELATION = (
-    ('HEAD', 'HEAD'),
-    ('SPOUSE', 'SPOUSE'),
-    ('SON_DAUGHTER', 'SON/DAUGHTER'),
-    ('STEPCHILD', 'STEPCHILD'),
-    ('GRANDCHILD', 'GRANDCHILD'),
-    ('PARENT', 'PARENT'),
-    ('GRANDPARENT', 'GRANDPARENT'),
-    ('BROTHER_SISTER', 'BROTHER/SISTER'),
-    ('NEPHEW_NIECE', 'NEPHEW/NEICE'),
-    ('SON_DAUGHTER IN LAW', 'SON/DAUGHTER IN LAW'),
-    ('PARENT_IN_LAW', 'PARENT IN LAW'),
-    ('OTHER_RELATIVE', 'OTHER RELATIVE'),
-    ('NOT_RELATED', 'NOT RELTED'),
+    ('HEAD', 'Head'),
+    ('SPOUSE', 'Spouse'),
+    ('SON_DAUGHTER', 'Son/Daughter'),
+    ('STEPCHILD', 'Stepchild'),
+    ('GRANDCHILD', 'Grandchild'),
+    ('PARENT', 'Parent'),
+    ('GRANDPARENT', 'Grandparent'),
+    ('BROTHER_SISTER', 'Brother/Sister'),
+    ('NEPHEW_NIECE', 'Nephew/Niece'),
+    ('SON_DAUGHTER IN LAW', 'Son/Daughter in law'),
+    ('PARENT_IN_LAW', 'Parent in law'),
+    ('OTHER_RELATIVE', 'Other relative'),
+    ('NOT_RELATED', 'Not related'),
 )
 
 CITIZENSHIP = (
@@ -640,7 +651,7 @@ CITIZENSHIP = (
     ('Mauritius', 'Mauritius'),
     ('UK', 'UK'),
     ('USA', 'USA'),
-    (OTHER, 'Other'),
+    (OTHER, 'Other, specify'),
 )
 
 PERSON_HOUSEHOLD_LIVE = (
@@ -669,7 +680,7 @@ UNPAID_REASON = (
     ('Student', 'Student'),
     ('Too_old_to_work', 'Too old to work'),
     ('Too_sick_to_work', 'Too sick to work'),
-    (OTHER, 'Other'),
+    (OTHER, 'Other, specify'),
 )
 
 MAIN_WORK = (
@@ -689,67 +700,67 @@ MAIN_WORK = (
 )
 
 HELP_RECIEVED = (
-    ('COUNSELING', 'COUNSELING'),
-    ('FREE_MEDICINE', 'FREE MEDICINE'),
-    ('EXTRA_FOOD', 'EXTRA FOOD'),
-    ('MONEY', 'MONEY'),
-    ('HELP_WITH_TOILETRY', 'HELP WITH TOILETRY (wheel chairs,'
+    ('COUNSELING', 'Counselling'),
+    ('FREE_MEDICINE', 'Free Medicine'),
+    ('EXTRA_FOOD', 'Extra money'),
+    ('MONEY', 'Money'),
+    ('HELP_WITH_TOILETRY', 'Help with toiletry (wheel chairs,'
      'disposable diapers, gloves)'),
-    (OTHER, 'OTHERS,SPECIFY'),
+    (OTHER, 'Other, specify'),
 
 )
 
 HELP_RECIEVED_FROM = (
-    ('RELATIVES', 'RELATIVES'),
-    ('FRIENDS', 'FRIENDS'),
-    ('HOSPITAL/CLINIC', 'HOSPITAL/CLINIC'),
+    ('RELATIVES', 'Relatives'),
+    ('FRIENDS', 'Friends'),
+    ('HOSPITAL/CLINIC', 'Hospital/Clinic'),
     ('FBO', 'FBO'),
-    ('COMMUNITY ORGANISATIONS', 'COMMUNITY ORGANISATIONS'),
+    ('COMMUNITY ORGANISATIONS', 'Ccommunity organisations'),
     ('NGOs', 'NGOs'),
-    ('SPIRITUAL HEALER', 'SPIRITUAL HEALER'),
-    ('WOMENS GROUP', 'WOMENS GROUP'),
-    ('SOCIAL WORKER', 'SOCIAL WORKER'),
-    ('TRADITIONAL HEALER', 'TRADITIONAL HEALER'),
-    (OTHER, 'OTHER(SPECIFY)'),
+    ('SPIRITUAL HEALER', 'Spiritual healer'),
+    ('WOMENS GROUP', 'Womens group'),
+    ('SOCIAL WORKER', 'Social worker'),
+    ('TRADITIONAL HEALER', 'Traditional healer'),
+    (OTHER, 'Other, specify'),
 )
 
 HELP_TYPE = (
-    ('COUNSELLING', 'COUNSELLING'),
-    ('MONEY', 'MONEY'),
-    ('EXTRA_FOOD', 'EXTRA FOOD'),
-    ('FREE_MEDICINE', 'FREE MEDICINE'),
-    ('HELP_WITH_CHILDCARE', 'HELP WITH CHILDCARE'),
-    ('HELP_WITH_SCHOOL_EXPENSES ', 'HELP WITH SCHOOL EXPENSES'),
-    ('INCOME_GENERATING_PROJECTS', 'INCOME GENERATING PROJECTS'),
-    ('HELP_WITH_HOUSEWORK', 'HELP WITH HOUSEWORK'),
-    ('HELP_WITH_FOOD_PREPARATION', 'HELP WITH FOOD PREPARATION'),
-    ('SPIRITUAL_RELIGIOUS_SUPPORT', 'SPIRITUAL/RELIGIOUS SUPPORT'),
-    ('SUPPORT_GROUP', 'SUPPORT GROUP'),
-    ('HOSPICE', 'HOSPICE'),
+    ('COUNSELLING', 'Counselling'),
+    ('MONEY', 'Money'),
+    ('EXTRA_FOOD', 'Extra food'),
+    ('FREE_MEDICINE', 'Free medicine'),
+    ('HELP_WITH_CHILDCARE', 'Help with childcare'),
+    ('HELP_WITH_SCHOOL_EXPENSES ', 'Help with school expenses'),
+    ('INCOME_GENERATING_PROJECTS', 'Income generating projects'),
+    ('HELP_WITH_HOUSEWORK', 'Help with housework'),
+    ('HELP_WITH_FOOD_PREPARATION', 'Help with food preparations'),
+    ('SPIRITUAL_RELIGIOUS_SUPPORT', 'Spiritual/Religious support'),
+    ('SUPPORT_GROUP', 'Support group'),
+    ('HOSPICE', 'Hospice'),
     (DONT_KNOW, 'Don\'t Know')
 )
 
 SATISFACTION_LEVEL = (
-    ('VERY_SATISFIED', 'VERY SATISFIED'),
-    ('SATISFIED', 'SATISFIED'),
-    ('NOT_SATISFIED', 'NOT SATISFIED'),
+    ('VERY_SATISFIED', 'Very satisfied'),
+    ('SATISFIED', 'Satisfied'),
+    ('NOT_SATISFIED', 'Not Satisfied'),
 )
 
 DEATH_AGE = (
-    ('AGE', 'AGE'),
+    ('AGE', 'Age'),
     (DONT_KNOW, 'Don\'t Know')
 )
 
 DEATH_CAUSE = (
-    ('AGE', 'AGE'),
-    ('STOKE', 'STROKE'),
+    ('AGE', 'Age'),
+    ('STOKE', 'Stroke'),
     ('TB', 'TB'),
-    ('MALARIA', 'MALARIA'),
-    ('VIOLENCE_INJURIES', 'VIOLENCE/INJURIES'),
-    ('CAR_ROAD_ACCIDENT', 'CAR/ROAD ACCIDENT'),
+    ('MALARIA', 'Malaria'),
+    ('VIOLENCE_INJURIES', 'Violance/Injuries'),
+    ('CAR_ROAD_ACCIDENT', 'Car/Road accident'),
 )
 
 TIME_SICK = (
-    ('MONTHS', 'MONTHS'),
+    ('MONTHS', 'Months'),
     (DONT_KNOW, 'Don\'t Know')
 )
