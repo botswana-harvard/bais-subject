@@ -1,10 +1,16 @@
+from .alcohol_consumption_and_substance_use_form import (
+    AlcoholConsumptionAndSubstanceUseForm)
+from .attitudes_towards_people_form import AttitudesTowardsPeopleForm
+from .background_characteristics_form import (
+    BackgroundCharacteristicsForm)
+from .childbearing_and_antenatal_care_form import (
+    ChildbearingAndAntenatalCareForm)
 from .household_questionnaire_form import HouseholdQuestionnaireForm
 from .household_member_form import HouseholdMemberForm
-from .section1_form import Section1Form
-from .section2_form import Section2Form
-from .section3_form import Section3Form
-from .section4_form import Section4Form
-from .section5_form import Section5Form
-from .section6_form import Section6Form
-from .section7_form import Section7Form
-from .section8_form import Section8Form
+from .knowledge_about_hiv_and_aids_and_tb_form import (
+    KnowledgeAboutHivAndAidsAndTbForm)
+from .male_circumcision_and_sexually_transmitted_infections_form import (
+    MaleCircumcissionAndSexuallyTransmittedInfectionsForm)
+from .sexual_history_and_behaviour_form import (
+    SexualHistoryAndBehaviourForm)
+from .tb_screening_form import TBScreeningForm

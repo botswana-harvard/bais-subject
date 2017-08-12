@@ -1,11 +1,14 @@
-from .section1 import Section1
-from .section2 import Section2
-from .section3 import Section3
-from .section4 import Section4
-from .section5 import Section5
-from .section6 import Section6
-from .section7 import Section7
-from .section8 import Section8
+from .alcohol_consumption_and_substance_use import (
+    AlcoholConsumptionAndSubstanceUse)
+from .attitudes_towards_people import AttitudesTowardsPeople
+from .background_characteristics import BackgroundCharacteristics
+from .childbearing_and_antenatal_care import (
+    ChildbearingAndAntenatalCare)
 from .household_questionnaire import HouseholdQuestionnaire
 from .household_member import HouseholdMember
-from .list_models import CircumcissionReason
+from .knowledge_about_hiv_and_aids_and_tb import (
+    KnowledgeAboutHivAndAidsAndTb)
+from .male_circumcision_and_sexually_transmitted_infections import (
+    MaleCircumcissionAndSexuallyTransmittedInfections)
+from .sexual_history_and_behaviour import SexualHistoryAndBehaviour
+from .tb_screening import TBScreening
