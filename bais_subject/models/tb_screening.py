@@ -86,7 +86,7 @@ class TBScreening(BaseUuidModel):
     )
 
     tb_sputum_sample_no_result = models.CharField(
-        verbose_name='If NO,Why not?',
+        verbose_name='If No,Why not?',
         max_length=35,
         choices=TB_NO_SPUTUM,
         help_text="",
@@ -152,10 +152,24 @@ class TBScreening(BaseUuidModel):
         choices=TB_HELP
     )
 
+    tb_first_help_other = OtherCharField(
+        verbose_name='Other, Specify',
+        max_length=35,
+        blank=True,
+        null=True
+    )
+
     tb_first_help_result = models.CharField(
         verbose_name='If you consulted, what happened?',
         max_length=35,
         choices=TB_HELP_RESULT
+    )
+
+    tb_first_help_result_other = OtherCharField(
+        verbose_name='Other, Specify',
+        max_length=35,
+        blank=True,
+        null=True
     )
 
     tb_no_help = models.CharField(

@@ -19,6 +19,11 @@ YES_NO = (
     (NO, 'No')
 )
 
+YES_NO = (
+    (YES, 'Yes'),
+    (NO, 'No')
+)
+
 YES_NO_UNSURE = (
     (YES, 'Yes'),
     (NO, 'No'),
@@ -110,7 +115,7 @@ EMPLOYMENT_STATUS = (
     ('TOO_OLD_TO_WORK', 'Too old to work'),
     ('PENSIONER', 'Pensioner'),
     ('STUDENT', 'Student'),
-    (OTHER, 'Other, specify'),
+    (OTHER, 'Other'),
 )
 
 MINE_OCCUPATION = (
@@ -119,7 +124,7 @@ MINE_OCCUPATION = (
     ('SHAFTMAN', 'Shaftman'),
     ('FOREMAN', 'Foreman'),
     ('DRILLER', 'Driller'),
-    (OTHER, 'Other, specify'),
+    (OTHER, 'Other'),
 )
 
 COMMODITY = (
@@ -128,7 +133,7 @@ COMMODITY = (
     ('KIMBERLITE', 'Kimberlite'),
     ('COPPER_NICKLE', 'Copper/Nickle'),
     ('ASBESTOS', 'Asbestos'),
-    (OTHER, 'Other, specify'),
+    (OTHER, 'Other'),
 )
 
 CONDOM_CONSENT = (
@@ -138,7 +143,7 @@ CONDOM_CONSENT = (
     ('NOT_ELIGIBLE', 'Not eligible'),
     ('NO_INCENTIVES', 'No incentives'),
     ('LACK_OF_KNOWLEGDE', 'Lack of knowledge'),
-    (OTHER, 'Other, specify'),
+    (OTHER, 'Other'),
 )
 
 RELIGION = (
@@ -148,7 +153,7 @@ RELIGION = (
     ('HINDUISM', 'Hinduism'),
     ('BADIMO', 'Badimo'),
     ('NO', 'No Religion'),
-    (OTHER, 'Other, specify'),
+    (OTHER, 'Other'),
 )
 
 TREATMENT_OPTIONS = (
@@ -173,7 +178,7 @@ REASONS_ARV_NOT_TAKEN = (
     ('SPRITUALIST_SAID_I_AM_HEALED', 'Spiritualist said I am healed'),
     ('DID_NOT_WANT_TO_BE_CONFINED_TO_MEDICATION',
      'Did not want to be confined to medication'),
-    (OTHER, 'Other, specify'),
+    (OTHER, 'Other'),
 )
 
 MARITAL_STATUS = (
@@ -250,7 +255,7 @@ TB_SPREAD = (
     ('TOUCHING_ITEMS_IN_PUBLIC_PLACES ',
      'Touching items in public places(Door knobs, etc.)'),
     (DONT_KNOW, 'Don\'t Know'),
-    (OTHER, 'Other, specify'),
+    (OTHER, 'Other'),
 )
 
 TB_CURE = (
@@ -275,7 +280,7 @@ TESTING_REASONS = (
     ('PRE_EMPLOYMENT_SCHOLARSHIP_REQUIREMENTS ',
      'Pre-employment/Scholarship requirements'),
     (DONT_KNOW, 'Don\'t Know'),
-    (OTHER, 'Other, specify'),
+    (OTHER, 'Other'),
 )
 
 TB_REACTION = (
@@ -284,7 +289,7 @@ TB_REACTION = (
     ('SHAME', 'Shame'),
     ('EMBARASSMENT', 'Embarassment'),
     ('SADNESS_OR_HOPELESSNESS', 'Sadness or hopelessness'),
-    (OTHER, 'Other, specify'),
+    (OTHER, 'Other'),
 )
 
 REASONS_NOT_TESTED = (
@@ -304,7 +309,7 @@ REASONS_NOT_TESTED = (
      'Pre-employment?Scholarship requirement'),
     ('I_DO_NOT_KNOW_WHERE_TO_GO_TO_GET_TESTED',
      'I do not know where to go to get tested'),
-    (OTHER, 'Other, specify'),
+    (OTHER, 'Other'),
 )
 
 SMC_SOURCE = (
@@ -365,7 +370,7 @@ TB_DISCLOSURE = (
     ('OTHER_RELATIVE', 'Other relative(s)'),
     ('HEALTHCARE_WORKER', 'Healthcare worker'),
     ('CO_WORKER', 'Co-worker'),
-    (OTHER, 'Other, specify'),
+    (OTHER, 'Other'),
 )
 
 HIV_PREVENTION = (
@@ -386,7 +391,7 @@ HIV_PREVENTION = (
 TB_NONDISCLOSURE = (
     ('FEAR_OF_STIGMATISATION', 'Fear of stigmatisation'),
     ('KEEP_IT_A_SECRET', 'Keep it a secret'),
-    (OTHER, 'Other, specify'),
+    (OTHER, 'Other'),
 )
 
 METHODS_OF_USE = (
@@ -412,7 +417,7 @@ SEXUAL_INTERCOURSE_INFLUENCE = (
     ('RELATIONSHIP_FULFILMENT', 'Relationship fulfilment'),
     ('PEER_PRESSURE', 'Peer pressure'),
     ('OLD_ENOUGH', 'Old enough'),
-    (OTHER, 'Other, specify'),
+    (OTHER, 'Other'),
 )
 
 SEXUAL_INTERCOURSE_PROTECTION = (
@@ -421,7 +426,7 @@ SEXUAL_INTERCOURSE_PROTECTION = (
     ('MODERN_CONTRACEPTIVES.', 'Modern contraceptives'),
     ('TRADITIONAL_METHODS', 'Traditional methods'),
     ('SPRITUAL_METHODS', 'Spritual methods'),
-    (OTHER, 'Other, specify'),
+    (OTHER, 'Other'),
 )
 
 SEXUAL_INTERCOURSE_PROTECTION_REASON = (
@@ -431,7 +436,7 @@ SEXUAL_INTERCOURSE_PROTECTION_REASON = (
     ('HIV_PREGNANCY', 'HIV/Pregnancy'),
     ('ALL_OF_THE_ABOVE', 'All of the above'),
     (DONT_KNOW, 'Don\'t Know'),
-    (OTHER, 'Other, specify'),
+    (OTHER, 'Other'),
 )
 
 SEX_PARTNER = (
@@ -443,7 +448,7 @@ SEX_PARTNER = (
     ('SUPERVISOR', 'Supervisor'),
     ('STRANGER', 'Stranger'),
     ('FRIEND', 'Friend'),
-    (OTHER, 'Other, specify'),
+    (OTHER, 'Other'),
 )
 
 ASSISTANCE = (
@@ -452,7 +457,7 @@ ASSISTANCE = (
     ('SOCIAL', 'Social'),
     ('COUNSELING', 'Counseling'),
     (NONE, 'None'),
-    (OTHER, 'Other, specify'),
+    (OTHER, 'Other'),
 )
 
 VIOLANCE = (
@@ -502,7 +507,7 @@ CONDOM_NOT_USED_REASON = (
      'You or your partner drunk/high on drugs'),
     ('IT_REDUCES_PLEASURE', 'It reduces pleasure'),
     ('WE_TRUST_EACH_OTHER', 'We trust each other'),
-    (OTHER, 'Other, specify'),
+    (OTHER, 'Other'),
 )
 
 CONDOM_PLACE = (
@@ -514,7 +519,7 @@ CONDOM_PLACE = (
     ('PUBLIC_DISPENSER', 'Public dispenser'),
     ('ANOTHER_PERSON', 'Another person'),
     (DONT_KNOW, 'Don\'t Know'),
-    (OTHER, 'Other, specify'),
+    (OTHER, 'Other'),
 )
 
 DRUNK_HIGH_SEX = (
@@ -540,7 +545,7 @@ ANTE_NATAL_REASONS = (
     ('DIDN\’T UNDERSTAND NEED/BENEFIT',
      'Didn\'t understand need/benefit'),
     ('NO FAMILY/SPOUSE SUPPORT', 'No family/spouse support'),
-    (OTHER, 'Other, specify'),
+    (OTHER, 'Other'),
 )
 
 CIRCUMICISSION_PLACE = (
@@ -556,7 +561,7 @@ TB_TREATMENT_SOURCE = (
     ('PRIVATE_CLINIC_OR_HOSPITAL', 'Private clinic or hospital'),
     ('PHARMACY_CHEMIST', 'Pharmacy/ Chemist'),
     ('TRADITIONAL_HEALER', 'Traditional healer'),
-    (OTHER, 'Other, specify'),
+    (OTHER, 'Other'),
 )
 
 ARV_TREATMENT_SOURCE = (
@@ -565,7 +570,7 @@ ARV_TREATMENT_SOURCE = (
     ('PRIVATE_CLINIC_OR_HOSPITAL', 'Private clinic or hospital'),
     ('PHARMACY_CHEMIST', 'Pharmacy/ Chemist'),
     ('TRADITIONAL_HEALER', 'Traditional healer'),
-    (OTHER, 'Other, specify'),
+    (OTHER, 'Other'),
 )
 
 TB_TIMES_TREATED = (
@@ -580,7 +585,8 @@ TB_SPUTUM_SAMPLE = (
     ('POSITIVE_FOR_TB', 'Positive TB'),
     ('NEGATIVE_FOR_TB', 'Negative for TB'),
     ('AWAITING_RESULTS', 'Awaiting results'),
-    (DONT_KNOW, 'Don\'t Know')
+    (DONT_KNOW, 'Don\'t Know'),
+    ('OTHER', 'Other'),
 )
 
 TB_NO_SPUTUM = (
@@ -590,7 +596,7 @@ TB_NO_SPUTUM = (
     ('I_WAS_NOT_ASKED_TO_SUBMIT_A_SPUTUM_SAMPLE',
      'I was not asked to submit a sputum sample'),
     ('NO_SPUTUM_CONTAINER', 'No sputum container'),
-    (OTHER, 'Other, specify'),
+    (OTHER, 'Other'),
 )
 
 TB_HELP = (
@@ -600,7 +606,7 @@ TB_HELP = (
     ('PRIVATE_CLINIC_OR_HOSPITAL', 'Private clinic or hospital'),
     ('PHARMACY_CHEMIST', 'Pharmacy/Chemist'),
     ('TRADITIONAL_HEALER', 'Traditional healther'),
-    (OTHER, 'Other, specify'),
+    (OTHER, 'Other'),
 )
 
 TB_HELP_RESULT = (
@@ -609,7 +615,7 @@ TB_HELP_RESULT = (
      'I was asked to submit sputum sample'),
     ('I_WAS_GIVEN_TB_DRUGS', 'I was given TB drugs'),
     ('I_WAS_PRESCRIBED_OTHER_DRUGS', 'I was prescribed other drugs'),
-    (OTHER, 'Other, specify'),
+    (OTHER, 'Other'),
 )
 
 TB_NO_HELP_REASON = (
@@ -618,7 +624,7 @@ TB_NO_HELP_REASON = (
     ('I_DID_NOT_FEEL_SICK_ENOUGH', 'I did not feel sick enough'),
     ('I_COULD_NOT_TAKE_TIME_OFF_WORK',
      'I could not take time off work'),
-    (OTHER, 'Other, specify'),
+    (OTHER, 'Other'),
 )
 
 CANCER_TEST = (
@@ -660,7 +666,7 @@ CITIZENSHIP = (
     ('Mauritius', 'Mauritius'),
     ('UK', 'UK'),
     ('USA', 'USA'),
-    (OTHER, 'Other, specify'),
+    (OTHER, 'Other'),
 )
 
 PERSON_HOUSEHOLD_LIVE = (
@@ -689,7 +695,7 @@ UNPAID_REASON = (
     ('Student', 'Student'),
     ('Too_old_to_work', 'Too old to work'),
     ('Too_sick_to_work', 'Too sick to work'),
-    (OTHER, 'Other, specify'),
+    (OTHER, 'Other'),
 )
 
 MAIN_WORK = (
@@ -715,7 +721,7 @@ HELP_RECIEVED = (
     ('MONEY', 'Money'),
     ('HELP_WITH_TOILETRY', 'Help with toiletry (wheel chairs,'
      'disposable diapers, gloves)'),
-    (OTHER, 'Other, specify'),
+    (OTHER, 'Other'),
 
 )
 
@@ -730,7 +736,7 @@ HELP_RECIEVED_FROM = (
     ('WOMENS GROUP', 'Womens group'),
     ('SOCIAL WORKER', 'Social worker'),
     ('TRADITIONAL HEALER', 'Traditional healer'),
-    (OTHER, 'Other, specify'),
+    (OTHER, 'Other'),
 )
 
 HELP_TYPE = (
