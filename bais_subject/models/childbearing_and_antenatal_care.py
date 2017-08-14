@@ -68,7 +68,9 @@ class ChildbearingAndAntenatalCare(BaseUuidModel):
     ante_natal_clinic = models.CharField(
         verbose_name='Are you attending an antenatal clinic for this pregnancy?',
         max_length=35,
-        choices=YES_NO
+        choices=YES_NO,
+        blank=True,
+        null=True
     )
 
     ante_natal_clinic_none = models.CharField(
@@ -90,15 +92,15 @@ class ChildbearingAndAntenatalCare(BaseUuidModel):
         verbose_name='Were you tested for HIV during'
         ' your visit to the antenatal clinic? ',
         max_length=35,
-        choices=YES_NO,
-        null=True,
-        blank=True,
+        choices=YES_NO
     )
 
     ante_natal_clinic_test_result = models.CharField(
         verbose_name=' What was the result of your HIV test? ',
         max_length=35,
-        choices=ANTE_NATAL_TEST_RESULT
+        choices=ANTE_NATAL_TEST_RESULT,
+        blank=True,
+        null=True
     )
 
     ante_natal_clinic_partner_test = models.CharField(
@@ -110,7 +112,9 @@ class ChildbearingAndAntenatalCare(BaseUuidModel):
     ante_natal_clinic_partner_test_result = models.CharField(
         verbose_name='What was the result of your partner’s HIV test?',
         max_length=35,
-        choices=ANTE_NATAL_TEST_RESULT
+        choices=ANTE_NATAL_TEST_RESULT,
+        blank=True,
+        null=True
     )
 
     class Meta(BaseUuidModel.Meta):

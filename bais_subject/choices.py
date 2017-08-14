@@ -51,9 +51,9 @@ ARV_INFLUENCE = (
 )
 
 BABY_TEST = (
-    ('YES_6_8_WEEK', '6-8 weeks'),
-    ('YES_18_MONTHS', '7 weeks - 18 months'),
-    (NO, 'NO'),
+    ('YES_6_8_WEEK', 'Yes (6-8 weeks)'),
+    ('YES_18_MONTHS', 'Yes (7 weeks - 18 months)'),
+    (NO, 'No'),
     (DWTA, 'Don\'t want to answer'),
     (DONT_KNOW, 'Don\'t Know')
 )
@@ -157,6 +157,7 @@ TREATMENT_OPTIONS = (
     ('SPIRITUAL_HEALING', 'Spiritual healing'),
     ('HERBAL', 'Herbal'),
     (NONE, 'None'),
+    ('OTHER', 'Other'),
 )
 
 
@@ -198,13 +199,15 @@ TRANSMISSION_PREVENTION = (
     ('ANTIRETROVIRAL_THERAPY',
      'Antiretroviral Therapy (AZT, Drugs before birth)'),
     ('CAESAREAN_SECTION', 'Caesarean section'),
-    (DONT_KNOW, 'Don\'t Know')
+    (DONT_KNOW, 'Don\'t Know'),
+    ('OTHER', 'Other')
 )
 
 ARV_CONCERN = (
     ('LESS_CONCERNED ', 'Less concerned'),
     ('MORE_CONCERNED ', 'More concerned '),
-    (DONT_KNOW, 'Don\'t Know')
+    (DONT_KNOW, 'Don\'t Know'),
+    ('Other', 'Other'),
 )
 
 SEXUAL_BEHAVIOUR = (
@@ -217,7 +220,8 @@ SEXUAL_BEHAVIOUR = (
     ('DISCONTINUE_TO_PRACTICE_MULTIPLE_AND_CONCURRENT_PARTNERSHIPS',
      'Discontinue to practice multiple and concurrent partnerships'),
     ('ABSTINENCE', 'Abstinence'),
-    (DONT_KNOW, 'Don\'t Know')
+    (DONT_KNOW, 'Don\'t Know'),
+    ('OTHER', 'Other'),
 )
 
 TB_INFECTION = (
@@ -230,7 +234,8 @@ TB_INFECTION = (
      'Only people living with HIV/AID'),
     ('ONLY_PEOPLE_WHO_HAVE_BEEN_IN_PRISON',
      'Only people who have been in prison'),
-    (DONT_KNOW, 'Don\'t Know')
+    (DONT_KNOW, 'Don\'t Know'),
+    ('OTHER', 'Other'),
 )
 
 TB_SPREAD = (
@@ -318,6 +323,7 @@ SMC_SOURCE = (
      'Workplace programme ((Peer educator, Counsellor, Co-worker)'),
     ('PEER_EDUCATOR', 'Peer educator'),
     ('SCHOOL', 'School'),
+    ('OTHER', 'Other'),
 )
 
 TB_INFO_SOURCE = (
@@ -336,6 +342,7 @@ TB_INFO_SOURCE = (
      'Workplace programme ((Peer educator, Counsellor, Co-worker)'),
     ('PEER_EDUCATOR', 'Peer educator'),
     ('SCHOOL', 'School'),
+    ('SCHOOL', 'School'),
 )
 
 TB_PREVENTION = (
@@ -345,7 +352,8 @@ TB_PREVENTION = (
     ('AVOID_SHAKING_HANDS', 'Avoid shaking hands'),
     ('GOOD_NUTRITION', 'Good nutrition'),
     ('PRAYING', 'Praying'),
-    (DONT_KNOW, 'Don\'t Know')
+    (DONT_KNOW, 'Don\'t Know'),
+    ('OTHER', 'Other')
 )
 
 
@@ -371,7 +379,8 @@ HIV_PREVENTION = (
     ('AVOID_INJECTIONS_WITH CONTAMINATED NEEDLES',
      'Avoid injections with contaminated needles'),
     ('AVOID_BLOOD_TRANSFUSIONS', 'Avoid blood transfusions'),
-    (DONT_KNOW, 'Don\'t Know')
+    (DONT_KNOW, 'Don\'t Know'),
+    ('OTHER', 'Other'),
 )
 
 TB_NONDISCLOSURE = (
@@ -563,7 +572,7 @@ TB_TIMES_TREATED = (
     (NONE, 'None'),
     ('ONCE', 'Once'),
     ('TWO_TIMES', 'Two times'),
-    ('THREE_TIMES', 'Three tomes'),
+    ('THREE_TIMES', 'Three times'),
     (DONT_KNOW, 'Don\'t Know')
 )
 

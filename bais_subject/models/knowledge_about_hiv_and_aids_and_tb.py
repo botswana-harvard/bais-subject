@@ -74,8 +74,7 @@ class KnowledgeAboutHivAndAidsAndTb(BaseUuidModel):
     tb_information_source = models.CharField(
         verbose_name="From what source(s) did you recieve information about TB?",
         max_length=35,
-        choices=TB_INFO_SOURCE,
-        help_text="Circle all that are mentioned more than one anwser is possible"
+        choices=TB_INFO_SOURCE
     )
 
     tb_information_source_other = OtherCharField(
@@ -215,13 +214,13 @@ class KnowledgeAboutHivAndAidsAndTb(BaseUuidModel):
     arv_treatment_concern_yes = models.CharField(
         verbose_name='If yes, what ways',
         max_length=250,
-        choices=ARV_CONCERN,
+        choices=ARV_CONCERN
     )
 
-#     arv_treatment_concern_yes_other = OtherCharField(
-#         verbose_name='Other, Specify',
-#         max_length=250,
-#     )
+    arv_treatment_concern_yes_other = OtherCharField(
+        verbose_name='Other, Specify',
+        max_length=250,
+    )
 
     arv_treatment_condomize = models.CharField(
         verbose_name='Do you think that people on ARV’s should always use condoms?',
@@ -242,7 +241,7 @@ class KnowledgeAboutHivAndAidsAndTb(BaseUuidModel):
     )
 
     arv_sexual_behaviour_yes_other = OtherCharField(
-        verbose_name='OTHER, SPECIFY',
+        verbose_name='Other,Specify',
         max_length=250,
         blank=True,
         null=True
@@ -269,7 +268,7 @@ class KnowledgeAboutHivAndAidsAndTb(BaseUuidModel):
     )
 
     tb_infection_other = OtherCharField(
-        verbose_name='OTHER, SPECIFY',
+        verbose_name='Other, Specify',
         max_length=250,
         blank=True,
         null=True
@@ -282,7 +281,7 @@ class KnowledgeAboutHivAndAidsAndTb(BaseUuidModel):
     )
 
     tb_spread_other = OtherCharField(
-        verbose_name='OTHER, SPECIFY',
+        verbose_name='Other, Specify',
         max_length=35,
         blank=True,
         null=True
@@ -321,7 +320,7 @@ class KnowledgeAboutHivAndAidsAndTb(BaseUuidModel):
     )
 
     smc_programme_source_other = OtherCharField(
-        verbose_name='OTHER, SPECIFY',
+        verbose_name='Other, Specify',
         max_length=35,
         blank=True,
         null=True
@@ -367,7 +366,7 @@ class KnowledgeAboutHivAndAidsAndTb(BaseUuidModel):
     )
 
     condom_consent_woman_other = OtherCharField(
-        verbose_name=' OTHER, SPECIFY',
+        verbose_name=' Other, Specify',
         max_length=35,
         blank=True,
         null=True
