@@ -20,6 +20,8 @@ class MaleCircumcissionAndSexuallyTransmittedInfections(BaseUuidModel):
         verbose_name='Are you circumcised?',
         max_length=45,
         choices=YES_NO_DNTKNW,
+        blank=True,
+        null=True
     )
 
     circumcission_year = models.CharField(
@@ -34,12 +36,16 @@ class MaleCircumcissionAndSexuallyTransmittedInfections(BaseUuidModel):
         CircumcissionReason,
         verbose_name='Why were you circumcised?',
         max_length=45,
+        blank=True,
+        null=True
     )
 
     circumcission_place = models.CharField(
         verbose_name='Where were you circumcised?',
         max_length=45,
         choices=CIRCUMICISSION_PLACE,
+        blank=True,
+        null=True
     )
 
     circumcised_complications = models.CharField(
@@ -47,6 +53,8 @@ class MaleCircumcissionAndSexuallyTransmittedInfections(BaseUuidModel):
         'after circumcision?',
         max_length=45,
         choices=YES_NO_DNTKNW,
+        blank=True,
+        null=True
     )
 
     circumcission_intent = models.CharField(
@@ -60,6 +68,8 @@ class MaleCircumcissionAndSexuallyTransmittedInfections(BaseUuidModel):
         CircumcissionIntentReason,
         verbose_name='Why would you want to get circumcised?',
         max_length=45,
+        blank=True,
+        null=True
     )
 
     circumcission_intent_reason_other = OtherCharField(
@@ -73,6 +83,9 @@ class MaleCircumcissionAndSexuallyTransmittedInfections(BaseUuidModel):
         CircumcissionRejectReason,
         verbose_name='Why would you want to get circumcised?',
         max_length=45,
+        blank=True,
+        null=True
+
     )
 
     circumcission_reject_reason_other = OtherCharField(
@@ -87,6 +100,8 @@ class MaleCircumcissionAndSexuallyTransmittedInfections(BaseUuidModel):
         verbose_name='What signs and symptoms would lead you to '
         'think that a man or a woman has STIs? ',
         max_length=45,
+        blank=True,
+        null=True
     )
 
     sti_symptoms_other = OtherCharField(
