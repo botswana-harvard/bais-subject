@@ -133,6 +133,14 @@ class HouseholdMember(BaseUuidModel):
 
     )
 
+    household_death_cause_other = OtherCharField(
+        verbose_name='Other, Specify ',
+        max_length=35,
+        blank=True,
+        null=True
+
+    )
+
     household_time_sick = models.CharField(
         verbose_name='For How long was he/she sick before he/she died?',
         choices=TIME_SICK,

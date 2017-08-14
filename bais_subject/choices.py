@@ -752,7 +752,8 @@ HELP_TYPE = (
     ('SPIRITUAL_RELIGIOUS_SUPPORT', 'Spiritual/Religious support'),
     ('SUPPORT_GROUP', 'Support group'),
     ('HOSPICE', 'Hospice'),
-    (DONT_KNOW, 'Don\'t Know')
+    (DONT_KNOW, 'Don\'t Know'),
+    ('OTHER', 'Other'),
 )
 
 SATISFACTION_LEVEL = (
@@ -773,6 +774,7 @@ DEATH_CAUSE = (
     ('MALARIA', 'Malaria'),
     ('VIOLENCE_INJURIES', 'Violance/Injuries'),
     ('CAR_ROAD_ACCIDENT', 'Car/Road accident'),
+    ('OTHER', 'Other'),
 )
 
 TIME_SICK = (
