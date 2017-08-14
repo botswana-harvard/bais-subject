@@ -31,12 +31,12 @@ class AttitudesTowardsPeople(BaseUuidModel):
         choices=YES_NO,
     )
 
-    tb_household_diagnose = models.CharField(
-        verbose_name='If a member of your family got diagnosed with TB,'
-        ' would you be willing to care for him or her in your household?',
-        max_length=35,
-        choices=YES_NO,
-    )
+#     tb_household_member = models.CharField(
+#         verbose_name='If a member of your family got diagnosed with TB,'
+#         ' would you be willing to care for him or her in your household?',
+#         max_length=35,
+#         choices=YES_NO,
+#     )
 
     aids_housekeeper = models.CharField(
         verbose_name='If your housekeeper, nanny or anybody looking'
@@ -110,7 +110,7 @@ class AttitudesTowardsPeople(BaseUuidModel):
     )
 
     aids_hiv_test_reason_other = OtherCharField(
-        verbose_name='SPECIFY OTHER',
+        verbose_name='Specify Other',
         max_length=35,
         null=True,
         blank=True,
@@ -123,7 +123,7 @@ class AttitudesTowardsPeople(BaseUuidModel):
     )
 
     aids_hiv_not_tested_other = OtherCharField(
-        verbose_name='OTHER SPECIFY',
+        verbose_name='Other, Specify',
         max_length=35,
         null=True,
         blank=True,
@@ -154,7 +154,7 @@ class AttitudesTowardsPeople(BaseUuidModel):
     )
 
     current_arv_supplier_other = OtherCharField(
-        verbose_name='OTHER, SPECIFY',
+        verbose_name='Other Specify',
         max_length=35,
         null=True,
         blank=True,
@@ -167,7 +167,7 @@ class AttitudesTowardsPeople(BaseUuidModel):
     )
 
     not_on_arv_therapy_other = OtherCharField(
-        verbose_name='OTHER SPECIFY',
+        verbose_name='Other Specify',
         max_length=35,
         blank=True,
         null=True
@@ -182,7 +182,7 @@ class AttitudesTowardsPeople(BaseUuidModel):
     )
 
     tb_reaction_other = OtherCharField(
-        verbose_name='OTHER SPECIFY',
+        verbose_name='Other Specify',
         max_length=35,
         null=True,
         blank=True,
@@ -207,7 +207,7 @@ class AttitudesTowardsPeople(BaseUuidModel):
     )
 
     tb_diagnosis_no_disclosure_other = OtherCharField(
-        verbose_name='If No,why not',
+        verbose_name='Other, Specify',
         max_length=35,
         blank=True,
         null=True
