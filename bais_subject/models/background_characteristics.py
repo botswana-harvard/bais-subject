@@ -68,6 +68,8 @@ class BackgroundCharacteristics(BaseUuidModel):
     mine_occupation = models.CharField(
         verbose_name='What was your occupation?',
         max_length=45,
+        blank=True,
+        null=True,
         choices=MINE_OCCUPATION
     )
 
@@ -81,6 +83,8 @@ class BackgroundCharacteristics(BaseUuidModel):
     commodity = models.CharField(
         verbose_name='What is/was the type of the commodity mined?',
         max_length=45,
+        blank=True,
+        null=True,
         choices=COMMODITY
     )
 
@@ -113,25 +117,33 @@ class BackgroundCharacteristics(BaseUuidModel):
     respondent_marriage_age = models.IntegerField(
         verbose_name='How old were you when you first married/started'
         ' living together?',
-        help_text='AGE IN YEARS'
+        help_text='AGE IN YEARS',
+        blank=True,
+        null=True,
     )
 
     living_with_spouse = models.CharField(
         verbose_name='Does your husband/wife/partner live with you?',
         max_length=45,
-        choices=YES_NO
+        choices=YES_NO,
+        blank=True,
+        null=True,
     )
 
     spouse_visit = models.CharField(
         verbose_name='If no, how often do you see/visit each other?',
         max_length=45,
-        choices=SPOUSE_VISIT
+        choices=SPOUSE_VISIT,
+        blank=True,
+        null=True,
     )
 
     respondent_married_years = models.IntegerField(
         verbose_name='For how many years have you been married or '
         'living together? ',
-        help_text='RECORD 00 IF LESS THAN ONE YEAR.'
+        help_text='RECORD 00 IF LESS THAN ONE YEAR.',
+        blank=True,
+        null=True,
     )
 
     class Meta(BaseUuidModel.Meta):

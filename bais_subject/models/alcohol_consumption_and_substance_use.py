@@ -24,10 +24,14 @@ class AlcoholConsumptionAndSubstanceUse(BaseUuidModel):
         verbose_name='Method of use',
         max_length=15,
         choices=METHODS_OF_USE,
+        blank=True,
+        null=True,
     )
 
     substance_age_alcohol = models.IntegerField(
         verbose_name='Age at First Use',
+        blank=True,
+        null=True,
     )
 
     substance_frequency_alcohol = models.CharField(
@@ -35,6 +39,8 @@ class AlcoholConsumptionAndSubstanceUse(BaseUuidModel):
         'you had the following substance?',
         max_length=15,
         choices=SUBSTANCE_FREQUENCY,
+        blank=True,
+        null=True,
     )
 
     taken_tobacco = models.CharField(
@@ -48,10 +54,14 @@ class AlcoholConsumptionAndSubstanceUse(BaseUuidModel):
         verbose_name='Method of use',
         max_length=15,
         choices=METHODS_OF_USE,
+        blank=True,
+        null=True,
     )
 
     substance_age_tobacco = models.IntegerField(
         verbose_name='Age at First Use',
+        blank=True,
+        null=True,
     )
 
     substance_frequency_tobacco = models.CharField(
@@ -59,6 +69,8 @@ class AlcoholConsumptionAndSubstanceUse(BaseUuidModel):
         'you had the following substance?',
         max_length=15,
         choices=SUBSTANCE_FREQUENCY,
+        blank=True,
+        null=True,
     )
 
     taken_marijuana = models.CharField(
@@ -72,10 +84,14 @@ class AlcoholConsumptionAndSubstanceUse(BaseUuidModel):
         verbose_name='Method of use',
         max_length=15,
         choices=METHODS_OF_USE,
+        blank=True,
+        null=True,
     )
 
     substance_age_marijuana = models.IntegerField(
         verbose_name='Age at First Use',
+        blank=True,
+        null=True,
     )
 
     substance_frequency_marijuana = models.CharField(
@@ -83,6 +99,8 @@ class AlcoholConsumptionAndSubstanceUse(BaseUuidModel):
         'you had the following substance?',
         max_length=15,
         choices=SUBSTANCE_FREQUENCY,
+        blank=True,
+        null=True,
     )
 
     taken_cocaine = models.CharField(
@@ -96,10 +114,14 @@ class AlcoholConsumptionAndSubstanceUse(BaseUuidModel):
         verbose_name='Method of use',
         max_length=15,
         choices=METHODS_OF_USE,
+        blank=True,
+        null=True,
     )
 
     substance_age_cocaine = models.IntegerField(
         verbose_name='Age at First Use',
+        blank=True,
+        null=True,
     )
 
     substance_frequency_cocaine = models.CharField(
@@ -107,6 +129,8 @@ class AlcoholConsumptionAndSubstanceUse(BaseUuidModel):
         'you had the following substance?',
         max_length=15,
         choices=SUBSTANCE_FREQUENCY,
+        blank=True,
+        null=True,
     )
 
     taken_crack = models.CharField(
@@ -120,10 +144,14 @@ class AlcoholConsumptionAndSubstanceUse(BaseUuidModel):
         verbose_name='Method of use',
         max_length=15,
         choices=METHODS_OF_USE,
+        blank=True,
+        null=True,
     )
 
     substance_age_crack = models.IntegerField(
         verbose_name='Age at First Use',
+        blank=True,
+        null=True,
     )
 
     substance_frequency_crack = models.CharField(
@@ -131,6 +159,8 @@ class AlcoholConsumptionAndSubstanceUse(BaseUuidModel):
         'you had the following substance?',
         max_length=15,
         choices=SUBSTANCE_FREQUENCY,
+        blank=True,
+        null=True,
     )
 
     taken_meth = models.CharField(
@@ -144,10 +174,14 @@ class AlcoholConsumptionAndSubstanceUse(BaseUuidModel):
         verbose_name='Method of use',
         max_length=15,
         choices=METHODS_OF_USE,
+        blank=True,
+        null=True,
     )
 
     substance_age_meth = models.IntegerField(
         verbose_name='Age at First Use',
+        blank=True,
+        null=True,
     )
 
     substance_frequency_meth = models.CharField(
@@ -155,6 +189,8 @@ class AlcoholConsumptionAndSubstanceUse(BaseUuidModel):
         'you had the following substance?',
         max_length=15,
         choices=SUBSTANCE_FREQUENCY,
+        blank=True,
+        null=True,
     )
 
     taken_nyaope = models.CharField(
@@ -168,10 +204,14 @@ class AlcoholConsumptionAndSubstanceUse(BaseUuidModel):
         verbose_name='Method of use',
         max_length=15,
         choices=METHODS_OF_USE,
+        blank=True,
+        null=True,
     )
 
     substance_age_nyaope = models.IntegerField(
         verbose_name='Age at First Use',
+        blank=True,
+        null=True,
     )
 
     substance_frequency_nyaope = models.CharField(
@@ -179,6 +219,8 @@ class AlcoholConsumptionAndSubstanceUse(BaseUuidModel):
         'you had the following substance?',
         max_length=15,
         choices=SUBSTANCE_FREQUENCY,
+        blank=True,
+        null=True,
     )
 
     taken_heroine = models.CharField(
@@ -192,10 +234,14 @@ class AlcoholConsumptionAndSubstanceUse(BaseUuidModel):
         verbose_name='Method of use',
         max_length=15,
         choices=METHODS_OF_USE,
+        blank=True,
+        null=True,
     )
 
     substance_age_heroine = models.IntegerField(
         verbose_name='Age at First Use',
+        blank=True,
+        null=True,
     )
 
     substance_frequency_heroine = models.CharField(
@@ -203,6 +249,8 @@ class AlcoholConsumptionAndSubstanceUse(BaseUuidModel):
         'you had the following substance?',
         max_length=15,
         choices=SUBSTANCE_FREQUENCY,
+        blank=True,
+        null=True,
     )
 
     taken_ecstasy = models.CharField(
@@ -216,10 +264,14 @@ class AlcoholConsumptionAndSubstanceUse(BaseUuidModel):
         verbose_name='Method of use',
         max_length=15,
         choices=METHODS_OF_USE,
+        blank=True,
+        null=True,
     )
 
     substance_age_ecstacy = models.IntegerField(
         verbose_name='Age at First Use',
+        blank=True,
+        null=True,
     )
 
     substance_frequency_ecstacy = models.CharField(
@@ -227,6 +279,8 @@ class AlcoholConsumptionAndSubstanceUse(BaseUuidModel):
         'you had the following substance?',
         max_length=15,
         choices=SUBSTANCE_FREQUENCY,
+        blank=True,
+        null=True,
     )
 
     taken_codeine = models.CharField(
@@ -240,10 +294,14 @@ class AlcoholConsumptionAndSubstanceUse(BaseUuidModel):
         verbose_name='Method of use',
         max_length=15,
         choices=METHODS_OF_USE,
+        blank=True,
+        null=True,
     )
 
     substance_age_codeine = models.IntegerField(
         verbose_name='Age at First Use',
+        blank=True,
+        null=True,
     )
 
     substance_frequency_codeine = models.CharField(
@@ -251,6 +309,8 @@ class AlcoholConsumptionAndSubstanceUse(BaseUuidModel):
         'you had the following substance?',
         max_length=15,
         choices=SUBSTANCE_FREQUENCY,
+        blank=True,
+        null=True,
     )
 
     substance_other = OtherCharField(
