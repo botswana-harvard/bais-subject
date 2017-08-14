@@ -92,7 +92,7 @@ class BackgroundCharacteristics(BaseUuidModel):
     )
 
     religion = models.CharField(
-        verbose_name='What is/was the type of the commodity mined?',
+        verbose_name='What is your main religious affiliation? ',
         max_length=45,
         choices=RELIGION
     )
