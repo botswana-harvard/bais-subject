@@ -16,17 +16,13 @@ class ChildbearingAndAntenatalCare(BaseUuidModel):
     given_birth = models.CharField(
         verbose_name='Have you ever given birth?',
         max_length=35,
-        choices=YES_NO,
-        null=True,
-        blank=True
+        choices=YES_NO
     )
 
     given_birth_past_5yrs = models.CharField(
         verbose_name='Have you given birth in the past 5 years?',
         max_length=35,
         choices=YES_NO,
-        null=True,
-        blank=True,
     )
 
     baby_dob = models.DateField(
@@ -38,9 +34,7 @@ class ChildbearingAndAntenatalCare(BaseUuidModel):
         verbose_name='Was your baby tested for HIV'
         ' by the time he/she was 6 weeks to 18 months old? ',
         max_length=35,
-        choices=BABY_TEST,
-        null=True,
-        blank=True,
+        choices=BABY_TEST
     )
 
     baby_hiv_test_result = models.CharField(
@@ -62,25 +56,19 @@ class ChildbearingAndAntenatalCare(BaseUuidModel):
     baby_feeding = models.CharField(
         verbose_name='How did you feed your baby in the first 6months?',
         max_length=35,
-        choices=BABY_FEEDING,
-        null=True,
-        blank=True,
+        choices=BABY_FEEDING
     )
 
     currently_pregnant = models.CharField(
         verbose_name='Are you currently pregnant?',
         max_length=35,
-        choices=YES_NO,
-        null=True,
-        blank=True,
+        choices=YES_NO
     )
 
     ante_natal_clinic = models.CharField(
         verbose_name='Are you attending an antenatal clinic for this pregnancy?',
         max_length=35,
-        choices=YES_NO,
-        null=True,
-        blank=True,
+        choices=YES_NO
     )
 
     ante_natal_clinic_none = models.CharField(
@@ -110,25 +98,19 @@ class ChildbearingAndAntenatalCare(BaseUuidModel):
     ante_natal_clinic_test_result = models.CharField(
         verbose_name=' What was the result of your HIV test? ',
         max_length=35,
-        choices=ANTE_NATAL_TEST_RESULT,
-        null=True,
-        blank=True,
+        choices=ANTE_NATAL_TEST_RESULT
     )
 
     ante_natal_clinic_partner_test = models.CharField(
         verbose_name='Has your partner tested for HIV during this pregnancy? ',
         max_length=35,
-        choices=YES_NO,
-        null=True,
-        blank=True,
+        choices=YES_NO
     )
 
     ante_natal_clinic_partner_test_result = models.CharField(
         verbose_name='What was the result of your partner’s HIV test?',
         max_length=35,
-        choices=ANTE_NATAL_TEST_RESULT,
-        null=True,
-        blank=True,
+        choices=ANTE_NATAL_TEST_RESULT
     )
 
     class Meta(BaseUuidModel.Meta):
