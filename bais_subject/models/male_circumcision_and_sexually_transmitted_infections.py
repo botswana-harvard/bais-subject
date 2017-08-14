@@ -73,6 +73,7 @@ class MaleCircumcissionAndSexuallyTransmittedInfections(BaseUuidModel):
         CircumcissionRejectReason,
         verbose_name='Why would you want to get circumcised?',
         max_length=45,
+
     )
 
     circumcission_reject_reason_other = OtherCharField(
