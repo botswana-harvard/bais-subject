@@ -31,7 +31,7 @@ class AttitudesTowardsPeople(BaseUuidModel):
         choices=YES_NO,
     )
 
-    tb_household_care = models.CharField(
+    tb_household_diagnose = models.CharField(
         verbose_name='If a member of your family got diagnosed with TB,'
         ' would you be willing to care for him or her in your household?',
         max_length=35,

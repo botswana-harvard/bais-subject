@@ -40,6 +40,8 @@ class AttitudesTowardsPeopleAdmin(admin.ModelAdmin):
             'fields': (
                 'meal_sharing',
                 'aids_household_care',
+                'tb_household_care',
+                'tb_household_diagnose'
                 'aids_housekeeper',
                 'aids_teacher',
                 'aids_shopkeeper',

@@ -70,7 +70,11 @@ class TBScreeningAdmin(admin.ModelAdmin):
                 'tb_no_help',
                 'diabetes_diagnosis',
                 'diabetes_treatment',
-                'cancer_test_result',)},
+                'cervical_cancer_screening',
+                'last_cancer_test',
+                'last_cancer_test_other',
+                'cancer_test_result',
+                'cancer_treatment_referral')},
          ),
         audit_fieldset_tuple
     )
